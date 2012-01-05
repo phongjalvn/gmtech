@@ -1,0 +1,55 @@
+.nsp_main_portal_mode4 { position: relative; overflow: hidden; }
+.nsp_main_portal_mode4 .nsp_arts_scroll { width: 20000px; }
+.nsp_main_portal_mode4 .nsp_arts { width: 100%; }
+.nsp_main_portal_mode4 .nsp_images { padding: 0 18px; }
+.nsp_main_portal_mode4 .nsp_arts,
+.nsp_main_portal_mode4 .nsp_art { overflow: hidden; }
+.nsp_main_portal_mode4 .nsp_art { float: left; }
+.nsp_main_portal_mode4 .nsp_art:hover img { }
+.nsp_main_portal_mode4 .nsp_art img { }
+.nsp_main_portal_mode4 .nsp_art img,
+.nsp_main_portal_mode4 .nsp_art img a { display: block; }
+.nsp_main_portal_mode4 .nsp_art.active img { background: #1a1a1a; margin: 0!important; }
+
+.nsp_main_portal_mode4 .nsp_header { width: 100%; background: #000; background: rgba(0, 0, 0, 0.65); padding: 0; border-radius: 0 0 3px 3px; -moz-border-radius: 0 0 3px 3px; -webkit-border-radius: 0 0 3px 3px; margin: 0!important; }
+.nsp_main_portal_mode4 .nsp_headline { padding: 0; }
+.nsp_main_portal_mode4 .nsp_art_headline { position: absolute; bottom: -100%; z-index: 1; opacity:0; filter: alpha(opacity=0); -webkit-transition:opacity 0.3s ease-in, bottom 0.3s ease-in;  
+   -moz-transition:opacity 0.3s ease-in, bottom 0.3s ease-in;  
+   -o-transition:opacity 0.3s ease-in, bottom 0.3s ease-in;  
+   transition:opacity 0.3s ease-in, bottom 0.3s ease-in;  }
+.nsp_main_portal_mode4 .nsp_art:hover .nsp_art_headline { opacity:1; bottom: 0; padding:0!important; filter: alpha(opacity=100); }
+.nsp_main_portal_mode4 .nsp_header a { font-family: Arial, Verdana, sans-serif!important; color: #fff!important; font-weight: bold!important; font-size: 10px!important; padding: 8px 12px; display:block; line-height: 1.1; }
+
+.nsp_main_portal_mode4 .nsp_art { padding: 0 5px; }
+.nsp_main_portal_mode4 .nsp_art > div { padding: 0; position: relative; }
+.nsp_main_portal_mode4 .nsp_art > div > div { padding: 0; }
+
+.nsp_main_portal_mode4 .nsp_prev,
+.nsp_main_portal_mode4 .nsp_next { height: 16px; width: 16px; display: block; background: transparent url('../images/nsp_portal_mode_4_interface.png') no-repeat 0 0; text-indent: -999em; margin-top: -8px; cursor: pointer; }
+.nsp_main_portal_mode4 .nsp_prev { position: absolute; top: 50%; left: 0; z-index: 1; }
+.nsp_main_portal_mode4 .nsp_next { background-position: -16px 0; position: absolute; top: 50%; right: 0; z-index:1; }
+.nsp_main_portal_mode4 .nsp_prev:hover { background-position: 0 -16px; }
+.nsp_main_portal_mode4 .nsp_next:hover { background-position: -16px -16px; }
+
+.nsp_main_portal_mode4 .nsp_prev::selection,
+.nsp_main_portal_mode4 .nsp_next::selection { background:transparent!important; }
+.nsp_main_portal_mode4 .nsp_prev::-moz-selection,
+.nsp_main_portal_mode4 .nsp_next::-moz-selection { background:transparent!important; } 
+.nsp_main_portal_mode4 .nsp_prev::-webkit-selection,
+.nsp_main_portal_mode4 .nsp_next::-webkit-selection { background:transparent!important; }
+/* make element unvisible */
+.nsp_main_portal_mode4 .unvisible { height:1px; left:-10000px; overflow:hidden; position:absolute; top:auto; width:1px; }
+/* font-size classes */
+.nsp_fs80 { font-size:80%; }
+.nsp_fs90 { font-size:90%; }
+.nsp_fs100 { font-size:100%; }
+.nsp_fs110 { font-size:110%; }
+.nsp_fs120 { font-size:120%; }
+.nsp_fs130 { font-size:130%; }
+.nsp_fs140 { font-size:140%; }
+.nsp_fs150 { font-size:150%; }
+.nsp_fs160 { font-size:160%; }
+.nsp_fs170 { font-size:170%; }
+.nsp_fs180 { font-size:180%; }
+.nsp_fs190 { font-size:190%; }
+.nsp_fs200 { font-size:200%; }

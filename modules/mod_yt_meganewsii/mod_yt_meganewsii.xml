@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>Yt Mega News II</name>
+	<creationDate>July 2011</creationDate>
+	<author>YouTech Company</author>
+	<copyright>(C) 2010 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.ytcvn.com</authorUrl>
+	<version>1.0</version>
+	<description><![CDATA[<a href="http://www.newone.org" target="_blank"><img src="http://www.newone.org/Joomla.png" width="360" height="115" alt="www.newone.org" /></a><br/>]]> YT_EXTENSIONS_DESC</description>
+	<files>
+		<filename module="mod_yt_meganewsii">mod_yt_meganewsii.php</filename>
+		<folder module="mod_yt_meganewsii">assets</folder>
+		<folder module="mod_yt_meganewsii">elements</folder>
+		<folder module="mod_yt_meganewsii">lib</folder>
+		<folder module="mod_yt_meganewsii">tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_yt_meganewsii.ini</language>
+	</languages>
+	<params addpath="/modules/mod_yt_meganewsii/elements">
+
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+
+		<param type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#0D9FC4;&quot;&gt;General Options&lt;/div&gt;" />
+		<param name="module_width" type="text" default="" label="Module Width" description="blank value to set width=auto" />
+		<param name="theme" type="list" default="theme1" label="Themes" description="Select theme you want">
+			<option value="theme1">Theme 1</option>
+			<option value="theme2">Theme 2</option>
+			<option value="theme3">Theme 3</option>
+			<option value="theme4">Theme 4</option>
+		</param>
+
+		<param type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#0D9FC4;&quot;&gt;Source Options&lt;/div&gt;" />
+		<param name="source" type="listcategory" default="" label="Data Source" description="Select category" />
+		<param name="source_order_by" type="list" default="created" label="Sort Order By" description="Sort order type">
+			<option value="created">Recently Added</option>
+			<option value="hits">Most Views</option>
+			<option value="modified">Recently Modified</option>
+			<option value="ordering">Ordering</option>
+			<option value="title">Title</option>
+			<option value="random">Random</option>
+		</param>
+		<param name="source_filter" type="list" default="2" label="Source Filter" description="Frontpage filter type">
+			<option value="0">All Articles</option>
+			<option value="1">None Frontpage</option>
+			<option value="2">Only Frontpage</option>
+		</param>
+
+
+		<param type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#0D9FC4;&quot;&gt;Categories Options&lt;/div&gt;" />
+		<param name="columns_max" type="text" default="3" label="Number column" description="Number of column display on each rows"/>
+		<param name="articles_max" type="text" default="6" label="Number article / category" description="Number of article in each category selected" />
+
+		<param name="super_category_link" type="radio" default="1" label="Show Super Category Link" description="Show Super Category Link">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="super_category_link_target" type="list" default="_self" label="Super Category Link Target" description="Open Super Category Link on ...">
+			<option value="_self">Same Window</option>
+			<option value="_blank">New Window</option>
+			<option value="_windowopen">Popup Window</option>
+		</param>
+		
+		<param name="sub_category_link" type="radio" default="1" label="Show Sub Category Link" description="Show Sub Category Link">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="sub_category_link_target" type="list" default="_self" label="Sub Category Link Target" description="Open Sub Category Link on ...">
+			<option value="_self">Same Window</option>
+			<option value="_blank">New Window</option>
+			<option value="_windowopen">Popup Window</option>
+		</param>
+		
+		<param name="list_subcategory" type="radio" default="1" label="Show List SubCategory" description="Show List SubCategory">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="sub_category_title_maxchars" type="text" default="-1" label="Sub Category Title Length" description="Shorten Title of sub categories by length, -1 to unlimit length." />
+
+		<param type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#0D9FC4;&quot;&gt;Articles Options&lt;/div&gt;" />
+		<param name="item_image_disp" type="radio" default="1" label="Display Article Image" description="Display image of articles">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="item_image_link" type="radio" default="1" label="Article Image Linkable" description="Article image linkable">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="item_image_link_target" type="list" default="_self" label="Article Image Link Target" description="Open article image link on ...">
+			<option value="_self">Same Window</option>
+			<option value="_blank">New Window</option>
+			<option value="_windowopen">Popup Window</option>
+		</param>
+
+		<param name="item_title_disp" type="radio" default="1" label="Display Article Title" description="Display Article Title">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="item_title_link" type="radio" default="1" label="Article Title Linkable" description="Article Title Linkable">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="item_title_color" type="text" default="" label="Article Title Color" description="Article Title Color" />
+		<param name="item_title_link_target" type="list" default="_self" label="Article Title Link Target" description="Open article title link on ...">
+			<option value="_self">Same Window</option>
+			<option value="_blank">New Window</option>
+			<option value="_windowopen">Popup Window</option>
+		</param>
+		<param name="item_title_maxchars" type="text" default="-1" label="Article Title Max Chars" description="Shorten Title of articles by length, -1 to unlimit length." />
+
+		<param name="item_description_disp" type="radio" default="1" label="Display Article Description" description="isplay Article Description">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="item_description_color" type="text" default="" label="Article Description Color" description="Article Description Color" />
+		<param name="item_description_keephtml" type="radio" default="1" label="Keep HTML" description="Strip html tag in description or keep them.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="item_description_maxchars" type="text" default="-1" label="Article Description Max Chars" description="Shorten description of articles by length, -1 to unlimit length." />
+
+		<param name="tooltip_disp" type="radio" default="1" label="Display article tooltip" description="Display article tooltip when hover article link, only for other articles list">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>		
+		<param name="tooltip_width" type="text" default="360" label="Tooltip Width" description="Tooltip Width" />
+		<param name="tooltip_image_maxwidth" type="text" default="100" label="Tooltip Image Maxwidth" description="Max width of image inside tooltip." />
+		
+		<param name="item_nb_view_disp" type="radio" default="1" label="Display article's hits" description="Display article's hits">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="item_comment_disp" type="radio" default="1" label="Display number of comments" description="Display article's comments">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="item_created_disp" type="radio" default="1" label="Display date created" description="Display date created">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="item_readmore_disp" type="radio" default="1" label="Display read more" description="Display read more link">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="item_readmore_text" type="text" default="Read more" label="Read more text" description="Read more text" />
+		<param name="item_readmore_link_target" type="list" default="_self" label="Read more Link Target" description="Open read more link on ...">
+			<option value="_self">Same Window</option>
+			<option value="_blank">New Window</option>
+			<option value="_windowopen">Popup Window</option>
+		</param>
+		<param name="other_items_link_target" type="list" default="_self" label="Other articles more target" description="Open other article link on ...">
+			<option value="_self">Same Window</option>
+			<option value="_blank">New Window</option>
+			<option value="_windowopen">Popup Window</option>
+		</param>
+		
+		<param type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#0D9FC4;&quot;&gt;Thumbnail Options&lt;/div&gt;" />
+		<param name="item_thumbnail_width" type="text" default="220" label="Thumbnail Width" description="The width of thumbnail image. The module will auto resize your image to your width." />
+		<param name="item_thumbnail_height" type="text" default="175" label="Thumbnail Height" description="The height of thumbnail image. The module will auto resize your image to your height." />
+		<param name="item_thumbnail_background" type="text" default="#FFFFFF" label="Thumbnail Background Color" description="The default background of thumbnail image." />
+		<param name="item_thumbnail_mode" type="listthumbnailmode" default="stretch" label="Thumbnail Mode" description="The way to resize your image." />
+
+		<param type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#0D9FC4;&quot;&gt;Other Options&lt;/div&gt;" />
+		<param name="introtext" type="textarea" default="" label="Intro text" description="Intro text of module" cols="40" rows="4" />
+		<param name="footertext" type="textarea" default="" label="Footer text" description="Footer text of module" cols="40" rows="4" />
+	</params>
+
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Caching">
+			<option value="1">Use Cache</option>
+			<option value="0">Do not use Cache</option>
+		</param>
+		<param name="cache_time" type="text" default="300" label="Cache time" description="Cache time" />
+	</params>
+</install>
+

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - Joomla Extra News Plugin</name>
+	<author>Viet Nguyenhoang</author>
+	<creationDate>Sept. 2008</creationDate>
+	<copyright>(C) 2008 Luyenkim.net. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GPLv2.0</license>
+	<authorEmail>email2@luyenkim.net</authorEmail>
+	<authorUrl>www.luyenkim.net</authorUrl>
+	<version>2.0.7</version>
+	<description>
+<![CDATA[<b>Plugin - Extra News 2.0.7 - Created by </b><a href="http://www.luyenkim.net/home9/" target="_blank">Nguyen Hoang Viet</a>, <b>April 2008</b><br/><br/>This mambot creates a list of related and/or newer and/or older news items of the same category of the present topic.<br />Visit this link <a href="http://luyenkim.net/home9/index.php?option=com_fireboard&Itemid=88889169&func=view&catid=5&id=1002#1002" target="_blank">How to install and using 'plugin_extranews'</a> for more details.<br/>]]>
+	</description>
+		<files>
+		<filename plugin="extranews">extranews.php</filename>
+		<filename>extranews/js/dhtmltooltip.js</filename>
+		<filename>extranews/js/mootools.js</filename>    		
+		<filename>extranews/images/tooltiparrow.gif</filename>
+		<filename>extranews/images/selector-arrow.png</filename>		
+		<filename>extranews/css/dhtmltooltip.css</filename>
+		<filename>extranews/css/extranews.css</filename>		
+	</files>
+    <!-- Language files -->
+	<languages folder="i18n">
+        <language tag="en-GB">en-GB.plg_content_extranews.ini</language>
+        <language tag="vi-VN">vi-VN.plg_content_extranews.ini</language>
+        <language tag="fr-FR">fr-FR.plg_content_extranews.ini</language>
+        <language tag="pt-BR">pt-BR.plg_content_extranews.ini</language>
+        <language tag="de-DE">de-DE.plg_content_extranews.ini</language>
+        <language tag="nl-NL">nl-NL.plg_content_extranews.ini</language>
+        <language tag="it-IT">it-IT.plg_content_extranews.ini</language>
+        </languages>
+	<params>
+		 <param name="enabled" type="radio" default="1" label="Enable Plugin" description="Enable or Disable Plugin">
+		<option value="0">No</option>
+		<option value="1">Yes</option>
+	 </param>
+		<param name="cache" type="radio" default="0" label="Enable Cache" description="Select whether to cache the content of this module">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="Content setting" description="" />
+		<param name="LBL_RELATEDNAME" type="text" size="40" default="" label="lbl_relatedname_" />
+		<param name="LBL_NEWERNAME" type="text" size="40" default="" label="lbl_newername_" />
+		<param name="LBL_PREV_PAGE" type="text" size="40" default="" label="lbl_prev_page_" />
+		<param name="LBL_OLDERNAME" type="text" size="40" default="" label="lbl_oldername_" />
+		<param name="LBL_NEXT_PAGE" type="text" size="40" default="" label="lbl_next_page_" />
+		
+		<param name="LBL_RELATEDNAME_EN" type="text" size="40" default="" label="lbl_relatedname_en_" />
+		<param name="LBL_NEWERNAME_EN" type="text" size="40" default="" label="lbl_newername_en_" />
+		<param name="LBL_PREV_PAGE_EN" type="text" size="40" default="" label="lbl_prev_page_en_" />
+		<param name="LBL_OLDERNAME_EN" type="text" size="40" default="" label="lbl_oldername_en_" />
+		<param name="LBL_NEXT_PAGE_EN" type="text" size="40" default="" label="lbl_next_page_en_" />
+
+		<param name="sectionid_list" type="text" size="6" default="-" label="Disable section id List" description="List of section ids that this plugin is disable. Each id is separated by ','&lt;br/&gt;for example 2,3,8 &lt;br/&gt; '-' means no disable sections" />
+		<param name="catid_list" type="text" size="6" default="-" label="Disable category id List" description="List of category ids that this plugin is disable. Each id is separated by ','&lt;br/&gt;for example 1,5,6 &lt;br/&gt;'-' means no disable categories" />
+		<param name="id_list" type="text" size="6" default="-" label="Disable article id List" description="List of article ids that this plugin is disable. Each id is separated by ','&lt;br/&gt;for example 1,4,9 &lt;br/&gt;'-' means no disable articles" />	
+		<param name="sectionid_list_rsform" type="text" size="6" default="-" label="Disable section id List with Rsform" description="List of section ids that this plugin is disable. Each id is separated by ','&lt;br/&gt;for example 2,3,8 &lt;br/&gt; '-' means no disable sections" />
+		<param name="catid_list_rsform" type="text" size="6" default="-" label="Disable category id List with Rsform" description="List of category ids that this plugin is disable. Each id is separated by ','&lt;br/&gt;for example 1,5,6 &lt;br/&gt;'-' means no disable categories" />
+		<param name="id_list_rsform" type="text" size="6" default="-" label="Disable article id List with Rsform" description="List of article ids that this plugin is disable. Each id is separated by ','&lt;br/&gt;for example 1,4,9 &lt;br/&gt;'-' means no disable articles" />	
+		<param name="queryby" type="list" default="c_dsc" label="Query by" description="Which one you choose">
+			<option value="c_dsc">Recently Added</option>
+			<option value="i_dsc">Article id</option>
+	  	</param>
+    <param name="@spacer" type="spacer" default="" label="Main setting" description="" />
+		<param name="char_count_title" type="text" size="6" default="0" label="Linked Title Char Count" description="Allows you to limit the amount of visible item title text in the linked title. 0 will show all the text" />
+		<param name="relateditemscount" type="text" default="5" label="Number of related items" description="The number of items to display (default 5)" />
+		<param name="neweritemscount" type="text" default="5" label="Number of newer news items" description="The number of items to display (default 5)" />
+		<param name="oderitemscount" type="text" default="5" label="Number of older news items" description="The number of items to display (default 5)" />
+		<param name="showdate" type="radio" default="1" label="Show date with title" description="Show date before linked title!">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="showdateformat" type="text" default="d/m/Y H:i" label="Created date display" description="Format of created date display date (d) month (m, M) year (y, Y) hour (H) minute (i) examples: d/m/Y->1/9/2006 d/m/y->1/9/06 d-m-Y->1-9-2006."/>
+		<param name="linkedtitleformat" type="text" default="%1$s - %2$s" label="Linked title format with date" description="Format of linked title format with date, where %1$s is date and %2$s is linked title. You can use these formats:&lt;br /&gt;+%1$s - %2$s&lt;br /&gt;+%2$s %1$s and Created date display is '(d/m/Y H:i)'"/>
+		<param name="@spacer" type="spacer" default="" label="Text befores and after this content display" description="Text befores and after this content display" />
+		<param name="textbefore" type="text" default="&lt;hr color=&quot;maroon&quot; width=&quot;85%&quot;&gt;&lt;/hr&gt;" label="Text before" description="Text before the content display"/>
+		<param name="textafter" type="text" default="&lt;hr color=&quot;maroon&quot; width=&quot;85%&quot;&gt;&lt;/hr&gt;" label="Text after" description="Text after the content display"/>
+		<param name="marginleft" type="text" default="5%" label="Margin-left" description="left margin of displaying list. Value in px or %, i.e: 50px or 5%"/>
+		<param name="marginright" type="text" default="5%" label="Margin-right" description="left margin of displaying list. Value in px or %, i.e: 50px or 5%"/>
+		<param name="@spacer" type="spacer" default="" label="Tooltip Settings" description="The settings below are related to the mouseover tooltip" />
+		<param name="enable_tooltip" type="radio" default="yes" label="Enable Tooltip" description="Show item description in mouseover tooltip? e.g this one!">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</param>
+		<param name="script_tooltip" type="radio" default="0" label="Tooltip Script" description="Select the tooltip script!">
+			<option value="0">Joomla Mootool</option>
+			<option value="1">Overlib</option>
+			<option value="2">Dhtml tooltip</option>
+		</param>
+		<param name="load_mootools" type="radio" default="no" label="Load mootools script" description="Load mootools script!">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</param>
+		<param name="scriptIE6_tooltip" type="radio" default="2" label="IE6 Tooltip Script" description="This is only for Internet Eplorer 6.x &lt;br/&gt;Choose Overlib or DHTML Tooltips!">
+			<option value="2">Dhtml tooltip</option>
+			<option value="1">Overlib</option>
+		</param>
+		<param name="t_char_count_title" type="text" size="6" default="0" label="Tooltip Title Char Count" description="Allows you to limit the amount of visible item title text in the tooltip. 0 will show all the text" />
+		<param name="t_char_count_desc" type="text" size="6" default="150" label="Tooltip Description Char Count" description="Allows you to limit the amount of visible item description text in the tooltip. 0 will show all the text" />
+		<param name="tooltip_desc_images" type="radio" default="yes" label="Tooltip Description Text Images" description="Allow images in the tooltip description text">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</param>
+		<param name="img_width" type="text" default="100" label="Image Width" description="Width of image display" />
+		<param name="img_height" type="text" default="100" label="Image Height" description="Height of image display" />
+		<param name="tooltip_width" type="text" default="270" size="4" label="Tooltip Width" description="Width of tooltip area in pixels e.g 270" />
+		<param name="tooltip_height" type="text" default="120" size="4" label="Tooltip Height" description="Height of tooltip area in pixels e.g 120" />
+		<param name="tooltip_bgcolor" type="text" default="#000000" size="8" label="Tooltip Caption Background Color" description="Color of tooltip caption background and border in hexidecimal notation e.g. #24537d" />
+		<param name="tooltip_capcolor" type="text" default="#ffffff" size="8" label="Tooltip Caption Font Color" description="Color of tooltip caption font in hexidecimal notation e.g. #ffffff" />
+		<param name="tooltip_fgcolor" type="text" default="#ffffff" size="8" label="Tooltip Body Background Color" description="Color of tooltip body background in hexidecimal notation e.g. #E1F0FF" />
+		<param name="tooltip_textcolor" type="text" default="#000000" size="8" label="Tooltip Body Font Color" description="Color of tooltip body font in hexidecimal notation e.g. #000000" />
+		<param name="tooltip_border" type="text" default="1" size="5" label="Tooltip Border Width" description="Width of tooltip border in pixels e.g 2" />
+		<param name="tooltip_extra_invocation_string" type="text" size="50" default="" label="Extra Tooltip Parameters" description="(Advanced) Extra parameters to use when creating tooltip, for more options, see http://www.bosrup.com/web/overlib/?Command_Reference" />
+	</params>
+
+</install>

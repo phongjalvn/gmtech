@@ -1,0 +1,406 @@
+/**
+ * @version		$Id: k2.css 503 2010-06-24 21:11:53Z joomlaworks $
+ * @package		K2
+ * @author		JoomlaWorks http://www.joomlaworks.gr
+ * @copyright	Copyright (c) 2006 - 2010 JoomlaWorks, a business unit of Nuevvo Webware Ltd. All rights reserved.
+ * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+
+/*
+### Legend ###
+Font families used:
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-family:"Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+	font-family:Arial, Helvetica, sans-serif;
+Colors used:
+	#f7fafe (light blue) used as background on all toolbars, category and user/author boxes
+*/
+
+/*----------------------------------------------------------------------
+	Common Elements
+----------------------------------------------------------------------*/
+
+/* --- Global K2 container --- */
+#k2Container {padding:0;}
+body.contentpane #k2Container {padding:16px;} /* used in popups */
+/* --- General padding --- */
+.k2Padding {padding:4px;}
+/* --- K2 Store --- */
+.k2store_item_price {color: #202020; font-weight: bold;}
+.k2store_item_price_value {color: #CF1919}
+div#k2Container div.mycart {margin: 12px 0 24px;}
+div#k2Container div.mycart {background: #fff url('../images/moduletable_title.png') repeat-x scroll 0 100%; border:1px solid #E7E7E7;margin:0 0 16px 0;padding:12px;}
+div#k2Container div.mycart label {margin-bottom: 12px;}
+.moduletable div.mycart {font-size: 90%; border-top: 1px dotted #ddd; padding: 12px 0; }
+.moduletable div.mycart label {margin: 0 2px 0 0}
+.moduletable div.mycart input {padding: 3px 1px; margin: 0}
+.moduletable div.mycart input#quantity {width: auto}
+table#cart {width: 100%;margin: 20px 0;}
+table#cart th {background: #444 !important;}
+table#cart td {border-bottom: 1px dotted #ddd !important}
+table#cart td#total_price {font-weight: bold; color: #CF1919}
+/* restriction for K2 Store */
+.catItemView div.mycart {font-size: 90%;background: none !important; border: none!important; border-top: 1px dotted #ddd!important;; padding: 12px 0!important; margin: 6px 0 0!important;}
+.catItemView div.mycart input {padding: 3px 1px; margin: 2px 0}
+.catItemView .k2store_item_price {margin: 10px 0; }
+/* --- Clearing --- */
+.clr {clear:both;height:0;line-height:0;display:block;float:none;}
+/* --- RSS feed icon --- */
+.k2FeedIcon {padding:4px 8px;}
+.k2FeedIcon a,
+.k2FeedIcon a:hover {display:block;float:right;margin:0;padding:0;width:16px;height:16px;background:url(../images/k2/fugue/feed.png) no-repeat 50% 50%;}
+.k2FeedIcon a span,
+.k2FeedIcon a:hover span {display:none;}
+/* --- Rating --- */
+.itemRatingForm {display:block;vertical-align:middle;line-height:25px;float:left;}
+.itemRatingLog {font-size:11px;margin:0;padding:0 0 0 4px;float:left;}
+.itemRatingForm .formLogLoading {background:url(../images/k2/system/loading.gif) no-repeat left center;height:25px;padding:0 0 0 20px;}
+.itemRatingList,
+.itemRatingList a:hover,
+.itemRatingList .itemCurrentRating {background:url(../images/k2/system/transparent_star.gif) left -1000px repeat-x;}
+.itemRatingList {position:relative;float:left;width:125px;height:25px;overflow:hidden;list-style:none;margin:0!important;padding:0;background-position:left top;}
+.itemRatingList li {display:inline;background:none;padding:0;}
+.itemRatingList a,
+.itemRatingList .itemCurrentRating {position:absolute;top:0;left:0;text-indent:-1000px;height:25px;line-height:25px;outline:none;overflow:hidden;border:none;cursor:pointer;}
+.itemRatingList a:hover {background-position:left bottom;}
+.itemRatingList a.one-star {width:20%;z-index:6;}
+.itemRatingList a.two-stars {width:40%;z-index:5;}
+.itemRatingList a.three-stars {width:60%;z-index:4;}
+.itemRatingList a.four-stars {width:80%;z-index:3;}
+.itemRatingList a.five-stars {width:100%;z-index:2;}
+.itemRatingList .itemCurrentRating {z-index:1;background-position:0 center;margin:0;padding:0;}
+.siteRoot {display:none;}
+/* --- CSS added with Javascript --- */
+.smallerFontSize {font-size:100%;line-height:inherit;}
+.largerFontSize {font-size:150%;line-height:140%;}
+/* --- ReCaptcha --- */
+.recaptchatable .recaptcha_image_cell,
+#recaptcha_table {background-color:#fff !important;}
+#recaptcha_table {border-color: #ccc !important;}
+#recaptcha_response_field {border-color: #ccc !important;background-color:#fff !important;}
+/* --- Primary lists in modules --- */
+.clearList {display:none;float:none;clear:both;} /* this class is used to clear all previous floating list elements */
+.lastItem {border:none;} /* class appended on last list item */
+/* --- Avatars --- */
+.k2Avatar img {display:block;float:left;background:#fff;border:1px solid #ccc;padding:2px;margin:2px 4px 4px 0;}
+/* --- Pagination --- */
+.k2Pagination {padding:8px;margin:24px 0 4px 0;text-align:center;color:#999;}
+/* --- Featured flags: the classes are repeated further below to indicate placement in the CSS structure --- */
+.itemIsFeatured,
+.catItemIsFeatured,
+.userItemIsFeatured {background:url(../images/k2/system/featuredItem.png) no-repeat 100% 0;}
+
+/*----------------------------------------------------------------------
+	Component: views
+----------------------------------------------------------------------*/
+.genericItemView {border-bottom:1px dotted #ccc;padding:8px 0;margin:0 0 16px 0;} /* this is the item container for this view */
+.userItemViewUnpublished {opacity:0.9;border:4px dashed #ccc;background:#fffff2;padding:8px;}
+.itemView {padding:8px 0 24px 0;margin:0 0 24px 0;border-bottom:1px dotted #ccc;} /* this is the item container for this view */
+.userItemEditLink, .catItemEditLink, .itemEditLink {display:block;text-align:right;padding:16px 36px 4px 4px;margin:0 0 4px 0;border-bottom:2px dashed #ddd;}
+
+	.latestItemDateCreated, .genericItemDateCreated, .userItemDateCreated, .catItemDateCreated, .itemDateCreated {color:#999;font-size:11px;}
+	.genericItemDateCreated{border-right:1px solid #DDD;margin:0 8px 0 0;padding:0 8px 0 0;}
+	.itemHeader .itemTitle {color:#202020;font-size:260%;font-weight:normal;line-height:110%;margin:0;padding:10px 0 4px;}
+	.latestItemHeader .latestItemTitle, .genericItemHeader .genericItemTitle, .userItemHeader .userItemTitle, .catItemHeader .catItemTitle{font-size:24px;font-weight:normal;line-height:110%;margin:0;padding:10px 0 4px;}
+	.latestItemHeader .latestItemTitle a, .genericItemHeader .genericItemTitle a, .userItemHeader .userItemTitle a, .catItemHeader .catItemTitle a{color:#202020;}
+	.userItemHeader .userItemTitle span sup, .catItemHeader .catItemTitle span sup, .itemHeader .itemTitle span sup {font-size:12px;color:#CF1919;text-decoration:none;} /* "Featured" presented in superscript */
+	.catItemHeader .catItemAuthor, .itemHeader .itemAuthor {display:block;padding:0;margin:0;}
+.itemToolbar {margin:0;padding:2px 0;}
+	.itemToolbar ul {text-align:left;list-style:none;padding:0!important;margin:0!important;font-size:90%;}
+	.itemToolbar ul li {display:inline;list-style:none;padding:0 4px 0 8px;margin:0;border-left:1px solid #ccc;text-align:center;background:none;}
+	.itemToolbar ul > li:first-child {border:none;padding-left:0!important;} /* remove the first CSS border from the left of the toolbar */
+	.itemToolbar ul li a {font-weight:normal;}
+	.itemToolbar ul li a img {vertical-align:middle;}
+	.itemToolbar ul li a#fontDecrease {margin:0 0 0 2px;}
+	.itemToolbar ul li a#fontDecrease img {width:13px;height:13px;background:url(../images/k2/system/font_decrease.gif) no-repeat;}
+	.itemToolbar ul li a#fontIncrease {margin:0 0 0 2px;}
+	.itemToolbar ul li a#fontIncrease img {width:13px;height:13px;background:url(../images/k2/system/font_increase.gif) no-repeat;}
+	.itemToolbar ul li a#fontDecrease span,
+	.itemToolbar ul li a#fontIncrease span {display:none;}
+.catItemRatingBlock, .itemRatingBlock {padding:8px 0;}
+	.catItemRatingBlock span, .itemRatingBlock span {display:block;float:left;font-style:normal;padding:0 4px 0 0;margin:0;color:#999;}
+.latestItemBody, .genericItemBody, .userItemBody, .catItemBody, .itemBody {padding:8px 0;margin:0;}
+.genericItemImageBlock{float:left;margin:0 16px 0 0!important;padding:0;}
+ .userItemImageBlock, .itemImageBlock {float:left;margin:0 16px 16px 0;padding:0;}
+.latestItemImageBlock, .genericItemImageBlock, .catItemImageBlock{border:1px dotted #ddd;margin:0;padding:8px 0 0;}
+.genericItemImageBlock{padding:0;border:none;}
+
+	span.itemImage {display:block;text-align:center;margin:0 0 8px 0;}
+	span.latestItemImage, span.userItemImage, span.catItemImage{display:block;margin:0 0 8px;text-align:center;}
+	span.latestItemImage img, span.genericItemImage img, span.userItemImage img, span.catItemImage img, span.itemImage img {border:1px dotted #DDDDDD;margin:12px 8px 0 0;padding:8px;}
+	span.latestItemImage img, span.catItemImage img{border:none;}
+	span.itemImageCaption {color:#666;float:left;display:block;font-size:11px;}
+	span.itemImageCredits {color:#999;float:right;display:block;font-style:italic;font-size:11px;}
+.latestItemIntroText, .genericItemIntroText, .userItemIntroText, .catItemIntroText, .itemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:4px 0 12px;}
+	.latestItemIntroText img , .genericItemIntroText img , .userItemIntroText img, .catItemIntroText img, .itemIntroText img {padding:2px;margin:4px;background:#fff;border:1px solid #ccc;}
+	.itemFullText h3 {margin:0;padding:16px 0 4px 0;}
+	.itemFullText img {padding:2px;margin:4px;background:#fff;border:1px solid #ccc;}
+.catItemExtraFields, .genericItemExtraFields, .itemExtraFields {clear:both;margin:0 0 20px;padding:0;}
+	.catItemExtraFields h4, .genericItemExtraFields h4, .itemExtraFields h3 {background:#FBFBFB;border-color:#E5E5E5 #E5E5E5;border-style:solid solid none;border-width:1px 1px medium;display:inline;font-size:100%;line-height:normal !important;margin:0 0 2px;padding:8px 16px;}
+	.catItemExtraFields ul, .genericItemExtraFields ul, .itemExtraFields ul {background:#FBFBFB;border:1px solid #E5E5E5;list-style:none;margin:0!important;padding:24px 16px!important;}
+	.catItemExtraFields ul li, .genericItemExtraFields ul li, .itemExtraFields ul li {display:block;border-bottom:1px dotted #DDDDDD;padding:2px;overflow:hidden;}
+	.catItemExtraFields ul li span.catItemExtraFieldsLabel, .genericItemExtraFields ul li span.genericItemExtraFieldsLabel, .itemExtraFields ul li span.itemExtraFieldsLabel {display:block;float:left;font-weight:bold;margin:0 4px 0 0;width:30%;}
+	.catItemExtraFields ul li span.catItemExtraFieldsValue, .itemExtraFields ul li span.itemExtraFieldsValue {margin-left:30%;display:block;}
+span.itemDateModified {color:#999999;display:block;font-size:90%;font-style:italic;margin:16px 0 4px;padding:4px;text-align:right;}
+.latestItemLinks, .userItemLinks, .catItemLinks, .itemLinks {margin:0 0 16px 0;padding:0;}
+.catItemHitsBlock, .itemHitsTwitter {padding:4px;border-bottom:1px dotted #ccc;}
+	span.itemHitsTwitterSep {padding:0 8px;color:#ccc;}
+	span.itemTwitterLink a {background:url(../images/k2/social/twitter_16.png) no-repeat 0 50%;padding:2px 0 0 20px;margin:8px 0;text-decoration:none;}
+	span.itemTwitterLink a:hover {text-decoration:none;}
+.itemCategory {padding:4px;border-bottom:1px dotted #ccc;}
+.latestItemCategory, .genericItemCategory, .userItemCategory, .catItemCategory{font-size:11px;}
+	.itemCategory span {font-weight:bold;color:#555;padding:0 4px 0 0;}	
+	.latestItemCategory span, .genericItemCategory span, .userItemCategory span, .catItemCategory span{}
+	.latestItemCategory a, .genericItemCategory a, .userItemCategory a, .catItemCategory a, .itemCategory a {}
+.latestItemTagsBlock, .userItemTagsBlock, .catItemTagsBlock, .itemTagsBlock {padding:4px;border-bottom:1px dotted #ccc;}
+	.latestItemTagsBlock span, .userItemTagsBlock span, .catItemTagsBlock span, .itemTagsBlock span {font-weight:bold;color:#555;padding:0 4px 0 0;}
+	.latestItemTagsBlock ul.latestItemTags, .userItemTagsBlock ul.userItemTags, .catItemTagsBlock ul.catItemTags, .itemTagsBlock ul.itemTags {list-style:none;padding:0;margin:0;display:inline;}
+	.latestItemTagsBlock ul.latestItemTags li, .userItemTagsBlock ul.userItemTags li, .catItemTagsBlock ul.catItemTags li, .itemTagsBlock ul.itemTags li {display:inline;list-style:none;padding:0 4px 0 0;margin:0;text-align:center;}
+	.latestItemTagsBlock ul.latestItemTags li a, .userItemTagsBlock ul.userItemTags li a, .catItemTagsBlock ul.catItemTags li a, .itemTagsBlock ul.itemTags li a {color:#999;}
+	.latestItemTagsBlock ul.latestItemTags li a:hover, .userItemTagsBlock ul.userItemTags li a:hover, .catItemTagsBlock ul.catItemTags li a:hover, .itemTagsBlock ul.itemTags li a:hover {color:#202020;}
+.itemSocialLinksBlock {padding:4px;border-bottom:1px dotted #ccc;}
+	.itemSocialLinksBlock span {font-weight:bold;color:#555;padding:0 4px 0 0;float:left;display:block;}
+	.itemSocialLinksBlock ul.itemSocialLinks {list-style:none;padding:0;margin:0;float:left;}
+	.itemSocialLinksBlock ul.itemSocialLinks li {float:left;list-style:none;padding:0 4px;margin:0;}
+	.itemSocialLinksBlock ul.itemSocialLinks li a {float:left;display:block;width:16px;height:16px;background-position:0 0;background-repeat:no-repeat;}
+	.itemSocialLinksBlock ul.itemSocialLinks li a:hover {}
+	.itemSocialLinksBlock ul.itemSocialLinks li a span {display:none;}
+		a.delicious {background-image: url(../images/k2/social/delicious_16.png);}
+		a.digg {background-image: url(../images/k2/social/digg_16.png);}
+		a.facebook {background-image: url(../images/k2/social/facebook_16.png);}
+		a.googlebuzz {background-image: url(../images/k2/social/googlebuzz_16.png);}
+		a.myspace {background-image: url(../images/k2/social/myspace_16.png);}
+		a.reddit {background-image: url(../images/k2/social/reddit_16.png);}
+		a.stumble {background-image: url(../images/k2/social/stumbleupon_16.png);}
+		a.technorati {background-image: url(../images/k2/social/technorati_16.png);}
+.catItemAttachmentsBlock, .itemAttachmentsBlock {padding:4px;border-bottom:1px dotted #ccc;}
+	.catItemAttachmentsBlock span, .itemAttachmentsBlock span {font-weight:bold;color:#555;padding:0 4px 0 0;}
+	.catItemAttachmentsBlock ul.catItemAttachments, .itemAttachmentsBlock ul.itemAttachments {list-style:none;padding:0;margin:0;display:inline;}
+	.catItemAttachmentsBlock ul.catItemAttachments li, .itemAttachmentsBlock ul.itemAttachments li {display:inline;list-style:none;padding:0 4px;margin:0;text-align:center;}
+	.catItemAttachmentsBlock ul.catItemAttachments li span, .itemAttachmentsBlock ul.itemAttachments li span {font-size:10px;color:#999;font-weight:normal;}
+/* Author block */
+.itemAuthorBlock {background:url("../images/moduletable_title.png") repeat-x scroll 0 100% #FFFFFF;border:1px solid #E7E7E7;margin:0 0 16px;padding:12px;}
+	.itemAuthorBlock img.itemAuthorAvatar {background:#FFF;border:1px solid #EEE;display:block;float:left;margin:0 24px 0 0;padding:6px;}
+	.itemAuthorBlock .itemAuthorDetails {margin:0;padding:4px 0 0 0;}
+	.itemAuthorBlock .itemAuthorDetails h3.itemAuthorName {margin:0 0 4px 0;padding:0;font-weight:normal;}
+	.itemAuthorBlock .itemAuthorDetails p {margin:6px 0;}
+	.itemAuthorBlock .itemAuthorDetails span.itemAuthorUrl {font-weight:bold;color:#555;border-right:1px solid #ccc;padding:0 8px 0 0;margin:0 4px 0 0;}
+	.itemAuthorBlock .itemAuthorDetails span.itemAuthorEmail {font-weight:bold;}
+	.itemAuthorBlock .itemAuthorDetails span.itemAuthorUrl a,
+	.itemAuthorBlock .itemAuthorDetails span.itemAuthorEmail a {font-weight:normal;}
+/* Author latest */
+.itemRelated {float:right;margin-bottom:16px;overflow:hidden;width:49%;}
+.itemRelated h3{background:url("../images/moduletable_title.png") repeat-x scroll 0 100% #FFF;border:1px solid #E7E7E7;font-size:12px;height:35px;line-height:35px;margin:0 0 12px;padding:0 12px;}
+.itemRelated ul li{background:url("../images/arrow.png") no-repeat scroll 0 12px transparent;padding-left:16px !important;border-bottom:1px dotted #DDD;padding:2px;}
+/* Related by tag */
+.itemAuthorLatest {float:left;margin-bottom:16px;overflow:hidden;width:49%;}
+.itemAuthorLatest h3{background:url("../images/moduletable_title.png") repeat-x scroll 0 100% #FFF;border:1px solid #E7E7E7;font-size:12px;height:35px;line-height:35px;margin:0 0 12px;padding:0 12px;}
+.itemAuthorLatest ul li{background:url("../images/arrow.png") no-repeat scroll 0 12px transparent;padding-left:16px !important;border-bottom:1px dotted #DDD;padding:2px;}
+/* Video */
+.latestItemVideoBlock, .catItemVideoBlock, .itemVideoBlock {margin:0 0 16px 0;padding:16px;background:#010101 url(../images/k2/system/videoplayer-bg.gif) repeat-x bottom;}
+	.catItemVideoBlock .catItemVideoEmbedded, .itemVideoBlock .itemVideoEmbedded {text-align:center;} /* for embedded videos (not using AllVideos) */
+	.latestItemVideoBlock span.latestItemVideo, .catItemVideoBlock span.catItemVideo, .itemVideoBlock span.itemVideo {display:block;overflow:hidden;}
+	.itemVideoBlock span.itemVideoCaption {color:#eee;float:left;display:block;font-size:11px;font-weight:bold;width:60%;}
+	.itemVideoBlock span.itemVideoCredits {color:#eee;float:right;display:block;font-style:italic;font-size:11px;width:35%;text-align:right;}
+/* Image Gallery */
+.catItemImageGallery, .itemImageGallery {margin:0 0 16px 0;padding:0;}
+/* Article navigation */
+.itemNavigation {background:#F9F9F9;border-bottom:1px dotted #DDDDDD;border-top:1px dotted #DDDDDD;font-size:90%;margin:0 0 24px;padding:4px 8px;}
+	.itemNavigation span.itemNavigationTitle {color:#202020;}
+	.itemNavigation a.itemPrevious {padding:0 12px;}
+	.itemNavigation a.itemNext {padding:0 12px;}
+/* Comments */
+.itemComments {}	
+	.itemComments ul.itemCommentsList {margin:0 0 16px;padding:0;list-style:none;}
+	.itemComments ul.itemCommentsList li {padding:2px;margin:0;border-bottom:1px dotted #ddd;}
+	.itemComments ul.itemCommentsList li.authorResponse {background:url(../images/k2/system/stripes.png) repeat;}
+	.itemComments ul.itemCommentsList li img {background:#FFF;border:1px dotted #DDD;float:left;margin:6px 20px 0 0;padding:4px;}
+	.itemComments ul.itemCommentsList li span.commentDate {border-right:1px solid #DDD;color:#999;margin:0 8px 0 0;padding:0 4px 0 0;}
+	.itemComments ul.itemCommentsList li span.commentAuthorName {}
+	.itemComments ul.itemCommentsList li p {padding:4px 0;}
+	.itemComments ul.itemCommentsList li span.commentAuthorEmail {display:none;}
+	.itemComments ul.itemCommentsList li span.commentLink {float:right;}
+	.itemComments ul.itemCommentsList li span.commentLink a {font-size:11px;color:#999;text-decoration:underline;}
+	.itemComments ul.itemCommentsList li span.commentLink a:hover {font-size:11px;color:#555;text-decoration:underline;}
+.itemCommentsPagination {padding:4px;margin:0 0 24px 0;}
+	.itemCommentsPagination span.pagination {display:block;float:right;clear:both;}
+.itemComments h3 {background:url("../images/moduletable_title.png") repeat-x scroll 0 0 transparent;border:1px solid #E7E7E7;font-size:12px;height:35px;line-height:35px;margin:0 0 12px;padding:0 12px;}
+	.itemCommentsForm p.itemCommentsFormNotes {font-size:90%;}
+	.itemCommentsForm form {}
+	.itemCommentsForm form label.formComment {display:block;margin:12px 0 0 2px;}
+	.itemCommentsForm form label.formName {display:block;margin:12px 0 0 2px;}
+	.itemCommentsForm form label.formEmail {display:block;margin:12px 0 0 2px;}
+	.itemCommentsForm form label.formUrl {display:block;margin:12px 0 0 2px;}
+	.itemCommentsForm form label.formRecaptcha {display:block;margin:12px 0 0 2px;}
+	.itemCommentsForm form textarea.inputbox {display:block;width:350px;height:160px;margin:0;}
+	.itemCommentsForm form input.inputbox {display:block;width:350px;margin:0;}
+	.itemCommentsForm form input#submitCommentButton {margin:12px 0 0 0;}
+	.itemCommentsForm form span#formLog {margin:0 0 0 20px;padding:0 0 0 20px;font-weight:bold;color:#CF1919;}
+	.itemCommentsForm form .formLogLoading {background:url(../images/k2/system/loading.gif) no-repeat left center;}
+/* Back to top link */
+.itemBackToTop {text-align:right;margin-bottom:20px;}
+	.itemBackToTop a {text-decoration:underline;}
+	.itemBackToTop a:hover {text-decoration:underline;}
+
+.latestItemsContainer {float:left;}
+.latestItemsUser, .userBlock {background:url("../images/moduletable_title.png") repeat-x scroll 0 100% #FFF;border:1px solid #E7E7E7;margin:0 0 16px;padding:12px;}
+		.latestItemsUser img, .userBlock img {background:none repeat scroll 0 0 #FFFFFF;border:1px solid #EEEEEE;display:block;float:left;margin:0 24px 0 0;padding:6px;}
+		.latestItemsUser h2, .userBlock h2 {font-size:125%;font-weight:normal;margin:0 0 4px;padding:0;}
+		.latestItemsUser p.ulatestItemsUserDescription, .userBlock p.userDescription {padding:0!important;margin:0!important;}
+		.latestItemsUser p.latestItemsUserAdditionalInfo, .userBlock p.userAdditionalInfo {padding:4px 0;margin:8px 0 0 0;border-top:1px dotted #ccc;}
+			span.latestItemsUserURL, span.userURL {font-weight:bold;color:#555;}
+			span.latestItemsUserEmail, span.userEmail {font-weight:bold;color:#555;}
+/* --- Category block --- */
+.latestItemsCategory, .itemListCategory {background:url("../images/moduletable_title.png") repeat-x scroll 0 100% #FFF;border:1px solid #E7E7E7;margin:0 0 16px;padding:12px;}
+	span.catItemAddLink, span.userItemAddLink {clear:both;display:block;text-align:right;padding:4px;margin:0 0 4px 0;border-bottom:2px dashed #ddd;}
+	.latestItemsCategoryImage {text-align:center;}
+	.latestItemsCategoryImage img, .itemListCategory img {float:left;display:block;background:#fff;padding:4px;border:1px solid #ddd;margin:0 8px 0 0;}
+	.latestItemsCategory h2, .itemListCategory h2 {font-size:125%;font-weight:normal;margin:0 0 4px;padding:0;}
+	.latestItemsCategory p, .itemListCategory p {margin:2px 0!important;}
+/* --- Sub-category block --- */
+	.itemListSubCategories h3 {font-size:125%;margin:30px 0 12px 0;}
+		.subCategoryContainer {float:left;}
+			.subCategory {margin:4px 12px 4px 0;}
+				.subCategory a.subCategoryImage,
+				.subCategory a.subCategoryImage:hover {text-align:center;display:block;}
+				.subCategory a.subCategoryImage img{background:none repeat scroll 0 0 #FFF;border:1px dotted #DDD;margin:0 8px 0 0;padding:6px;}
+				.subCategory a.subCategoryImage:hover img{} 
+				.subCategory h2 {font-size:125%;font-weight:normal;margin:16px 0 0;}
+				.subCategory h2 a {color:#202020;}
+/* --- Item groups --- */
+	#itemListLinks {background:#f7fafe;border:1px solid #ddd;margin:8px 0;padding:8px;}
+		.itemContainer {float:left;margin:30px 0 0;}
+/* --- Item block for each item group --- */
+.catItemView,
+.latestItemView {padding:0 20px 0 0;} /* this is the item container for this view - we add a generic padding so that items don't get stuck with each other */
+	/* Additional class appended to the element above for further styling per group item */
+	.groupLinks {padding:0;margin:0;}
+/* Anchor link to comments */
+.latestItemCommentsLink, .catItemCommentsLink, .userItemCommentsLink {font-size:90%;display:inline;margin:0 8px 0 4px;padding:0 8px 0 0;border-right:1px solid #ccc;}
+/* Read more link */
+.latestItemReadMore, .userItemReadMore, .catItemReadMore {font-size:90%;display:inline;}
+	.genericItemReadMore{font-size:100%;}
+/* Modified date */
+span.catItemDateModified {display:block;text-align:right;padding:4px;margin:4px 0;color:#999;border-top:1px solid #ddd;}
+/* Items presented in a list */
+h2.latestItemTitleList{font-size:14px;padding:2px 0;margin:8px 0 2px 0;font-family:Arial, Helvetica, sans-serif;border-bottom:1px dotted #ccc;line-height:normal;}
+
+/*----------------------------------------------------------------------
+	Component: Register & profile page views (register.php & profile.php)
+----------------------------------------------------------------------*/
+.k2AccountPage table tr td label {white-space:nowrap;}
+img.k2AccountPageImage {border:4px solid #ddd;margin:10px 0;padding:0;display:block;}
+.k2AccountPage .k2AccountPageNotice {padding:8px;}
+.k2AccountPage .k2AccountPageUpdate {border-top:1px dotted #ccc;margin:8px 0;padding:8px;text-align:right;}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_comments
+----------------------------------------------------------------------*/
+
+/* Latest Comments */
+.k2LatestCommentsBlock ul li {border-top:none!important;background:none!important;padding:0 0 12px 0!important;margin:0!important;border-bottom:1px dashed #DDD!important;margin-bottom:12px!important;font-family:Georgia,"Times New Roman",Times,serif;font-style:italic;line-height:1.8!important;}
+.k2LatestCommentsBlock ul li a.lcAvatar img {background:#FFF;border:1px dotted #DDD;display:block;float:right;margin:2px 0 2px 8px;padding:4px;}
+.k2LatestCommentsBlock ul li a {display:block;}
+.k2LatestCommentsBlock ul li span.lcUsername {color:#999;}
+.k2LatestCommentsBlock ul li span.lcCommentDate {color:#999;}
+/* Top Commenters */
+.k2TopCommentersBlock ul li span.tcLatestCommentDate {color:#999;}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_content
+----------------------------------------------------------------------*/
+.k2ItemsBlock ul li {background:transparent!important;padding:6px 0 !important;}
+.k2ItemsBlock ul li a.moduleItemTitle {color:#202020;display:block;font-size:160%;}
+.k2ItemsBlock ul li .moduleItemAuthor {color:#999999;font-size:90%;}
+.k2ItemsBlock ul li a.moduleItemAuthorAvatar img {background:none repeat scroll 0 0 #FFF;border:1px dotted #DDD;display:block;float:right;height:auto;margin:0 4px 0 0;padding:2px;width:14px;}
+.k2ItemsBlock ul li .moduleItemIntrotext {display:block;padding:4px 0;line-height:160%;}
+.k2ItemsBlock ul li .moduleItemIntrotext a.moduleItemImage img {border:1px dotted #DDD;float:left;margin:2px 8px 4px 0;padding:0;}
+	.moduleItemExtraFields ul li span.moduleItemExtraFieldsLabel {display:block;float:left;font-weight:bold;margin:0 4px 0 0;width:30%;}
+.k2ItemsBlock ul li a.moduleItemCategory {font-size:90%;}
+.k2ItemsBlock ul li .moduleItemTags {font-size:90%;}
+.k2ItemsBlock ul li .moduleItemTags a {padding:0 2px;}
+.k2ItemsBlock ul li .moduleAttachments {font-size:90%;}
+.k2ItemsBlock ul li a.moduleItemComments {font-size:90%;border-right:1px solid #ccc;padding:0 4px 0 0;margin:0 8px 0 0;}
+.k2ItemsBlock ul li span.moduleItemHits {font-size:90%;border-right:1px solid #ccc;padding:0 4px 0 0;margin:0 8px 0 0;}
+.k2ItemsBlock ul li a.moduleItemReadMore {font-size:90%;}
+.k2ItemsBlock a.moduleCustomLink {font-size:90%;}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_login
+----------------------------------------------------------------------*/
+
+	.k2LoginBlock fieldset.input {margin:0;padding:0 0 8px 0;}
+	.k2LoginBlock fieldset.input p {margin:0;padding:0 0 4px 0;}
+	.k2LoginBlock fieldset.input p label {display:block;}
+	.k2LoginBlock fieldset.input p input {display:block;}
+	.k2LoginBlock fieldset.input p#form-login-remember label,
+	.k2LoginBlock fieldset.input p#form-login-remember input {display:inline;}
+	.k2UserBlock p.ubGreeting {border-bottom:1px dotted #ccc;}
+	.k2UserBlock .k2UserBlockDetails span.ubName {display:block;font-weight:bold;font-size:14px;}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_tools
+----------------------------------------------------------------------*/
+
+/* --- Authors --- */
+.k2AuthorsListBlock ul li a.abAuthorLatestItem {display:block;clear:both;}
+/* --- Breadcrumbs --- */
+.k2BreadcrumbsBlock span.bcTitle {padding:0 4px 0 0;color:#999;}
+.k2BreadcrumbsBlock span.bcSeparator {padding:0 4px;font-size:14px;}
+/* --- Calendar --- */
+.k2CalendarBlock {height:190px;margin-bottom:8px;} /* use this height value so that the calendar height won't change on Month change via ajax */
+.k2CalendarLoader {background:#fff url(../images/k2/system/k2CalendarLoader.gif) no-repeat 50% 50%;}
+table.calendar {margin:0 auto;background:#fff;border-collapse:collapse;}
+table.calendar tr td {text-align:center;vertical-align:middle;padding:2px;border:1px solid #f4f4f4;background:#fff;}
+table.calendar tr td.calendarNavMonthPrev {background:#f3f3f3;text-align:left;}
+table.calendar tr td.calendarNavMonthPrev a {font-size:20px;text-decoration:none;}
+table.calendar tr td.calendarNavMonthPrev a:hover {font-size:20px;text-decoration:none;}
+table.calendar tr td.calendarCurrentMonth {background:#f3f3f3;}
+table.calendar tr td.calendarNavMonthNext {background:#f3f3f3;text-align:right;}
+table.calendar tr td.calendarNavMonthNext a {font-size:20px;text-decoration:none;}
+table.calendar tr td.calendarNavMonthNext a:hover {font-size:20px;text-decoration:none;}
+table.calendar tr td.calendarDayName {background:#e9e9e9;font-size:11px;width:14.2%;}
+table.calendar tr td.calendarDateEmpty {background:#fbfbfb;}
+table.calendar tr td.calendarDate {}
+table.calendar tr td.calendarDateLinked {padding:0;}
+table.calendar tr td.calendarDateLinked a {display:block;padding:2px;text-decoration:none;background:#eee;}
+table.calendar tr td.calendarDateLinked a:hover {display:block;background:#135cae;color:#fff;padding:2px;text-decoration:none;}
+table.calendar tr td.calendarToday {background:#135cae;color:#fff;}
+table.calendar tr td.calendarTodayLinked {background:#135cae;color:#fff;padding:0;}
+table.calendar tr td.calendarTodayLinked a {display:block;padding:2px;color:#fff;text-decoration:none;}
+table.calendar tr td.calendarTodayLinked a:hover {display:block;background:#BFD9FF;padding:2px;text-decoration:none;}
+/* --- Category Tree Select Box --- */
+.k2CategorySelectBlock form select {width:auto;}
+/* --- Category List/Menu --- */
+.k2CategoriesListBlock ul li {background:url("../images/arrow.png") no-repeat scroll 0 12px transparent;padding-left:16px!important;}
+.k2CategoriesListBlock ul li.activeCategory a {font-weight:bold;}
+.k2CategoriesListBlock ul li ul{border-left:1px dotted #DDD;margin:0 0 6px 10px;padding:0 0 0 12px;}
+/* --- Tag Cloud --- */
+.k2TagCloudBlock {padding:8px 0;}
+.k2TagCloudBlock a {color:#555;padding:4px;float:left;display:block;}
+.k2TagCloudBlock a:hover {padding:4px;float:left;display:block;background:#135cae;color:#fff;text-decoration:none;}
+/* --- Google Search --- */
+#k2Container .gsc-branding-text {text-align:right;}
+#k2Container .gsc-control {width:100%;}
+#k2Container .gs-visibleUrl {display:none;}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_users
+----------------------------------------------------------------------*/
+
+	a.ubUserFeedIcon,
+	a.ubUserFeedIcon:hover {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;background:url(../images/k2/fugue/feed.png) no-repeat 50% 50%;}
+	a.ubUserFeedIcon span,
+	a.ubUserFeedIcon:hover span {display:none;}
+	a.ubUserURL,
+	a.ubUserURL:hover {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;background:url(../images/k2/fugue/globe.png) no-repeat 50% 50%;}
+	a.ubUserURL span,
+	a.ubUserURL:hover span {display:none;}
+	span.ubUserEmail {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;background:url(../images/k2/fugue/mail.png) no-repeat 50% 50%;overflow:hidden;}
+	span.ubUserEmail a {display:inline-block;margin:0;padding:0;width:16px;height:16px;text-indent:-9999px;}
+.k2UsersBlock ul li h3 {clear:both;margin:8px 0 0 0;padding:0;}
+
+/* --- OTHER --- */
+#sbox-content #container {padding: 20px}
+#sbox-content #cart th,#sbox-content #cart td,#container #cart th,#container #cart td {padding: 5px 10px}
+#sbox-content #cart th{color: #fff}

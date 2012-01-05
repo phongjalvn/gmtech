@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="template">
+  <name>Mekong</name>
+  <version>1.0</version>
+  <creationDate>27 August 2011</creationDate>
+  <author>vietprotocol</author>
+  <authorEmail>htkieuphuong@gmail.com</authorEmail>
+  <authorUrl>www.thietkewebsite.com</authorUrl>
+  <copyright></copyright>
+  <license></license>
+  <description>Template for Mekong</description>
+  <positions>
+    <position>left</position>
+    <position>right</position>
+    <position>top</position>
+    <position>menu</position>
+    <position>lang</position>
+    <position>search</position>
+    <position>banner</position>
+	<position>tfooter</position>
+    
+	<position>gioithieu</position>
+	<position>img-link</position>
+	<position>breadcrumb</position>
+	<position>luottruycap</position>
+	<position>copyright</position>
+	<position>gotop</position>
+  </positions>
+</install>

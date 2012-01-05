@@ -1,0 +1,30 @@
+.nivoSlider{position:relative;background:#202834 url(loading.gif) no-repeat 50% 50%;}
+.nivoSlider img{position:absolute;top:0;left:0;display:none}
+.nivoSlider a.nivo-imageLink{
+	position:absolute;top:0;left:0;width:100%;
+	height:100%;border:0;
+	padding:0;margin:0;z-index:6;display:none
+}
+.nivo-slice{display:block;position:absolute;z-index:5;height:100%}
+.nivo-box{display:block;position:absolute;z-index:5}
+.nivo-caption{position:absolute;left:0;bottom:0;background:#000;color:#fff;opacity:.8;width:100%;z-index:8}
+.nivo-caption p{padding:5px;margin:0}
+.nivo-caption a{display:inline!important}
+.nivo-html-caption{display:none}
+.nivoSlider a{border:0}
+.nivo-directionNav a{position:absolute;top:45%;z-index:9;cursor:pointer}
+.nivo-prevNav{left:0}
+.nivo-nextNav{right:0}
+.nivo-controlNav a{position:relative;z-index:9;cursor:pointer}
+.nivo-controlNav a.active{font-weight:bold}
+.nivo-controlNav{bottom:-70px;left:29%;position:absolute}
+.nivo-controlNav img{display:inline;margin-right:10px;position:relative}
+.nivo-controlNav a.active img{}
+.nivo-directionNav a{
+	display:block;width:38px;height:38px;background:url(arrows_e.png) no-repeat;
+	text-indent:-9999px;border:0}
+a.nivo-nextNav{background-position:-39px 0;right:5px}
+a.nivo-prevNav{left:5px}.nivoSlider{}
+.nivoSlider .nivo-controlNav{position:absolute;left:47%;bottom:14px;z-index:9999;}
+.nivoSlider .nivo-controlNav a{display:block;width:15px;height:14px;background:url(bullets.png) no-repeat;text-indent:-9999px;border:0;margin-right:8px;float:left}
+.nivoSlider .nivo-controlNav a.active{background-position:bottom right}

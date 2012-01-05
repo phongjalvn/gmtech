@@ -1,0 +1,95 @@
+.jvk2ItemsBlock {
+	clear: both;
+	width: 100%;
+}
+.jv-k2items-rows {
+	clear: both;
+	width: 100%;
+	display: inline-block;
+	border: none;
+	margin-bottom: 5px;
+}
+.jv-k2item-tr {
+	background: url(../images/body-tr.png) no-repeat top right;
+	margin: 0 0 0 9px;
+}
+.jv-k2item-tl {
+	background: url(../images/body-tl.png) no-repeat top left;
+	margin: 0 0 0 -9px;
+	height: 10px;
+}
+.jv-k2item-cr {
+	background: url(../images/body-cr.png) repeat-y center right;
+	margin: 0 0 0 9px;
+}
+.jv-k2item-cl {
+	background: url(../images/body-cl.png) repeat-y center left;
+	margin: 0 0 0 -9px;
+}
+.jv-k2item-cc {
+	position: relative;
+	margin: 0;
+	padding: 1px 20px 10px;
+}
+.jv-k2item-br {
+	background: url(../images/body-br.png) no-repeat bottom right;
+	margin: 0 0 0 9px;
+}
+.jv-k2item-bl {
+	background: url(../images/body-bl.png) no-repeat bottom left;
+	margin: 0 0 0 -9px;
+	height: 8px;
+}
+.jv-k2items-rows-first {
+	border-top: none !important;
+}
+.jv-k2item {
+	float: left;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.jv-k2item-last {
+	float: right;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.jv-k2items-rows .jv-k2item .jv-k2item-pad {
+	padding: 5px 5px 5px 10px;
+}
+.jv-k2items-rows .jv-k2item-last .jv-k2item-pad {
+	padding: 5px 10px 5px 0px;
+}
+.jv-k2item .jv-k2item-pad {
+	border: none;
+}
+.jv-k2item-pad .moduleItemCategory {
+	color: #3d3d3d;
+	font-weight: bold;
+	font-size: 120%;
+	text-decoration: none;
+}
+.jv-k2item-pad .moduleItemCategory:hover,
+.jv-k2item-pad .moduleItemCategory:active,
+.jv-k2item-pad .moduleItemCategory:focus {
+	color: #5697E3;
+	text-decoration: underline;
+}
+.jv-k2item-pad .moduleItemTitle {
+	color: #3d3d3d;
+	font-weight: bold;
+	text-decoration: none;
+}
+.jv-k2item-pad .moduleItemTitle:hover,
+.jv-k2item-pad .moduleItemTitle:active,
+.jv-k2item-pad .moduleItemTitle:focus {
+	color: #5697E3;
+	text-decoration: underline;
+}
+.jv-k2item-pad .moduleItemImage {
+	display: block;
+	text-align: center;
+}
+.jv-k2item-pad .moduleItemImage img {
+	margin-bottom: 5px;
+}

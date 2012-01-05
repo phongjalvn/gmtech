@@ -1,0 +1,142 @@
+div.yt_section_title a.yt_section_title,
+div.yt_section_title a.yt_section_title:hover {
+}
+
+div.yt_section_title span.yt_section_title {
+	font-size: 18px;
+	font-weight: bold;
+	color: #111111;
+}
+/*
+div.yt_section_title a:hover span.yt_section_title {
+}
+*/
+
+div.yt_category_title a,
+div.yt_category_title a:hover {
+}
+
+div.yt_category_title span {
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: normal;
+	color: #135cae;
+}
+/*
+div.yt_category_title a:hover span {
+}
+*/
+
+div.yt_item_title a, 
+div.yt_item_title a:hover {
+}
+
+div.yt_item_title span {
+	font-size: 12px;
+	font-weight: bold;
+	color: #135cae;
+}
+/*
+div.yt_item_title a:hover span {
+}
+*/
+
+div.yt_item_description{
+	color: #555555;
+	font-size: 11px;
+}
+
+div.yt_item_info div.yt_item_nb_view span,
+div.yt_item_info div.yt_item_comment span,
+div.yt_item_info div.yt_item_created span,
+div.yt_item_info div.yt_item_readmore span{
+	color:#999999;
+	font-size: 11px;
+}
+
+div.yt_list_others>ul>li a{
+	color:#135cae;
+	font-size: 12px;
+	font-weight: normal;
+}
+div.yt_list_others>ul>li a.hover,
+div.yt_list_others>ul>li a:hover{
+	color:#135cae;
+}
+div.yt_list_others>ul>li span.created{
+	color:#999999;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+div.yt_categories_nav ul.yt_categories_nav span{
+	color: #333333;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+div.yt_categories_nav ul.yt_categories_nav li.selected span{
+	color: #135cae;
+}
+
+div.yt_browsers div.btn >a >span{
+	color: #999999;
+	font-size: 11px;
+}
+
+
+.theme1 div.yt_item_image > div.yt_item_title span{
+	color: #fff;
+	font-weight: bold;
+	font-size: 11px;	
+}
+.theme1 div.yt_item_image > div.yt_item_title a:hover{
+	text-decoration: none;
+}
+.theme1 div.yt_item_image > div.yt_item_title a:hover span{
+	color: #135cae;
+	text-shadow: #000 0.1em 0.1em 0.2em;
+}
+
+.theme1 div.yt_item_info div.yt_item_nb_view span,
+.theme1 div.yt_item_info div.yt_item_comment span,
+.theme1 div.yt_item_info div.yt_item_created span,
+.theme1 div.yt_item_info div.yt_item_readmore span{
+	color:#555555;
+	font-size: 11px;
+}
+
+.theme1 div.yt_list_others>ul>li a{
+	color:#555555;
+	font-size: 11px;
+	font-weight: bold;
+}
+.theme1 div.yt_list_others>ul>li a.hover,
+.theme1 div.yt_list_others>ul>li a:hover{
+	color:#135cae;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.theme3 div.yt_categories_nav ul.yt_categories_nav span{
+	text-transform: none;
+	color: #555555;
+}
+
+.theme4 span.pre_categories_nav{
+	color: #135cae;
+	font-size: 12px;
+}
+
+.theme4 div.yt_categories_nav ul.yt_categories_nav div > span {
+	color: #555555;
+}
+
+.theme4 div.yt_categories_nav ul.yt_categories_nav li.selected>div>span {
+	color: #fff;
+	text-shadow: #000 0.1em 0.1em 0.2em; 
+}
+.theme4 div.yt_browsers div.btn >a >span{
+	color: #135cae;
+	font-weight: bold;
+}

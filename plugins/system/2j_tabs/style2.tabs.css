@@ -1,0 +1,85 @@
+/* Skin */
+.twoj_tabs_class2 {
+
+}
+
+.twoj_tabs_class2 .ui-tabs-nav, 
+.twoj_tabs_class2 .ui-tabs-panel { }
+.twoj_tabs_class2 .ui-tabs-nav {  padding: 0 0 0 3px !important;}
+
+
+.twoj_tabs_class2 .ui-tabs-nav li{
+   margin: 0 0px 0 10px!important;
+}
+
+.twoj_tabs_class2.twoj_right_align .ui-tabs-nav li{
+	margin: 0 5px 0 0!important;
+}
+
+/* ================================*/
+.twoj_tabs_class2 .ui-tabs-nav a,
+.twoj_tabs_class2 .ui-tabs-nav a span {
+    padding: 0 12px;
+	 background-color: #d8d8d8; 
+}
+
+.twoj_tabs_class2.enable_hover .ui-tabs-nav  a:hover, 
+.twoj_tabs_class2.enable_hover .ui-tabs-nav  a:hover span { background-color: #c5c5c5; }
+
+.twoj_tabs_class2 .ui-tabs-nav a {
+    margin: 2px 0 0; /* position: relative makes opacity fail for disabled tab in IE */
+    padding-left: 0;
+}
+.twoj_tabs_class2 .ui-tabs-nav .twoj_li_bottom a {
+	 margin: 2px 0 0; /* position: relative makes opacity fail for disabled tab in IE */
+}
+
+.twoj_tabs_class2 .ui-tabs-nav a,
+.twoj_tabs_class2 .ui-tabs-nav a span,
+.twoj_tabs_class2 .ui-tabs-nav a:link, 
+.twoj_tabs_class2 .ui-tabs-nav a:visited { color: #8c8c8c; }
+
+.twoj_tabs_class2 .ui-tabs-nav a:hover,
+.twoj_tabs_class2 .ui-tabs-nav a:hover span  { color: #3d3d3d; }
+
+.twoj_tabs_class2 .ui-tabs-nav .ui-tabs-selected a,
+.twoj_tabs_class2 .ui-tabs-nav .ui-tabs-selected a span,
+.twoj_tabs_class2 .ui-tabs-nav .ui-tabs-selected a:link, 
+.twoj_tabs_class2 .ui-tabs-nav .ui-tabs-selected a:visited { color: #fff; }
+
+.twoj_tabs_class2 .ui-tabs-nav .ui-tabs-selected a,
+.twoj_tabs_class2 .ui-tabs-nav .ui-tabs-selected a span,
+.twoj_tabs_class2 .ui-tabs-nav .ui-tabs-selected a:hover,
+.twoj_tabs_class2 .ui-tabs-nav .ui-tabs-selected a:hover span {
+    background-color: #727272;
+}
+.twoj_tabs_class2 .ui-tabs-nav .twoj_li_top.ui-tabs-selected a {
+    position: relative;
+    top: 1px;
+    z-index: 2;
+    margin-top: 0;
+}
+.twoj_tabs_class2 .ui-tabs-nav .twoj_li_bottom.ui-tabs-selected a {
+	 position: relative;
+	 top: 0px;
+	 z-index: 2;
+	 margin: 0; /* position: relative makes opacity fail for disabled tab in IE */
+}
+
+.twoj_tabs_class2 .ui-tabs-nav a span {
+	 padding: 2px 0px 2px 12px;
+}
+
+.twoj_tabs_class2 .ui-tabs-nav  .twoj_li_top.ui-tabs-selected a span {
+    padding: 3px 0px 5px 12px;
+}
+
+
+.twoj_tabs_class2 .ui-tabs-nav  .twoj_li_bottom.ui-tabs-selected a span {  
+	padding: 3px 0px 5px 12px;
+}
+
+.twoj_tabs_class2 .ui-tabs-panel {
+   border: 1px solid #727272;
+   padding: 10px;
+}

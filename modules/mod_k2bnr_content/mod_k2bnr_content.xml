@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+  <name>K2 BNR Content</name>
+  <author>BNR Branding Solutions</author>
+  <creationDate>June 21, 2011</creationDate>
+  <copyright>Copyright (c) 2011 BNR Branding Solutions, LLC. All rights reserved.</copyright>
+  <authorEmail>support@bnrbranding.com</authorEmail>
+  <authorUrl>www.bnrbranding.com</authorUrl>
+  <version>1.4.0</version>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <description>K2 BNR Content</description>
+  <files>
+    <filename module="mod_k2bnr_content">mod_k2bnr_content.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl</folder>
+  </files>
+  <languages>
+    <language tag="en-GB">en-GB.mod_k2bnr_content.ini</language>
+  </languages>
+  <params addpath="/administrator/components/com_k2/elements/">
+    <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	<param name="getTemplate" type="moduletemplate" modulename="mod_k2bnr_content" default="Default" label="Select sub-template" description="This module utilizes on-the-fly MVC template overrides. What this means is that you can create a new sub-template folder for this module within your Joomla! template's /html/mod_k2_content/ folder. The module will then pickup the new sub-template auto-magically, without you editing any XML file or doing any other non-designer work!" />
+    <param name="" type="header" default="Item Layout Options" label="" description="" />
+    <param name="itemTitle" type="radio" default="1" label="Title" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemAuthor" type="radio" default="1" label="Author" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemAuthorAvatar" type="radio" default="1" label="Author avatar" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemIntroText" type="radio" default="1" label="Introtext" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemIntroTextWordLimit" type="text" size="4" default="" label="Introtext word limit" description="Leave blank to diasble. If you enable this option, all html tags from the text will be cleaned up to make sure the html structure of the site does not brake." />
+    <param name="itemImage" type="radio" default="1" label="Image" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemImgSize" type="list" default="XSmall" label="Image size" description="">
+      <option value="XSmall">XSmall</option>
+      <option value="Small">Small</option>
+      <option value="Medium">Medium</option>
+      <option value="Large">Large</option>
+      <option value="XLarge">XLarge</option>
+    </param>
+    <param name="itemVideo" type="radio" default="1" label="Video" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemVideoCaption" type="radio" default="1" label="Video caption" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemVideoCredits" type="radio" default="1" label="Video credits" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemAttachments" type="radio" default="1" label="Attachments" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemTags" type="radio" default="1" label="Tags" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemRelated" type="radio" default="1" label="Related Items" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemRelatedLimit" type="text" default="" label="Related Items Limit" description="" />
+    <param name="itemShareLinks" type="radio" default="1" label="Share (social) links" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemDateCreated" type="radio" default="1" label="Created date and time" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemHits" type="radio" default="1" label="Hits" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemReadMore" type="radio" default="1" label="'Read more...' link" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemExtraFields" type="radio" default="1" label="Extra fields" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemCommentsCounter" type="radio" default="1" label="Comments counter and anchor link" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="" type="header" default="Other Options" label="" description="" />
+    <param name="itemPreText" type="textarea" default="" label="Description text at the top (optional)" description="" cols="40" rows="4" />
+    <param name="itemCustomLink" type="radio" default="0" label="Custom link at the bottom" description="">
+      <option value="0">Hide</option>
+      <option value="1">Show</option>
+    </param>
+    <param name="itemCustomLinkURL" type="text" default="http://" label="Custom link URL" description="" />
+    <param name="itemCustomLinkTitle" type="text" default="" label="Custom link title" description="" />
+  </params>
+  <params group="advanced">
+    <param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+      <option value="1">Use global</option>
+      <option value="0">No caching</option>
+    </param>
+    <param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+  </params>
+</install>

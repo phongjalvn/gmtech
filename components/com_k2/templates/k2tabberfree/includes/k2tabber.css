@@ -1,0 +1,65 @@
+/**
+ * @version		$Id: k2tabber.css $
+ * @package		K2tabber Free
+ * @author		WEBSELF s.n.c. http://www.webself.it starting from JoomlaWorks's code (http://www.joomlaworks.gr)
+ * @copyright	Copyright (c) 2006 - 2010 JoomlaWorks, a business unit of Nuevvo Webware Ltd. All rights reserved.
+ * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+
+
+/* ----------------------- SimpleTabs ----------------------- */
+div.simpleTabs {clear:both;padding:10px 0;}
+ul.simpleTabsNavigation {margin:0 10px;padding:0;text-align:left;white-space:nowrap;}
+ul.simpleTabsNavigation li {list-style:none;display:inline;margin:0;padding:0;}
+
+ul.simpleTabsNavigation li a {border:1px solid #E0E0E0;padding:3px 6px;background-color:#F0F0F0;font-size:14px;text-decoration:none;font-family:Georgia, "Times New Roman", Times, serif;color:#666;}
+ul.simpleTabsNavigation li a:hover {text-decoration:none;background-color:#F6F6F6;font-family:Georgia, "Times New Roman", Times, serif;}
+ul.simpleTabsNavigation li a.current {background-color:#fff;color:#222;border-bottom:1px solid #fff;}
+
+div.simpleTabsContent {border:1px solid #E0E0E0;padding:8px;margin-top:3px;display:none;}
+div.simpleTabsContent.currentTab {display:block;}
+/* End */
+
+
+/* ----------------------- SimpleTabs Other ----------------------- */
+span.simpleTabsx {clear:both;padding:10px 0;}
+ul.simpleTabsNavigationx {margin:0 10px;padding:0;text-align:right;white-space:nowrap;}
+ul.simpleTabsNavigationx li {list-style:none;display:inline;margin:0;padding:0;}
+
+ul.simpleTabsNavigationx li a {border:1px solid #E0E0E0;padding:3px 6px;background-color:#F0F0F0;font-size:11px;text-decoration:none;font-family:Georgia, "Times New Roman", Times, serif;}
+ul.simpleTabsNavigationx li a:hover {text-decoration:none;background-color:#F6F6F6;font-family:Georgia, "Times New Roman", Times, serif;}
+ul.simpleTabsNavigationx li a.current {background-color:#fff;color:#222;border-bottom:1px solid #fff;}
+
+span.simpleTabsContentx {border:1px solid #E0E0E0;padding:8px;margin-top:3px;display:none;}
+span.simpleTabsContentx.currentTab {display:block;}
+span.simpleTabsContentx.first {display:block;}
+/* End */
+
+
+/* ----------------------- itemToolbarx ----------------------- */
+div.itemToolbarx {padding:2px 0;margin:16px 0 0 0;border-top:1px dotted #ccc;border-bottom:1px dotted #ccc;background:#f7fafe;}
+	div.itemToolbarx table {text-align:left;list-style:none;padding:0;margin:0;}
+	div.itemToolbarx table td {display:inline;list-style:none;padding:0 4px 0 8px;margin:0;border-left:1px solid #ccc;text-align:center;background:none;font-size:12px;}
+	div.itemToolbarx table > li:first-child {border:none;} /* remove the first CSS border from the left of the toolbar */
+	div.itemToolbarx table td a {font-size:12px;font-weight:normal;}
+	div.itemToolbarx table td a:hover {}
+	div.itemToolbarx table td a span {}
+	div.itemToolbarx table td a.itemPrintLink {}
+	div.itemToolbarx table td a.itemPrintLink span {}
+	div.itemToolbarx table td a.itemEmailLink {}
+	div.itemToolbarx table td a.itemEmailLink span {}
+	div.itemToolbarx table td a.itemVideoLink {}
+	div.itemToolbarx table td a.itemVideoLink span {}
+	div.itemToolbarx table td a.itemImageGalleryLink {}
+	div.itemToolbarx table td a.itemImageGalleryLink span {}
+	div.itemToolbarx table td a.itemCommentsLink {}
+	div.itemToolbarx table td a.itemCommentsLink span {}
+	div.itemToolbarx table td a img {vertical-align:middle;}
+	div.itemToolbarx table td span.itemTextResizerTitle {}
+	div.itemToolbarx table td a#fontDecrease {margin:0 0 0 2px;}
+	div.itemToolbarx table td a#fontDecrease img {width:13px;height:13px;background:url(../../../images/system/font_decrease.gif) no-repeat;}
+	div.itemToolbarx table td a#fontIncrease {margin:0 0 0 2px;}
+	div.itemToolbarx table td a#fontIncrease img {width:13px;height:13px;background:url(../../../images/system/font_increase.gif) no-repeat;}
+	div.itemToolbarx table td a#fontDecrease span,
+	div.itemToolbarx table td a#fontIncrease span {display:none;}
+/* End */

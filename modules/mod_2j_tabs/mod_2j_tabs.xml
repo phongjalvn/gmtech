@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>2J Tabs</name>
+	<author>Dron (2joomla.net)</author>
+	<creationDate>2008</creationDate>
+	<copyright>(C) 2008 All rights reserved.</copyright>
+	<license></license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.2</version>
+	<description>
+	2JoomlaNet specialize in creating quality Joomla 1.0.x and Joomla 1.5 Native extension with user friendly interfaces.
+	</description>
+	<files>
+		<filename module="mod_2j_tabs">mod_2j_tabs.php</filename>
+	</files>
+	
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		<param name="@spacer1" type="spacer" default="&lt;br/&gt;&lt;strong&gt;Content options&lt;/strong&gt;&lt;hr/&gt;" label="" description="" />
+		<param name="cat_or_sec" type="list" default="0" label="Select content from" description="">
+			<option value="0">Category</option>
+			<option value="1">Section</option>
+			<option value="2">Whole site</option>
+			<option value="3">Modules positions</option>
+		</param>
+		<param name="catid" type="mos_category" default="0" label="Category" description="A content cateogry" />
+		<param name="secid" type="mos_section" default="0" label="Section" description="A content Section" />
+		<param name="load_module" type="textarea" rows="5" cols="40" label="Modules positions" description="please specify modules postions from which tabs should load modules (Modules positions could be specified few ways using delimiter for example:  left#; rigth#; user1#; delimiter is  #;  or you can write single value per line, without any delimiter), it's working this way in the case if you select Modules positions value in Select content from option" />
+		<param name="load_module_style" type="list" default="-2" label="Output style for module position" description="If selected output into tabs modules position, with this option you can select output way">
+			<option value="0">Wrapped by Table - Column</option>
+			<option value="1">Wrapped by Table - Horizontal</option>
+			<option value="-2">Wrapped by Divs</option>
+			<option value="-3">Wrapped by Multiple Divs</option>
+			<option value="-1">No wrapping - raw output</option>
+		</param>
+		<param name="content_count_word" type="text" default=""  label="Intro length (in symbols)" description="Here you can set amount of the symbols which will be showed from the begin of the article" />
+		<param name="content_count_cut_word" type="radio" default="1" label="Cut mid-word" description="In the case if you select Yes, then it cut off words in the middle in the case No words will not be cut mid-word. This option working when you specify length of the intro text in Intro length option">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="content_count_cut_text" type="text" default="" label="Symbols after cut off" description="" />
+		<param name="image" type="radio" default="1" label="Show images" description="Display content item images">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_autor" type="radio" default="0" label="Show Author" description="Display author name in content ">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_created" type="radio" default="0" label="Show creation date" description="Display date of creation in content ">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_modified" type="radio" default="0"  label="Show modified date" description="Display date of modification in content ">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_fulltext" type="radio" default="0"  label="Show full text" description="Display full text of the article, not only intro text ">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		
+		<param name="item_title" type="radio" default="1" label="Item Title" description="Show item title">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+        </param>
+		<param name="link_titles" type="radio" default="0" label="Linked Titles" description="Make the Item titles linkable">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+        <param name="readmore" type="radio" default="0" label="Show Read More" description="Show/Hide the Read More button">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+        </param>
+		<param name="items" type="text" default="0" label="Maximum articles amount" description="0 - unlimited amount of articles" />
+		<param name="items_inpage" type="text" default="" label="Amount of articles on page" description="Here you can set amount of articles which will be showed on every page  0 - unlimited amount of articles" />
+
+		<param name="orderby" type="list" default="0" label="Order by" description="this option make you able to set order for showing articles from the category : random, order by date, order by ID">
+			<option value="0">Ordering (Native joomla way)</option>
+			<option value="1">Alphabetical</option>
+			<option value="2">Random</option>
+			<option value="3">Creation Date(DESC)</option>
+			<option value="4">Creation Date(ACS)</option>
+			<option value="5">Publication Date(DESC)</option>
+			<option value="6">Publication Date(ACS)</option>
+			<option value="7">Hits(DESC)</option>
+			<option value="8">Hits(ACS)</option>
+			<option value="9">Rating(DESC)</option>
+			<option value="10">Rating(ACS)</option>
+		</param>
+		<param name="@spacer2" type="spacer" default="&lt;br/&gt;&lt;strong&gt;Tab section size &amp; margins&lt;/strong&gt;&lt;hr /&gt;" label="" description="" />
+		<param name="all_width" type="text" default="" label="Tabs block width" description="Value could be set in pixels for example: 12px  or in percents for example: 50% in the case if value stay empty it will be 100% by deafult" />
+		<param name="all_height" type="text" default="" label="Tabs block height" description="Value could be set in pixels for example: 12px  or in percents for example: 50% in the case if value stay empty it will be 100% by deafult" />
+		<param name="div_height" type="text" default="" label="Tab content height" description="Value could be set in pixels for example: 12px  or in percents for example: 50% in the case if value stay empty it will be 100% by deafult" />
+		
+		<param name="pend_all_left" type="text" default="" label="Tabs block  left margin" description="Please specify values for this options in pixels ( set just number , without any px or pix or anything else. For example:  Tabs panel  left margin: 12)" />
+		<param name="pend_all_right" type="text" default="" label="Tabs block  right margin" description="Please specify values for this options in pixels ( set just number , without any px or pix or anything else. For example:  Tabs panel  left margin: 12)" />
+		<param name="pend_all_top" type="text" default="" label="Tabs block top margin" description="Please specify values for this options in pixels ( set just number , without any px or pix or anything else. For example:  Tabs panel  left margin: 12)" />
+		<param name="pend_all_bottom" type="text" default="" label="Tabs block bottom margin" description="Please specify values for this options in pixels ( set just number , without any px or pix or anything else. For example:  Tabs panel  left margin: 12)" />
+		
+		<param name="@spacer3" type="spacer" default="&lt;br/&gt;&lt;strong&gt;Tabs navigation panel options&lt;/strong&gt;&lt;hr/&gt;" label="" description="" />
+		<param name="titleintab" type="list" default="0" label="Tabs Labels" description="In the case if you select  'Article Title' value then tabs labels will be set from name of the articles, in the case if you select 'Index' value tabs lables will be implemented as template based index. Template for this case you can set in 'Tab Label Template' option">
+			<option value="0">Show Article Title</option>
+			<option value="1">Show Index</option>
+			<option value="2">Show Custom Label</option>
+		</param>
+		<param name="tab_template" type="text" default="Tab #" label="Tab Label Template" description="Use symbol # for index, it will be replaced by index for every tab" />
+		
+		<param name="custom_label" type="textarea" rows="5" cols="40" default="" label="Custom labels" description="You can specify here custom labels for the tabs  (Custom labels could be specified few ways using delimiter for example:  First tab#; Second tab#; Third tab#; namely delimiter is  #; or you can write single value per line, without any delimiter)" />
+		
+		<param name="tab_name_cut" type="text" default="" label="Length of the Tabs label" description="when field is empty, length of the label stay as is" />
+		<param name="tab_name_cut_text" type="text" default="" label="Text after cut off" description="" />
+		
+		<param name="select_def" type="text" default="" label="Select default tab" description="" />
+		<param name="page_bar" type="list" default="0" label="Navigation panel position" description="">
+			<option value="0">top</option>
+			<option value="1">bottom</option>
+		</param>
+		<param name="align_tab" type="list" default="0" label="Tab buttons align" description="">
+			<option value="0">css style defined</option>
+			<option value="1">left</option>
+			<option value="2">right</option>
+		</param>
+		<param name="ch_tabs" type="list" default="0" label="Changing tabs by" description="">
+			<option value="0">Click</option>
+			<option value="1">Hover</option>
+		</param>
+		 <param name="enable_hover" type="radio" default="0" label="Enable hover" description="Show/Hide the Read More button">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+        </param>
+		<param name="font_tab" type="text" default="" label="Tab label font" description="If this option leave empty, then this styles will be the same as specifyed in template CSS styles" />
+		<param name="font_size_tab" type="text" default="" label="Tab label font size" description="If this option leave empty, then this styles will be the same as specifyed in template CSS styles" />
+		<param name="pending_need" type="list" default="0" label="Padding" description="you have 2 ways to set value for this option using css style or set it here in pixels">
+			<option value="0">css style defined</option>
+			<option value="1">custom</option>
+		</param>
+		<param name="pend_li_left" type="text" default="" label="Tab left padding" description="" />
+		<param name="pend_li_right" type="text" default="" label="Tab right padding" description="" />
+		<param name="pend_ul_left" type="text" default="" label="Whole navigation panel left padding" description="" />
+		<param name="pend_ul_right" type="text" default="" label="Whole navigation panel right padding" description="" />
+		
+		<param name="@spacer4" type="spacer" default="&lt;br/&gt;&lt;strong&gt;Visualisation&lt;/strong&gt;&lt;hr/&gt;" label="" description="" />
+		<param name="pre_text" type="textarea" rows="3" cols="45" default="" label="Pre-Text" description="Pre-Text  It's  HTML value which you can add to the module , this text will be showed before module"/>
+		<param name="post_text" type="textarea" rows="3" cols="45" default="" label="Post-Text" description="Post-Text  It's  HTML value which you can add to the module , this text will be showed after module"/>
+		
+		<param name="template" type="textarea" rows="6" cols="45" default="" label="Custom Template for article" description="Here's the list of the tags which you can use for customizing of the template:  
+		@@ID@@ - it's  ID of the article,  
+		@@TEXT@@ - it's text of the article,  
+		@@READMORE@@ - tag for inserting of the standard ReadMore link (standard joomla read more link with HTML  tag A), 
+		@@LINKREADMORE@@ - tag for inserting readmore link (you can use it in any custom code),  
+		@@CREATEDATE@@ - tag for inserting of the creation date, 
+		@@AUTHOR@@ - tag for inserting of the author name, 
+		@@AUTHORID@@  - tag of the author ID, 
+		@@MODIFIEDDATE@@ - tag for inserting date of the last modification" />
+		<param name="bg_color" type="text" default="" label="Background color" description="This option could be helful in the case if you have some problems with some transparent elements of the tabs. You can specify custom background color in this case." />
+		<param name="style" type="list" default="1" label="Tabs Skin" description="">
+			<option value="1">Style 1</option>
+			<option value="2">Style 2</option>
+			<option value="3">Style 3</option>
+			<option value="4">Style 4</option>
+			<option value="5">Style 5</option>
+			<option value="6">Style 6</option>
+			<option value="7">Style 7</option>
+			<option value="8">Style 8</option>
+			<option value="9">Style 9</option>
+			<option value="10">Style 10</option>
+			<option value="11">Style 11</option>
+			<option value="12">Style 12</option>
+			<option value="13">Style 13</option>
+			<option value="14">Style 14</option>
+			<option value="15">Style 15</option>
+			<option value="16">Style 16</option>
+			<option value="17">Style 17</option>
+			<option value="18">Style 18</option>
+			<option value="19">Style 19</option>
+			<option value="20">Style 20</option>
+			<option value="21">Style 21</option>
+			<option value="99">Custom style</option>
+		</param>
+		<param name="show_border" type="list" default="0" label="Enable border" description="">
+			<option value="0">css style defined</option>
+			<option value="1">Yes</option>
+			<option value="2">No</option>
+		</param>
+		<param name="color_border" type="text" default="#000000" label="Border color" description="" />
+		<param name="effect" type="list" default="0" label="Effect" description="Select Effect for this module">
+			<option value="0">None</option>
+			<option value="1">Slide</option>
+			<option value="2">Fade</option>
+			<option value="3">Slide + Fade</option>
+		</param>
+		<param name="duration" type="text" default="200" label="Moving Duration" description="" />
+		<param name="xhtml" type="radio" default="0" label="W3C XHTML 1.0" description="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		
+		<param name="@spacer5" type="spacer" default="&lt;br/&gt;&lt;strong&gt;Timer options&lt;/strong&gt;&lt;hr/&gt;" label="" description="" />
+		<param name="timer" type="radio" default="0" label="Enable Timer" description="">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="timer_time" type="text" default="3000" label="Period for timer" description="" />
+		
+		<param name="@spacer6" type="spacer" default="&lt;br/&gt;&lt;strong&gt;Admin Usability Option&lt;/strong&gt;&lt;hr/&gt;" label="" description="" />
+		<param name="twoj_ajax_admin" type="list" default="2" label="Enable Admin AJAX Options " description="">
+			<option value="-1">No</option>
+			<option value="2">Yes</option>
+		</param>
+	</params>
+</install>

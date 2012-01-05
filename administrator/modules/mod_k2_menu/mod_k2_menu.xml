@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" client="administrator" method="upgrade">
+	<name>Admin K2 Menu</name>
+	<author>Protos Extensions</author>
+	<creationDate>March 2010</creationDate>
+	<copyright>Copyright (C) 2007 - 2010 Protos Extensions. Ivo Apostolov. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>me@ivoapostolov.eu</authorEmail>
+	<authorUrl>www.ivoapostolov.eu</authorUrl>
+	<version>1.0.0</version>
+	<description>This module shows the main admin navigation module and is enhaced to show K2 options.</description>
+	<files>
+		<filename module="mod_k2_menu">mod_k2_menu.php</filename>
+		<filename module="mod_k2_menu">helper.php</filename>
+		<filename module="mod_k2_menu">k2_menu.php</filename>
+		<filename module="mod_k2_menu">index.html</filename>
+	</files>
+	<params>
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+	</params>
+</install>

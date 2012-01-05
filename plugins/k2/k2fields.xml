@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="k2" method="upgrade">
+  <name>K2 Plugin - K2 Fields</name>
+  <author>Gobezu Sewu</author>
+  <creationDate>March 2011</creationDate>
+  <copyright>Copyright (c) 2011 jproven.com</copyright>
+  <authorEmail>info@jproven.com</authorEmail>
+  <authorUrl>jproven.com</authorUrl>
+  <version>0.4.8</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>k2fields provides you with extra "extra fields". Currently providing date/datetime (using stock joomla widget for this purpose) and alpha|alphastrict|alphanum|alphanumstrict|number|real|integer|email|url|exp=regular-expression validated field. You can allow users to construct a list of these types. You can also block form submission if fields doesn't hold valid values. An extended and editable select list is also provided. For further information look at http://jproven.com/extensions/k2fields. Note: this plugin is yet to be used in a production enviroment so please do be cautious and test before putting it in use.</description>
+  <files>
+    <filename plugin="k2fields">k2fields.php</filename>
+		<folder>k2fields</folder>
+  </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB.plg_k2_k2fields.ini</language>
+    </languages>		  
+  <params>
+  </params>
+</install>

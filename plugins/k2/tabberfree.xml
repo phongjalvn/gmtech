@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="k2">
+<name>K2 - K2Tabber Free</name>
+  <author>WEBSELF.it</author>
+  <creationDate>21 Nov 2011</creationDate>
+  <copyright>Copyright (c) 2010 WEBSELF S.n.c. All rights reserved.</copyright>
+  <authorEmail>assistenza@webself.it</authorEmail>
+  <authorUrl>www.webself.it</authorUrl>
+  <version>1.0</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>
+	 <![CDATA[ 
+	<h1>K2 Tabber Free</h1> 
+	It creates a specific k2 template which divides your extrafileds in graphic tabs.
+	<br /> <a href="http://www.forum.webself.it" target="_blank">More Informations</a>  <br />
+  ]]>
+	</description>
+
+	<files>
+		<filename plugin="tabberfree">tabberfree.php</filename>
+	</files>
+
+	<params group="category">
+	<param name="ulstyle_free" type="textarea" default="" label="Tab Menu Style - UL" description="Add your css styles to customize Tab's Menu (UL tag) - Don't add style tag" rows="10" cols="5">
+	</param>
+	<param name="astyle_free" type="textarea" default="" label="Tab Menu Style - A" description="Add your css styles to customize Tab's Menu (A tag) - Don't add style tag" rows="10" cols="5">
+	</param>
+	<param name="contentstyle_free" type="textarea" default="" label="Tab Content Style - DIV" description="Add your css styles to customize Tab's content (DIV tag) - Don't add style tag" rows="10" cols="5">
+	</param>
+	</params>
+	
+</install>

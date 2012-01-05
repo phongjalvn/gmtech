@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0" method="upgrade">
+	<name>K2</name>
+	<creationDate>2010-12-10</creationDate>
+	<author>Alessio Marzo</author>
+ 	<authorEmail>assistenza@webself.it</authorEmail>
+ 	<authorUrl>http://www.webself.it</authorUrl>
+	<license>GNU/General Public License</license>
+	<description>
+	 <![CDATA[ 
+	<h1>K2 Tabber Free</h1> 
+	It creates a specific k2 template which divides your extrafileds in graphic tabs.
+	<br /> <a href="http://www.forum.webself.it" target="_blank">More Informations</a>  <br />
+  ]]>
+	</description>
+	<installfile>install.k2tabberfree.php</installfile>
+ <files folder="components/com_k2">
+    <folder>templates</folder>
+  </files>
+  <administration>
+		<menu img="../media/k2/assets/images/system/k2_16x16.png" view="items">COM_K2</menu>
+		<submenu>
+			<menu view="items" link="option=com_k2&amp;view=items">K2_ITEMS</menu>
+			<menu view="categories" link="option=com_k2&amp;view=categories">K2_CATEGORIES</menu>
+			<menu view="tags" link="option=com_k2&amp;view=tags">K2_TAGS</menu>
+			<menu view="comments" link="option=com_k2&amp;view=comments">K2_COMMENTS</menu>
+			<menu view="usergroups" link="option=com_k2&amp;view=users">K2_USERS</menu>
+			<menu view="usergroups" link="option=com_k2&amp;view=usergroups">K2_USER_GROUPS</menu>
+			<menu view="extrafields" link="option=com_k2&amp;view=extrafields">K2_EXTRA_FIELDS</menu>
+			<menu view="extrafieldgroups" link="option=com_k2&amp;view=extrafieldsgroups">K2_EXTRA_FIELD_GROUPS</menu>
+			<menu view="media" link="option=com_k2&amp;view=media">K2_MEDIA_MANAGER</menu>
+			<menu view="info" link="option=com_k2&amp;view=info">K2_INFORMATION</menu>
+		</submenu>
+  </administration>
+   <params/>
+	<plugins>
+		  <plugin plugin="tabberfree" group="k2" order="1">
+			 <files folder="plugins">
+				<filename>tabberfree.php</filename>
+				<filename>tabberfree.xml</filename>
+				<filename>index.html</filename>
+			 </files>
+		  </plugin>
+	</plugins>
+  
+</install>

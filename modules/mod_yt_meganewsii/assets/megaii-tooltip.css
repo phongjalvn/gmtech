@@ -1,0 +1,86 @@
+div.yt_tooltip_wrap{
+	position: absolute;
+	top: -999em;
+}
+div.yt_tooltip_wrap.using{
+}
+
+div.yt_tooltip_top_left {
+	padding: 0 0 0 8px;
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-image: url(tooltip/tip_tl.png);
+}
+
+div.yt_tooltip_top_right {
+	padding: 0 8px 0 0;
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-image: url(tooltip/tip_tr.png);
+}
+
+div.yt_tooltip_top_center {
+	background-position: top center;
+	background-repeat: repeat-x;
+	background-image: url(tooltip/tip_tc.png);
+	height: 8px;
+}
+
+div.yt_tooltip_content_left {
+	padding: 0 0 0 8px;
+	background-position: top left;
+	background-repeat: repeat-y;
+	background-image: url(tooltip/tip_ml.png);
+}
+
+div.yt_tooltip_content_right {
+	padding: 0 8px 0 0;
+	background-position: top right;
+	background-repeat: repeat-y;
+	background-image: url(tooltip/tip_mr.png);
+}
+
+div.yt_tooltip_content {
+	padding: 8px;
+	background-position: center center;
+	background-repeat: repeat;
+	background-image: url(tooltip/tip_mc.png);
+}
+
+div.yt_tooltip_foot_left {
+	padding: 0 0 0 45px;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-image: url(tooltip/tip_fl.png);
+}
+
+div.yt_tooltip_foot_right {
+	padding: 0 8px 0 0;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-image: url(tooltip/tip_fr.png);
+}
+
+div.yt_tooltip_foot_center {
+	background-position: bottom center;
+	background-repeat: repeat-x;
+	background-image: url(tooltip/tip_fc.png);
+	height: 22px;
+}
+
+/* tooltip content for megaii */
+div.yt_tooltip_wrap div.yt_item_title{
+	margin: 0;
+}
+div.yt_tooltip_wrap div.yt_item_title span{
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+}
+div.yt_tooltip_wrap div.yt_item_image{
+	float: left;
+	margin: 12px 8px 0 0;
+}
+div.yt_tooltip_wrap div.yt_item_description{
+	color: #ffffff;
+}

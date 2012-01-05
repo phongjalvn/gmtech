@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>Nivo-Szaki Slider</name>
+	<copyright>Copyright (C) 2011 szathmári.hu. All Rights Reserved.</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<version>1.0</version>
+	<creationDate>04-04-2011</creationDate>
+	<author>szathmari.hu</author>
+	<authorEmail>info@szathmari.hu</authorEmail>
+	<authorUrl>http://szathmari.hu</authorUrl>
+	<description>Nivo Slider is a jQuery image slider. Make sure your images are the same size!</description>
+	<files>
+		<folder>assets/</folder>
+        <folder>tmpl/</folder>
+        <filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename module="mod_nivoslider">mod_nivoslider.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_nivoslider.ini</language>
+		<language tag="hu-HU">hu-HU.mod_nivoslider.ini</language>
+	</languages>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="imagesDir" type="text" default="images/banners/" label="IMAGESDIR" description="IMAGESDIR DESC" />
+		<param name="subDir" type="list" default="0" label="SUBDIR" description="SUBDIR DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="imagesAttributes" type="textarea" default="Image1\|Nivo-Szaki Slider\|#link1&lt;br /&gt;&lt;br /&gt;3rd image|3rd slide|" label="IMAGESATTRIBUTES" description="IMAGESATTRIBUTES DESC" rows="10" cols="50" />
+		<param name="target" type="list" default="_self" label="TARGET" description="TARGET DESC">
+			<option value="_self">_self</option>
+			<option value="_blank">_blank</option>
+			<option value="_parent">_parent</option>
+			<option value="_top">_top</option>
+		</param>
+		<param name="@sp1" type="spacer" default="" label="" description="" />
+		<param name="style" type="list" default="enhanced" label="STYLE" description="STYLE DESC">
+			<option value="enhanced">Enhanced</option>
+			<option value="default">Default</option>
+		</param>
+		<param name="customStyle" type="textarea" rows="10" cols="50" label="CUSTOMSTYLE" description="CUSTOMSTYLE DESC" />
+		
+		<param name="soundFX" type="list" default="0" label="SOUNDFX" description="SOUNDFX DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="sound" type="text" default="nivo-szakislider.ogg" label="SOUND" description="SOUND DESC" />
+		<param name="soundVol" type="list" default="1" label="SOUNDVOL" description="SOUNDVOL DESC">
+			<option value="1">100%</option>
+			<option value="0.75">75%</option>
+			<option value="0.5">50%</option>
+			<option value="0.25">25%</option>
+			<option value="0.1">10%</option>
+		</param>
+		
+		<param name="effect" type="list" default="random" label="EFFECT" description="EFFECT DESC">
+			<option value="random">Random</option>
+			<option value="sliceDown">Slice Down</option>
+			<option value="sliceDownLeft">Slice Down Left</option>
+			<option value="sliceUp">Slice Up</option>
+			<option value="sliceUpLeft">Slice Up Left</option>
+			<option value="sliceUpDown">Slice Up Down</option>
+			<option value="sliceUpDownLeft">Slice Up Down Left</option>
+			<option value="fold">Fold</option>
+			<option value="fade">Fade</option>
+		</param>
+		<param name="slices" type="text" default="15" size="10" label="SLICES" description="SLICES DESC" />
+		<param name="animSpeed" type="text" default="500" size="10" label="ANIMSPEED" description="ANIMSPEED DESC" />
+		<param name="pauseTime" type="text" default="3000" size="10" label="PAUSETIME" description="PAUSETIME DESC" />
+		<param name="startSlide" type="text" default="0" size="10" label="STARTSLIDE" description="STARTSLIDE DESC" />
+		<param name="@sp2" type="spacer" default="" label="" description="" />
+	</params>
+	<params group="advanced">
+		<param name="directionNav" type="list" default="1" label="DIRECTIONNAV" description="DIRECTIONNAV DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="directionNavHide" type="list" default="1" label="DIRECTIONNAVHIDE" description="DIRECTIONNAVHIDE DESC">
+		<option value="1">Yes</option>
+		<option value="0">No</option>
+	</param>
+		<param name="controlNav" type="list" default="1" label="CONTROLNAV" description="CONTROLNAV DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="controlNavThumbs" type="list" default="1" label="CONTROLNAVTHUMBS" description="CONTROLNAVTHUMBS DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="controlNavThumbsSearch" type="text" default=".jpg" size="10" label="CONTROLNAVTHUMBSSEARCH" description="CONTROLNAVTHUMBSSEARCH DESC" />
+		<param name="controlNavThumbsReplace" type="text" default="_thumb.jpg" size="10" label="CONTROLNAVTHUMBSREPLACE" description="CONTROLNAVTHUMBSREPLACE DESC" />
+		<param name="keyboardNav" type="list" default="1" label="KEYBOARDNAV" description="KEYBOARDNAV DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="pauseOnHover" type="list" default="1" label="PAUSEONHOVER" description="PAUSEONHOVER DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="manualAdvance" type="list" default="0" label="MANUALADVANCE" description="MANUALADVANCE DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="captionOpacity" type="text" default="0.8" size="10" label="CAPTIONOPACITY" description="CAPTIONOPACITY DESC" />
+		<param name="@sp3" type="spacer" default="" label="" description="" />
+		<param name="jQuery" type="list" default="1" label="JQUERY" description="JQUERY DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>	
+</install>

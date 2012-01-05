@@ -1,0 +1,502 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup,tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+sup{
+	position: relative;
+	top:-0.3em;	
+}
+sub{
+	position: relative;
+	top:0.3em;}
+body {
+	line-height: 1;
+}
+/*ol, ul {
+	list-style: none;
+}*/
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* jce k hieu tables still need 'cellspacing="0"' in the markup */
+/*table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}*/
+/*end reset*/
+/* new clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+a{
+color:#333;
+text-decoration:none;
+}
+a:hover{
+color:#f71b1e;
+}
+
+a span{
+  cursor:pointer;
+}
+
+/* ============= */
+/* = end reset = */
+/* ============= */
+.left {
+	float: left;
+	display: inline;
+}
+.right {
+	float: right;
+	display: inline;
+}
+/*=====================*/
+body {
+	background: url('../images/bg.png') fixed center repeat-y;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 1.45em;
+	overflow-x:hidden;
+}
+#wrapper {
+	width: 944px;
+	margin: 0 auto;
+	
+	background-color: #fff;
+}
+/* ==================== */
+/* = Menu lang search = */
+#menu-search-lang {
+	background-color: #ec7f24;
+	margin-bottom: 1px;
+}
+#menu-bar {
+	background: url('../images/menubar.png') no-repeat;
+	height: 37px;
+	margin-bottom: 10px;
+}
+#menu {
+	float: left;
+	display: inline;
+	width: 700px;
+}
+#search {
+	float: right;
+	display: inline;
+	height: 21px;
+	margin-top: 8px;
+	width: 185px;
+	background: url('../images/search.png') no-repeat;
+	
+}
+#search input {
+	background:none;
+	border:none;
+	padding-left: 20px;
+	font-size: 11px;
+	padding-top: 3px;
+}
+#lang {
+	float: right;
+	display: inline;
+}
+#menu ul{
+	margin: 0;
+	padding-left: 10px;
+}
+#menu li, #menu a {
+	float: left;
+	display: inline;
+}
+#menu li {
+	background: url('../images/line-menu.png') no-repeat right center;
+	padding: 0 13px 0 10px;
+}
+#menu a {
+	height: 37px;
+	line-height: 37px;
+	color: #fff;
+	
+	font-size: 14px;
+	font-weight: bold;
+	
+}
+#menu a:hover {
+	text-decoration: underline;
+}
+
+/* ==================== */
+/* =========== */
+/* = Home gt = */
+.home-content {
+	margin-top: 10px;
+}
+
+
+/* =========== */
+/* ========== */
+/* = Footer = */
+#footer {
+	background: #3e3e3e ;
+	margin-top: 30px;
+}
+#ffooter {
+	padding: 5px 10px;
+	background: #3e3e3e ;
+	margin: 0 -8px;
+	color: #fff;
+	line-height: 18px;
+}
+#ffooter img {
+	vertical-align: middle;
+}
+#vvisit_counter {
+	margin-right: 10px;
+	margin-top: 8px;
+}
+#copyright {
+	float: left;
+	display: inline;
+}
+#luottruycap {
+	float: right;
+	display: inline;
+}
+#luottruycap a {
+	float: none;
+	text-decoration: none;
+	color: #fff;
+}
+#gotop {
+	float: right;
+	display: inline;
+}
+/* ========== */
+/* ======= */
+/* = Lèt = */
+#left {
+	width: 220px;
+	float: left;
+	display: inline;
+	padding-right: 10px;
+
+}
+#left .moduletable {
+	
+}
+#left, #right #noidungtrang {
+	background: url('../images/bgmain.png') ;
+}
+#right #noidungtrang {
+	padding: 0 10px;
+}
+#left .moduletable.menuleft {
+	padding-left: 0;
+}
+
+/* ========= */
+/* = Right = */
+
+#right {
+	width: 670px;
+	float: right;
+	display: inline;
+}
+#right.noleft{
+	float:none;
+	display:block;
+}
+/*.contact h3,
+.article h3 {
+	margin: 0;
+	background: url('../images/linecontent.png') no-repeat bottom center;
+	line-height: 35px !important;
+	font-size: 14px !important;
+	text-transform: uppercase;
+	font-weight: bold !important;
+	color: #005f32;
+	padding-left: 10px;
+}*/
+#emailForm {
+	padding: 10px;
+}
+/* ========= */
+
+/* ================= */
+/* = Css cho trang = */
+#logo img {
+	margin: 20px 10px 8px;
+}
+#menutop {
+	margin: 23px 20px 0;
+	margin-right: 20px;
+	
+}
+#menutop li, #menutop a {
+	float: left;
+	display: inline;
+}
+#menutop li {
+	margin:  0 5px 0 3px;
+	border-right:1px solid #333;
+	position: relative;
+	z-index:9999;
+}
+#menutop li.active a {
+	text-decoration: underline;
+}
+#menutop a {
+	padding: 0 6px 0 3px;
+}
+#menutop li ul {
+	display: none;
+	position: absolute;
+	z-index:9999;
+	top:5px;
+	left:0;
+	width: 200px;
+	background-color: #eee;
+	
+}
+#menutop li ul li {
+	border-right:none;
+	margin: 0;
+	padding: 0;
+}
+#menutop li ul li a {
+	float: none;
+	line-height: 30px;
+	border-bottom:1px solid #cecece;
+	display: block;
+	width: 180px;
+	padding: 0 10px;
+}
+/* ================= */
+#jflanguageselection {
+	margin: 28px 5px 22px 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* = editor = */
+/* ========== */
+#tinymce {
+	background:none;
+}
+.article h1,.article h2,.article h3,.article h4,.article h5,.article h6
+.mceContentBody h1,.mceContentBody h2,.mceContentBody h3,.mceContentBody h4,.mceContentBody h5,.mceContentBody h6 { font-weight: normal;}
+
+.article h1,
+.mceContentBody h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+.article h2,
+.mceContentBody h2 { font-size: 2em; margin-bottom: 0.75em; }
+.article h3,
+.mceContentBody h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+.article h4,
+.mceContentBody h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+.article h5,
+.mceContentBody h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+.article h6,
+.mceContentBody h6 { font-size: 1em; font-weight: bold; }
+
+.article h1 img,.article  h2 img,.article  h3 img,
+.article h4 img,.article  h5 img,.article  h6 img,
+.mceContentBody h1 img,.mceContentBody  h2 img,.mceContentBody  h3 img,
+.mceContentBody h4 img,.mceContentBody  h5 img,.mceContentBody  h6 img {
+  margin: 0;
+}
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+.article p,
+.mceContentBody p           {}
+.article p img.left,
+.mceContentBody p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+.article p img.right,
+.mceContentBody p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+
+/* Lists
+-------------------------------------------------------------- */
+
+.article li ul,
+.article li ol,
+.mceContentBody li ul,
+.mceContentBody li ol       { margin:0 1.5em; }
+.article ul,
+.article  ol,
+.mceContentBody ul,
+.mceContentBody  ol         { /*margin: 0 1.5em 1.5em 20.5em;*/ }
+.mceContentBody ul, .mceContentBody ol {
+	margin-left: 30px;
+}
+.article ul li,
+.mceContentBody ul li          { list-style-type: disc;
+	
+ }
+.article ol li,
+.mceContentBody ol li          { list-style-type: decimal; }
+
+.article dl,
+.mceContentBody dl          { margin: 0 0 1.5em 0; }
+.article dl dt,
+.mceContentBody dl dt       { font-weight: bold; }
+.article dd,
+.mceContentBody dd          { margin-left: 1.5em;}
+.article p, .mceContentBody p {
+	margin:10px 0 15px;
+}
+
+/* jce k hieu Tables
+-------------------------------------------------------------- */
+/*
+.article table,
+.mceContentBody table       { margin-bottom: 1.4em; width:100%; }
+.article th,
+.mceContentBody th          { font-weight: bold; }
+.article thead th,
+.mceContentBody thead th 		{ background: #c3d9ff; }
+.article th,.article td,.article caption,
+.mceContentBody th,.mceContentBody td,.mceContentBody caption { padding: 4px 10px 4px 5px; }
+.article tr.even td,
+.mceContentBody tr.even td  { background: #e5ecf9; }
+.article tfoot,
+.mceContentBody tfoot       { font-style: italic; }
+.article caption,
+.mceContentBody caption     { background: #eee; }*/
+.article li ul, .article ul, .leadingarticles ul, .teaserarticles ul {
+padding-left:30px;
+}
+.article li {
+	
+}
+.article ol {
+	margin-left: 30px;
+}
+.article ol li {
+	padding-left: 0px;
+}
+
+p, pre, blockquote, ul, ol {
+margin:1em 0;
+padding:0;
+}
+.qc{
+list-style-type:none;
+}
+.userForm textarea, input[type="text"], input[type="password"], select {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C8C8C8;}
+.userForm textarea:hover, input[type="text"]:hover, input[type="password"]:hover, select:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #007FD0;
+	}
+.userForm textarea:focus, input[type="text"]:focus, input[type="password"]:focus, select:focus {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #007FD0;
+	}
+	
+p, pre, blockquote, ul, ol, h1, h2, h3, h4, h5, h6 {
+margin:1em 0;
+padding:0;
+}

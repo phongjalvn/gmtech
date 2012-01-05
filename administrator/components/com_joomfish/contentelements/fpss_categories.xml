@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<joomfish type="contentelement">
+  <name>FrontPage Slideshow - Categories</name>
+  <author>JoomlaWorks</author>
+  <version>2.9.4</version>
+  <description>Definitions for FrontPage Slideshow categories.</description>
+  <reference>
+  	<table name="fpss_categories">
+  		<field type="referenceid" name="id" translate="0">ID</field>
+  		<field type="titletext" name="name" translate="1">Name</field>
+  	</table>
+  </reference>
+</joomfish>

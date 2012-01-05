@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>2J Tabs Plugin</name>
+	<author>Dron</author>
+	<creationDate>2008</creationDate>
+	<copyright>(C) 2008 All rights reserved.</copyright>
+	<license>Commercial License: Single Site 2J Tabs License</license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.5.0</version>
+	<description>
+		2JoomlaNet specialize in creating quality Joomla 1.0.x and Joomla 1.5 Native extension with user friendly interfaces.
+	</description>
+	<files>
+		<filename plugin="2j_tabs">2j_tabs.php</filename>
+		<filename>2j_tabs/index.html</filename>
+		<filename>2j_tabs/2j.ui.base.js</filename>
+		<filename>2j_tabs/jq_last.js</filename>
+		<filename>2j_tabs/2j.ui.tabs.js</filename>
+		<filename>2j_tabs/2j_tabs.css</filename>
+		<filename>2j_tabs/style1.tabs.css</filename>
+		<filename>2j_tabs/style2.tabs.css</filename>
+		<filename>2j_tabs/style3.tabs.css</filename>
+		<filename>2j_tabs/style4.tabs.css</filename>
+		<filename>2j_tabs/style5.tabs.css</filename>
+		<filename>2j_tabs/style6.tabs.css</filename>
+		<filename>2j_tabs/style7.tabs.css</filename>
+		<filename>2j_tabs/style8.tabs.css</filename>
+		<filename>2j_tabs/style9.tabs.css</filename>
+		<filename>2j_tabs/style10.tabs.css</filename>
+		<filename>2j_tabs/style11.tabs.css</filename>
+		<filename>2j_tabs/style12.tabs.css</filename>
+		<filename>2j_tabs/style13.tabs.css</filename>
+		<filename>2j_tabs/style14.tabs.css</filename>
+		<filename>2j_tabs/style15.tabs.css</filename>
+		<filename>2j_tabs/style16.tabs.css</filename>
+		<filename>2j_tabs/style17.tabs.css</filename>
+		<filename>2j_tabs/style18.tabs.css</filename>
+		<filename>2j_tabs/style19.tabs.css</filename>
+		<filename>2j_tabs/style20.tabs.css</filename>
+		<filename>2j_tabs/style21.tabs.css</filename>
+		<filename>2j_tabs/def.css</filename>
+		<filename>2j_tabs/style99.tabs.css</filename>
+		<filename>2j_tabs/i/index.html</filename>
+		<filename>2j_tabs/i/tabs.gif</filename>
+		<filename>2j_tabs/i/tabs_bottom.gif</filename>
+		<filename>2j_tabs/i/tabs_s3.gif</filename>
+		<filename>2j_tabs/i/tabs_s3_bottom_n.gif</filename>
+		<filename>2j_tabs/i/tabs_s3_bottom_s.gif</filename>
+		<filename>2j_tabs/i/tabs_s5.gif</filename>
+		<filename>2j_tabs/i/tabs_s5_bottom_n.gif</filename>
+		<filename>2j_tabs/i/tabs_s5_bottom_s.gif</filename>
+		<filename>2j_tabs/i/tabs_s6.gif</filename>
+		<filename>2j_tabs/i/tabs_s6_bottom_n.gif</filename>
+		<filename>2j_tabs/i/tabs_s6_bottom_s.gif</filename>
+		<filename>2j_tabs/i/tabs_s7.gif</filename>
+		<filename>2j_tabs/i/tabs_s7_bottom_n.gif</filename>
+		<filename>2j_tabs/i/tabs_s7_bottom_s.gif</filename>
+		<filename>2j_tabs/i/tabs_s8.gif</filename>
+		<filename>2j_tabs/i/tabs_s8_bottom_n.gif</filename>
+		<filename>2j_tabs/i/tabs_s8_bottom_s.gif</filename>
+		<filename>2j_tabs/i/tabs_s9_new.png</filename>
+		<filename>2j_tabs/i/tabs_s9_b_1.png</filename>
+		<filename>2j_tabs/i/tabs_s9_b_2.png</filename>
+		<filename>2j_tabs/i/tabs_s9_b_3.png</filename>
+		<filename>2j_tabs/i/tabs_s10.png</filename>
+		<filename>2j_tabs/i/tabs_s10_b_1.png</filename>
+		<filename>2j_tabs/i/tabs_s10_b_2.png</filename>
+		<filename>2j_tabs/i/tabs_s11.png</filename>
+		<filename>2j_tabs/i/tabs_s11_b_1.png</filename>
+		<filename>2j_tabs/i/tabs_s11_b_2.png</filename>
+		<filename>2j_tabs/i/tabs_s12.png</filename>
+		<filename>2j_tabs/i/tabs_s12_b_2.png</filename>
+		<filename>2j_tabs/i/tabs_s12_b_1.png</filename>
+		<filename>2j_tabs/i/tabs_s13.png</filename>
+		<filename>2j_tabs/i/tabs_s13_b_2.png</filename>
+		<filename>2j_tabs/i/tabs_s13_b_1.png</filename>
+		<filename>2j_tabs/i/tabs_s15.png</filename>
+		<filename>2j_tabs/i/tabs_s15_2.png</filename>
+		<filename>2j_tabs/i/tabs_s16.png</filename>
+		<filename>2j_tabs/i/tabs_s16_b.png</filename>
+		<filename>2j_tabs/i/tabs_s17.png</filename>
+		<filename>2j_tabs/i/tabs_s17_2.png</filename>
+		<filename>2j_tabs/i/tabs_s18.png</filename>
+		<filename>2j_tabs/i/tabs_s19.png</filename>
+		<filename>2j_tabs/i/tabs_s19_b_2.png</filename>
+		<filename>2j_tabs/i/tabs_s19_b_1.png</filename>
+		<filename>2j_tabs/i/tabs_s20.png</filename>
+		<filename>2j_tabs/i/tabs_s20_1.png</filename>
+		<filename>2j_tabs/i/tabs_s20_b.png</filename>
+		<filename>2j_tabs/i/tabs_s20_bottom_b.png</filename>
+		<filename>2j_tabs/i/tabs_s20_bottom.png</filename>
+		<filename>2j_tabs/i/tabs_s20_bottom_1.png</filename>
+		<filename>2j_tabs/i/tabs_s21_bg.png</filename>
+		<filename>2j_tabs/i/tabs_s21_1.png</filename>
+		<filename>2j_tabs/i/tabs_s21_bottom_bg.png</filename>
+		<filename>2j_tabs/i/tabs_s21_bottom_1.png</filename>
+	</files>
+	<params>
+		<param name="@spacer2" type="spacer" default="&lt;br/&gt;&lt;strong&gt;Tab section size &amp; margins&lt;/strong&gt;&lt;hr /&gt;" label="" description="" />
+		<param name="all_width" type="text" default="" label="Tabs block width" description="Value could be set in pixels for example: 12px  or in percents for example: 50% in the case if value stay empty it will be 100% by deafult" />
+		<param name="all_height" type="text" default="" label="Tabs block height" description="Value could be set in pixels for example: 12px  or in percents for example: 50% in the case if value stay empty it will be 100% by deafult" />
+		<param name="pend_all_left" type="text" default="" label="Tabs block  left margin" description="Please specify values for this options in pixels ( set just number , without any px or pix or anything else. For example:  Tabs panel  left margin: 12)" />
+		<param name="pend_all_right" type="text" default="" label="Tabs block  right margin" description="Please specify values for this options in pixels ( set just number , without any px or pix or anything else. For example:  Tabs panel  left margin: 12)" />
+		<param name="pend_all_top" type="text" default="" label="Tabs block top margin" description="Please specify values for this options in pixels ( set just number , without any px or pix or anything else. For example:  Tabs panel  left margin: 12)" />
+		<param name="pend_all_bottom" type="text" default="" label="Tabs block bottom margin" description="Please specify values for this options in pixels ( set just number , without any px or pix or anything else. For example:  Tabs panel  left margin: 12)" />
+		
+		<param name="@spacer3" type="spacer" default="&lt;br/&gt;&lt;strong&gt;Tabs navigation panel options&lt;/strong&gt;&lt;hr/&gt;" label="" description="" />
+		<param name="page_bar" type="list" default="0" label="Navigation panel position" description="">
+			<option value="0">top</option>
+			<option value="1">bottom</option>
+		</param>
+		<param name="align_tab" type="list" default="0" label="Tab buttons align" description="">
+			<option value="0">css style defined</option>
+			<option value="1">left</option>
+			<option value="2">right</option>
+		</param>
+		<param name="ch_tabs" type="list" default="0" label="Changing tabs by" description="">
+			<option value="0">Click</option>
+			<option value="1">Hover</option>
+		</param>
+		 <param name="enable_hover" type="radio" default="0" label="Enable hover" description="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+        </param>
+		<param name="font_tab" type="text" default="" label="Tab label font" description="If this option leave empty, then this styles will be the same as specifyed in template CSS styles" />
+		<param name="font_size_tab" type="text" default="" label="Tab label font size" description="If this option leave empty, then this styles will be the same as specifyed in template CSS styles" />
+		<param name="pending_need" type="list" default="0" label="Padding" description="you have 2 ways to set value for this option using css style or set it here in pixels">
+			<option value="0">css style defined</option>
+			<option value="1">custom</option>
+		</param>
+		<param name="pend_li_left" type="text" default="" label="Tab Left Padding" description="" />
+		<param name="pend_li_right" type="text" default="" label="Tab Right Padding" description="" />
+		<param name="pend_ul_left" type="text" default="" label="Whole Panel Left Padding" description="" />
+		<param name="pend_ul_right" type="text" default="" label="Whole Panel Right Padding" description="" />
+		
+		<param name="@spacer4" type="spacer" default="&lt;br/&gt;&lt;strong&gt;Visualisation&lt;/strong&gt;&lt;hr/&gt;" label="" description="" />
+		<param name="bg_color" type="text" default="" label="Background color" description="This option could be helful in the case if you have some problems with some transparent elements of the tabs. You can specify custom background color in this case." />
+		<param name="style" type="list" default="1" label="Tabs Skin" description="">
+			<option value="1">Style 1</option>
+			<option value="2">Style 2</option>
+			<option value="3">Style 3</option>
+			<option value="4">Style 4</option>
+			<option value="5">Style 5</option>
+			<option value="6">Style 6</option>
+			<option value="7">Style 7</option>
+			<option value="8">Style 8</option>
+			<option value="9">Style 9</option>
+			<option value="10">Style 10</option>
+			<option value="11">Style 11</option>
+			<option value="12">Style 12</option>
+			<option value="13">Style 13</option>
+			<option value="14">Style 14</option>
+			<option value="15">Style 15</option>
+			<option value="16">Style 16</option>
+			<option value="17">Style 17</option>
+			<option value="18">Style 18</option>
+			<option value="19">Style 19</option>
+			<option value="20">Style 20</option>
+			<option value="21">Style 21</option>
+			<option value="99">Custom style</option>
+		</param>
+		<param name="show_border" type="list" default="0" label="Enable border" description="">
+			<option value="0">css style defined</option>
+			<option value="1">Yes</option>
+			<option value="2">No</option>
+		</param>
+		<param name="color_border" type="text" default="#000000" label="Border color" description="" />
+		<param name="effect" type="list" default="0" label="Effect" description="Select Effect for this module">
+			<option value="0">None</option>
+			<option value="1">Slide</option>
+			<option value="2">Fade</option>
+			<option value="3">Slide + Fade</option>
+		</param>
+		<param name="duration" type="text" default="200" label="Moving Duration" description="" />
+		
+		<param name="@spacer5" type="spacer" default="&lt;br/&gt;&lt;strong&gt;Timer options&lt;/strong&gt;&lt;hr/&gt;" label="" description="" />
+		<param name="timer" type="radio" default="0" label="Enable Timer" description="">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="timer_time" type="text" default="3000" label="Period for timer" description="" />
+	</params>
+</install>

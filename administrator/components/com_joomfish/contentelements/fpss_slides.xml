@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<joomfish type="contentelement">
+  <name>FrontPage Slideshow - Slides</name>
+  <author>JoomlaWorks</author>
+  <version>2.9.4</version>
+  <description>Definitions for FrontPage Slideshow slides.</description>
+  <reference>
+  	<table name="fpss_slides">
+  		<field type="referenceid" name="id" translate="0">ID</field>
+  		<field type="titletext" name="name" length="50" maxlength="250" translate="1">Slide Name</field>
+  		<field type="text" name="customlink" length="50" maxlength="225" translate="1">Custom Link</field>
+  		<field type="htmltext" name="ctext" translate="1">Custom Text</field>
+  		<field type="text" name="plaintext" translate="1">Plain Text</field>
+  	</table>
+  </reference>
+</joomfish>

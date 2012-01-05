@@ -1,0 +1,122 @@
+/* ============= */
+.k2Pagination {
+    clear: both;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.k2Pagination span, .k2Pagination strong, .k2Pagination a {
+    color: #333333;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.k2Pagination a {
+    color: #FF0000;
+}
+.k2Pagination a:hover {
+    text-decoration: underline;
+}
+.k2Pagination p.results {
+    margin-bottom: 5px;
+}
+.k2Pagination .pagenav span {
+    background-color: #666666;
+    color: #FFFFFF;
+    padding: 2px 8px;
+}
+/* ================= */
+#luottruycap {
+	line-height: 36px;
+}
+#left h3.title {
+	background: url('../images/h3-bg.png') no-repeat;
+	line-height: 37px;
+	text-align: center;
+	font-size:16px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 5px !important;
+}
+#left .moduletable.visit h3 {
+	float: left;
+	display: inline;
+	font-size:12px;
+	font-weight: normal;
+	background:none;
+	text-transform: none;
+	line-height: 12px;
+	padding-left: 18px;
+}
+.width100 .item {
+	border-bottom:1px dashed #b3b2b2;
+}
+.width100 .item a.readmore {
+	display: none;
+}
+.width100 .item .headline,
+.width100 .item .headline a,
+.width100 .item .headline a h2,
+div.catItemHeader h3.catItemTitle a{
+	color: #1e00c8;
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+#left .moduletable.visit{
+	background: url('../images/luottruycap.png') no-repeat;
+	height: 37px;
+	width: 220px;
+}
+#left .moduletable.visit .left-bottom {
+	float: right;
+	display: inline;
+}
+#main {
+	padding: 0 20px;
+}
+body.gioithieu #left, body.gioithieu #right #noidungtrang .joomla.gioithieu {
+	display: none;
+}
+body.gioithieu h3.title,
+.contact h3,
+.noleft h2.itemTitle,
+.article h3{
+	background: url('../images/shadow.png') bottom center repeat-x;
+	margin: 0 -8px;
+	font-size: 16px;
+	color: #030000;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding: 15px 0 30px 20px;
+}
+body.gioithieu .home-content .left-bottom {
+	padding: 0 20px;
+	width: 904px;
+}
+.xs_67.slidechay {
+	background: url('../images/shadow.png') bottom center repeat-x;
+	padding-bottom: 20px;
+	margin: 0 -8px;
+}
+.home-content h3.title,
+.noleft .itemTitle{
+	color: #1e00c8;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding-left: 30px;
+	text-decoration: underline;
+}/* ================ */
+/* = list product = */
+div.itemContainerLast {
+	border-bottom:1px dashed #b3b2b2;
+	padding-bottom: 10px;
+}
+div.catItemImageBlock {
+	float: left;
+	display: inline;
+	margin-bottom: 5px;
+}
+
+/* ================ */
