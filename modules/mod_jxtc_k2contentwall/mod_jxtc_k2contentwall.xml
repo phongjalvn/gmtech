@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>JoomlaXTC K2 Content Wall</name>
+	<author>JoomlaXTC</author>
+	<creationDate>2011-01-28</creationDate>
+	<copyright>Copyright (C) 2008,2009,2010,2011 Monev Software LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.joomlaxtc.com</authorUrl>
+	<version>1.11.2</version>
+	<description>JoomlaXTC K2 Content Wall v1.11.2 - Visit www.joomlaxtc.com documents area for help.</description>
+	<files>
+		<filename module="mod_jxtc_k2contentwall">mod_jxtc_k2contentwall.php</filename>
+		<filename>index.html</filename>
+		<filename>incl_render.php</filename>
+		<filename>helper.php</filename>
+		<filename>func_parserow.php</filename>
+		<filename>LICENSE.php</filename>
+		<filename>COPYRIGHT.php</filename>
+		<folder>buttons</folder>
+		<folder>css</folder>
+		<folder>elements</folder>
+		<folder>images</folder>
+		<folder>templates</folder>
+	</files>
+	<media destination="JoomlaXTC" folder="media">
+		<filename>index.html</filename>
+		<filename>readme.txt</filename>
+		<filename>showcaseFX.js</filename>
+	</media>  
+	<params addpath="/modules/mod_jxtc_k2contentwall/elements">
+		<param type="spacer" default="SELECTION PARAMETERS:" />
+
+        <param name="category_id" type="jxtccat" default="0" label="Select category" description="Select one category for which you want to filter an items list. Select none to fetch items from all categories." />
+        <param name="usecurrentcat" type="radio" default="1" label="Use current category?" description="When browsing a Category or reading an article, display articles from the same Category only.">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        <param name="getChildren" type="radio" default="0" label="Get childrens of categories" description="">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        <param name="featured" type="list" default="1" label="Include Featured?" description="Set featured products inclusion." >
+            <option value="0">No</option>
+            <option value="1">Yes, if present</option>
+            <option value="2">Only Featured</option>
+        </param>
+        <param name="compat" type="list" default="none" label="Avatar Compatibility mode" description="Select component compatibility mode for Avatar support." >
+            <option value="none">None</option>
+            <option value="cb">Community Builder</option>
+            <option value="jomsoc">Jomsocial</option>
+            <option value="ido">IDoBlog</option>
+            <option value="myblog">My Blog</option>
+            <option value="fb">Fireboard</option>
+            <option value="kunena">Kunena</option>
+            <option value="k2">K2 Users</option>
+        </param>
+        <param name="comcompat" type="list" default="none" label="Comment Compatibility mode" description="Select component compatibility mode for Comment support." >
+            <option value="none">None</option>
+            <option value="jomcom">Jom Comment</option>
+            <option value="k2">K2 Users</option>
+        </param>
+        <param name="authorid" type="jxtcauthor" default="" label="Authors" description="Filter according to article authors." />
+        <param name="group" type="radio" default="0" label="One article per author?" description="Limit articles to one per author?" >
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        <param name="sortfield" type="list" default="0" label="Sort field" description="Article sort order.">
+            <option value="0">Recently Added First</option>
+            <option value="1">Recently Modified First</option>
+            <option value="2">Most viewed first</option>
+            <option value="3">Article Name</option>
+            <option value="4">Category name</option>
+            <option value="5">Author name</option>
+            <option value="6">Most Rating</option>
+            <option value="8">K2 Ordering</option>
+            <option value="7">Random</option>
+        </param>
+        <param name="sortorder" type="list" default="1" label="Sort order" description="Select a sort order for article selection." >
+            <option value="0">Ascending</option>
+            <option value="1">Descending</option>
+        </param>
+		<param type="spacer" default="DISPLAY PARAMETERS:" />
+		<param name="columns" type="text" default="1" label="Columns" description="Number of columns to show." />
+		<param name="rows" type="text" default="1" label="Rows" description="Number of rows to show." />
+		<param name="pages" type="text" default="1" label="Pages" description="Number of pages to show. Transition effects are enabled between page changes." />
+		<param name="transmode" type="list" default="hslide" label="Display Style" description="Transition effect mode.">
+		  <option value="hslide">Horizontal slider</option>
+		  <option value="vslide">Vertical slider</option>
+		  <option value="fade">Fader</option>
+		  <option value="wind">Draggable Window</option>
+		  <option value="winz">Zoom Window</option>
+		</param>
+		<param name="width" type="text" default="200" label="Window Width" description="Window width in pixels (only for Window mode)." />
+		<param name="height" type="text" default="200" label="Window Height" description="Window height in pixels (only for Window mode)." />
+		<param name="transpause" type="text" default="4000" label="Transition pause" description="Pause time between transitions (in milliseconds, default: 4000)." />
+		<param name="transspeed" type="text" default="1500" label="Transition duration" description="Transition duration in milliseconds (default: 1500)." />
+		<param name="transflow" type="list" default="0" label="Slide orientation" description="Starting transition orientation." >
+			<option value="0">Top-Bottom / Left-Right</option>
+			<option value="1">Bottom-Top / Right-Left</option>
+		</param>
+		<param name="transtype" type="list" default="1" label="Transition type" description="Transition animation type." >
+			<option value="1">Linear</option>
+			<option value="2">Quad</option>
+			<option value="3">Cubic</option>
+			<option value="4">Quart</option>
+			<option value="5">Quint</option>
+			<option value="6">Expo</option>
+			<option value="7">Circ</option>
+			<option value="8">Sine</option>
+			<option value="9">Back</option>
+			<option value="10">Bounce</option>
+			<option value="11">Elastic</option>
+		</param>
+		<param name="button" type="folderlist" default="" label="Button Style" directory="modules/mod_jxtc_k2contentwall/buttons" hide_none="1" hide_default="1" filter="" exclude="" stripext="" description="Button graphic set to use (if enabled)."/>
+
+        <param name="template" type="folderlist" directory="modules/mod_jxtc_k2contentwall/templates" default="" hide_default="1" label="Template" description="Select an exisiting module template. If none used, the following fields will be used." />
+        <param name="modulehtml" type="textarea" rows="10" cols="40" default="{mainarea}" label="Module HTML template" description="HTML/CSS code to draw the complete module box. The {mainarea} tag represents the article display area." />
+        <param name="html" type="textarea" rows="10" cols="40" default="{intro}" label="Main Content HTML template" description="HTML/CSS code to display each article. You can embedd any of the supported tags to display article information." />
+        <param name="avatarw" type="text" default="30" label="Avatar width" description="Avatar width (if applicable)." />
+        <param name="avatarh" type="text" default="30" label="Avatar height" description="Avatar height (if applicable)." />
+        <param name="maxtitle" type="text" default="" label="Max. title length" description="Maximum length of {title} tag. Empty = no limit." />
+        <param name="maxtitlesuf" type="text" default="..." label="Max. title suffix" description="Suffix to show when trimming the title." />
+        <param name="maxintro" type="text" default="" label="Max. intro length" description="Maximum length of {introtext} tag. Empty = no limit." />
+        <param name="maxintrosuf" type="text" default="..." label="Max. intro suffix" description="Suffix to show when trimming the intro text." />
+        <param name="maxtext" type="text" default="" label="Max. full text length" description="Maximum length of {fulltext} or {rawfulltext} tags. Empty = no limit." />
+        <param name="maxtextsuf" type="text" default="..." label="Max. full text suffix" description="Suffix to show when trimming full text." />
+        <param name="textbrk" type="text" default="" label="Full text break keyword" description="Display article text up to this string mark is found (including). Leave empty to display all text." />
+        <param name="dateformat" type="text" default="Y-m-d" label="Date format" description="Date format (using PHP date function). Defaulty is: Y-m-d" />
+        <param type="spacer" default="'MORE' AREA CONFIGURATION:"/>
+        <param name="morehtml" type="textarea" rows="10" cols="40" default="{title}" label="'More' Content HTML template" description="HTML/CSS code to display each article. You can embedd any of the supported tags to display article information." />
+        <param name="moreqty" type="text" default="0" label="More titles" description="Offer links to more article titles." />
+        <param name="morecols" type="text" default="1" label="More Columns" description="Number of articles to show horizontally. If number of articles is higher, multiple rows will be shown." />
+        <param name="moretext" type="text" default="" label="More legend" description="Legend to show in read more area." />
+        <param name="morergb" type="colorinput" default="CCCCCC" label="More legend color" description="Legend color." />
+        <param name="moretitle" type="text" default="" label="Max. length for title text" description="Maximum length of {title} tag. Empty = no limit." />
+        <param name="moretitlesuf" type="text" default="..." label="Max. title suffix" description="Suffix to show when trimming the title." />
+        <param name="moreintro" type="text" default="" label="Max. length for intro text" description="Maximum length of {introtext} tag. Empty = no limit." />
+        <param name="moreintrosuf" type="text" default="..." label="Max. intro suffix" description="Suffix to show when trimming the intro text." />
+        <param name="moremaxtext" type="text" default="" label="Max. full text length" description="Maximum length of {fulltext} or {rawfulltext} tags. Empty = no limit." />
+        <param name="moremaxtextsuf" type="text" default="..." label="Max. full text suffix" description="Suffix to show when trimming full text." />
+        <param name="moretextbrk" type="text" default="" label="Full text break keyword" description="Display article text up to this string mark is found (including). Leave empty to display all text." />
+	<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+	<params group="advanced">
+
+				<param name="numvotes" type="radio" default="0" label="Show number of votes?" description="Show the number of votes when use the {rate} or {rating} tag." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</param>
+				<param name="related" type="text" default="5" label="Max. related items" description="Maximum number of related items, only works if use {related} tag" />
+				<param name="cattwittext" type="text" default="Like this? Tweet it to your followers!" label="Category twitter text" description="Select the text that want to the tag {categorytwitterlink} display" />
+				<param name="twittext" type="text" default="Like this? Tweet it to your followers!" label="Item twitter text" description="Select the text that want to the tag {itemtwitterlink} display" />
+		<param name="translayer" type="text" default="0" label="Z layer" description="Define the z-index layer to use for the effects." />
+		<param type="spacer" default="Tooltip / Pop-Up FX Settings:" />
+		<param name="npElement0FXH" type="text" default="80" label="FX X Position" description="Element 0 Horizontal Map Position." />
+		<param name="nptipoi" type="text" default="1" label="In Opacity" description="Tooltip / Popup In Opacity Value." />
+		<param name="nptipoo" type="text" default="0" label="Out Opacity" description="Tooltip / Popup Out Opacity Value." />
+		<param name="nptipvi" type="text" default="0" label="In Animation Vertical" description="Height of Vertical In Animation." />
+		<param name="nptipvo" type="text" default="0" label="Out Animation Vertical" description="Height of Vertical Out Animation." />
+		<param name="nptiphi" type="text" default="0" label="In Animation Horizontal" description="Width of Tooltip / Popup In Animation." />
+		<param name="nptipho" type="text" default="0" label="Out Animation Horizontal" description="Width of Tooltip Out / Popup Animation." />
+		<param name="nptipdi" type="text" default="550" label="Fade-In Duration" description="Tooltip / Popup Animation Fade In Duration." />
+		<param name="nptipdo" type="text" default="550" label="Fade-Out Duration" description="Tooltip / Popup Animation Fade Out Duration." />
+		<param name="nptpause" type="text" default="1000" label="Pause" description="Tooltip Pause Value (in millisencods)." />
+		<param name="nptipAnim" type="list" default="Quad" label="Tooltip animation mode" description="Tooltip / Popup animation mode." >
+			<option value="Quad">Quadratic transition</option>
+			<option value="linear">Linear transition</option>
+			<option value="Cubic">Cubicular transition</option>
+			<option value="Quart">Quartetic transition</option>
+			<option value="Quint">Quintic transition</option>
+			<option value="Expo">Exponential transition</option>
+			<option value="Circ">Circular transition</option>
+			<option value="Sine">Sineousidal transition</option>
+			<option value="Back">Makes the transition go back, then all forth</option>
+			<option value="Bounce">Makes the transition bouncy</option>
+			<option value="Elastic">Elastic curve</option>
+		</param>
+		<param name="nptipEase" type="list" default="easeIn" label="Tooltip / Popup ease mode" description="Tooltip ease mode." >
+			<option value="easeIn">Ease In</option>
+			<option value="easeOut">Ease Out</option>
+			<option value="easeInOut">Ease In/Out</option>
+		</param>
+		<param name="nptipCenter" type="radio" default="1" label="Centered Popup" description="Centers the pop-up window on the screen." >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param type="spacer" default="Slide FX Settings:" />
+		<param name="npslideitfx" type="list" default="easeIn" label="Sliding Panel Settings" description="Sliding Panel" >
+			<option value="RSO">Right Slide Out</option>
+		  <option value="RSI">Right Slide In</option>
+			<option value="LSO">Left Slide Out</option>
+		  <option value="LSI">Left Slide In</option>
+			<option value="BSO">Bottom Slide Out</option>
+		  <option value="BSI">Bottom Slide In</option>
+			<option value="TSO">Top Slide Out</option>
+		  <option value="TSI">Top Slide In</option>
+		  <option value="TRSO">Top Right Slide Out</option>
+		  <option value="TRSI">Top Right Slide In</option>
+		  <option value="TLSO">Top Left Slide Out</option>
+		  <option value="TLSI">Top Left Slide In</option>
+		  <option value="BRSO">Bottom Right Slide Out</option>
+		  <option value="BRSI">Bottom Right Slide In</option>
+		  <option value="BLSO">Bottom Left Slide Out</option>
+		  <option value="BLSI">Bottom Left Slide In</option>
+			<option value="CM">Custom</option>
+		</param>
+		<param name="npslixin" type="text" default="" label="Slide Panel X In" description="Slide X coordiantes px"/>
+		<param name="npslixout" type="text" default="" label="Slide Panel X out" description="Slide X coordiantes px"/>
+		<param name="npsliyin" type="text" default="" label="Slide Panel Y In" description="Slide Y coordiantes px"/>
+		<param name="npsliyout" type="text" default="" label="Slide Panel Y Out" description="Slide Y coordiantes px"/>
+		<param name="npsliAnim" type="list" default="Quad" label="Slide animation mode" description="Slide Panel animation mode." >
+			<option value="Quad">Quadratic transition</option>
+			<option value="linear">Linear transition</option>
+			<option value="Cubic">Cubicular transition</option>
+			<option value="Quart">Quartetic transition</option>
+			<option value="Quint">Quintic transition</option>
+			<option value="Expo">Exponential transition</option>
+			<option value="Circ">Circular transition</option>
+			<option value="Sine">Sineousidal transition</option>
+			<option value="Back">Makes the transition go back, then all forth</option>
+			<option value="Bounce">Makes the transition bouncy</option>
+			<option value="Elastic">Elastic curve</option>
+		</param>
+		<param name="npsliEase" type="list" default="easeIn" label="Slide ease mode" description="Slide ease mode." >
+			<option value="easeIn">Ease In</option>
+			<option value="easeOut">Ease Out</option>
+			<option value="easeInOut">Ease In/Out</option>
+		</param>
+		<param name="npslidi" type="text" default="50" label="Frames Per Second" description="Frames per second" />
+		<param name="npslido" type="text" default="800" label="Frame Duration" description="Duration in Milliseconds." />
+		<param type="spacer" default="Hover Color Change FX Settings:" />
+		<param name="hoifx" type="colorinput" default="CECECE" label="Hover Effect In Color" description="Hover Effect Color"/>
+		<param name="hoofx" type="colorinput" default="FFFFFF" label="Hover Effect Out Color" description="Original Background Color"/>
+
+	</params>
+</install>

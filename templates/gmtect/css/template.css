@@ -245,6 +245,7 @@ body {
 #right.noleft{
 	float:none;
 	display:block;
+	width:100%;
 }
 /*.contact h3,
 .article h3 {
