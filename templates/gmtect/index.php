@@ -100,11 +100,10 @@
 		<?php endif; ?>
 			<!-- /#home-content -->
 		<!-- #main -->
-		<div id="main" class="clearfix">
+		<div id="main" class="clearfix<?php if(!$this->countModules('banner')) : ?> productpage<?php endif; ?>">
 			<?php if($this->countModules('left')) : ?>
 			<!-- #left -->
 			<div id="left">
-				
 				<jdoc:include type="modules" name="left" style="phuonghtk" />
 			</div>
 			<!-- /#left -->

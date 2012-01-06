@@ -726,9 +726,17 @@ padding: 0 12px;
 }
 .itemRelated ul li {
 background: url("../images/arrow.png") no-repeat scroll 0 12px transparent;
-padding-left: 16px !important;
 border-bottom: 1px dotted #DDD;
 padding: 2px;
+text-align: center;
+width:150px;
+}
+.itemRelated ul li a{
+	display:block;
+	width:150px;
+	height:38px;
+	line-height:38px;
+	text-align:center;
 }
 /* Related by tag */
 .itemAuthorLatest {

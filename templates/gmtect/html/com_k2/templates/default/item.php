@@ -11,10 +11,18 @@
 defined('_JEXEC') or die('Restricted access');
 
 ?>
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" type="text/css" media="screen" title="no title" charset="utf-8">
 <!-- Start K2 Item Layout -->
 <span id="startOfPageId<?php echo JRequest::getInt('id'); ?>"></span>
-
+<?php if($this->item->params->get('itemImageGallery') && !empty($this->item->gallery)): ?>
+  <!-- Item image gallery -->
+  <a name="itemImageGalleryAnchor" id="itemImageGalleryAnchor"></a>
+  <div class="itemImageGallery">
+	  <!-- <h3><?php echo JText::_('Image Gallery'); ?></h3> -->
+	  <?php echo $this->item->gallery; ?>
+  </div>
+  <?php endif; ?>
 <div id="k2Container" class="itemView<?php echo ($this->item->featured) ? ' itemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
 
 	<!-- Plugins: BeforeDisplay -->
@@ -226,7 +234,7 @@ defined('_JEXEC') or die('Restricted access');
 		  <div class="clr"></div>
 	  </div>
 	  <?php endif; ?>
-
+	  
 	  <?php if(!empty($this->item->fulltext)): ?>
 
 	  <?php if($this->item->params->get('itemIntroText')): ?>
@@ -255,19 +263,26 @@ defined('_JEXEC') or die('Restricted access');
 		<div class="clr"></div>
 
 	  <?php if($this->item->params->get('itemExtraFields') && count($this->item->extra_fields)): ?>
+		<script>
+			jQuery(function($) {
+				$("#extraTabs").tabs({ fx: { opacity: 'toggle' } });
+			});
+			</script>
 	  <!-- Item extra fields -->
-	  <div class="itemExtraFields">
-	  	<h3><?php echo JText::_('Additional Info'); ?></h3>
+	<div id="extraTabs">
 	  	<ul>
+			<?php $extraId = 1; ?>
 			<?php foreach ($this->item->extra_fields as $key=>$extraField):?>
 			<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
-				<span class="itemExtraFieldsLabel"><?php echo $extraField->name; ?>:</span>
-				<span class="itemExtraFieldsValue"><?php echo $extraField->value; ?></span>
+				<a href="#extratab-<?php echo $extraId; ?>"><span class="itemExtraFieldsLabel"><?php echo $extraField->name; ?>:</span></a>
 			</li>
-			<?php endforeach; ?>
+			<?php $extraId++; endforeach; ?>
 			</ul>
-	    <div class="clr"></div>
-	  </div>
+			<?php $extraId = 1; ?>
+			<?php foreach ($this->item->extra_fields as $key=>$extraField):?>
+				<div class="itemExtraFieldsValue" id="extratab-<?php echo $extraId; ?>"><?php echo $extraField->value; ?></div>
+			<?php $extraId++; endforeach; ?>
+	</div>
 	  <?php endif; ?>
 
 		<?php if($this->item->params->get('itemDateModified') && intval($this->item->modified)!=0):?>
@@ -514,15 +529,6 @@ defined('_JEXEC') or die('Restricted access');
 	  <?php endif; ?>
 
 	  <div class="clr"></div>
-  </div>
-  <?php endif; ?>
-
-  <?php if($this->item->params->get('itemImageGallery') && !empty($this->item->gallery)): ?>
-  <!-- Item image gallery -->
-  <a name="itemImageGalleryAnchor" id="itemImageGalleryAnchor"></a>
-  <div class="itemImageGallery">
-	  <h3><?php echo JText::_('Image Gallery'); ?></h3>
-	  <?php echo $this->item->gallery; ?>
   </div>
   <?php endif; ?>
 
