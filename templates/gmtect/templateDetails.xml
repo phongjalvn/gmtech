@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install version="1.5" type="template">
-  <name>Mekong</name>
+  <name>GMTech</name>
   <version>1.0</version>
   <creationDate>27 August 2011</creationDate>
-  <author>vietprotocol</author>
+  <author>phuonghtk</author>
   <authorEmail>htkieuphuong@gmail.com</authorEmail>
-  <authorUrl>www.thietkewebsite.com</authorUrl>
+  <authorUrl>www.jblog.vnwebtalk.com.com</authorUrl>
   <copyright></copyright>
   <license></license>
-  <description>Template for Mekong</description>
+  <description>Template for GMtect</description>
   <positions>
     <position>left</position>
     <position>right</position>
