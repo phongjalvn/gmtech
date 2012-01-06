@@ -97,13 +97,6 @@ body {
 	font-size:12px;
 	line-height: 1.45em;
 	overflow-x:hidden;
-	color: #333;
-}
-body.daylahomene {
-
-	/*height: 989px;
-		overflow: hidden;
-		position: relative;*/
 }
 #wrapper {
 	width: 944px;
@@ -246,9 +239,13 @@ body.daylahomene {
 
 #right {
 	width: 670px;
-	
 	float: right;
 	display: inline;
+}
+#right.noleft{
+	float:none;
+	display:block;
+	width:100%;
 }
 /*.contact h3,
 .article h3 {
