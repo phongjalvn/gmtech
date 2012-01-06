@@ -15,7 +15,14 @@ defined('_JEXEC') or die('Restricted access');
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" type="text/css" media="screen" title="no title" charset="utf-8">
 <!-- Start K2 Item Layout -->
 <span id="startOfPageId<?php echo JRequest::getInt('id'); ?>"></span>
-
+<?php if($this->item->params->get('itemImageGallery') && !empty($this->item->gallery)): ?>
+  <!-- Item image gallery -->
+  <a name="itemImageGalleryAnchor" id="itemImageGalleryAnchor"></a>
+  <div class="itemImageGallery">
+	  <!-- <h3><?php echo JText::_('Image Gallery'); ?></h3> -->
+	  <?php echo $this->item->gallery; ?>
+  </div>
+  <?php endif; ?>
 <div id="k2Container" class="itemView<?php echo ($this->item->featured) ? ' itemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
 
 	<!-- Plugins: BeforeDisplay -->
@@ -227,14 +234,7 @@ defined('_JEXEC') or die('Restricted access');
 		  <div class="clr"></div>
 	  </div>
 	  <?php endif; ?>
-	  <?php if($this->item->params->get('itemImageGallery') && !empty($this->item->gallery)): ?>
-	  <!-- Item image gallery -->
-	  <a name="itemImageGalleryAnchor" id="itemImageGalleryAnchor"></a>
-	  <div class="itemImageGallery">
-		  <!-- <h3><?php echo JText::_('Image Gallery'); ?></h3> -->
-		  <?php echo $this->item->gallery; ?>
-	  </div>
-	  <?php endif; ?>
+	  
 	  <?php if(!empty($this->item->fulltext)): ?>
 
 	  <?php if($this->item->params->get('itemIntroText')): ?>
