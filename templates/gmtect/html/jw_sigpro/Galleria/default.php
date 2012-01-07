@@ -15,7 +15,7 @@ $document->addScript($pluginLivePath.'/tmpl/Galleria/js/behaviour.js');
 
 ?>
 
-<div id="sigProGalleria<?php echo $gal_id; ?>" class="sigProContainer sigProGalleriaContainer">
+<div id="sigProGalleria<?php echo $gal_id; ?>" class="clearfix sigProContainer sigProGalleriaContainer">
 
 	<div class="sigProGalleriaPlaceholderContainer">
 		<div class="sigProGalleriaPlaceholder">
@@ -35,8 +35,8 @@ $document->addScript($pluginLivePath.'/tmpl/Galleria/js/behaviour.js');
 						<img class="sigProImg" src="<?php echo $transparent; ?>" alt="<?php echo JText::_('JW_SIGP_LABELS_08').' '.$photo->filename; ?>" title="<?php echo JText::_('JW_SIGP_LABELS_08').' '.$photo->filename; ?>" style="width:<?php echo $photo->width; ?>px;height:<?php echo $photo->height; ?>px;background-image:url(<?php echo $photo->thumbImageFilePath; ?>);" />
 						<?php endif; ?>
 						<?php if($gal_captions): ?>
-						<span class="sigProPseudoCaption"><b><?php echo $photo->captionTitle; ?></b></span>
-						<span class="sigProCaption" title="<?php echo $photo->captionTitle; ?>"><?php echo $photo->captionTitle; ?></span>
+						<span class="sigProPseudoCaption"><b></b></span>
+						<span class="sigProCaption"  ?></span>
 						<?php endif; ?>
 					</a>
 				</span>
@@ -48,13 +48,13 @@ $document->addScript($pluginLivePath.'/tmpl/Galleria/js/behaviour.js');
 </div>
 
 <?php if(isset($flickrSetUrl)): ?>
-<a class="sigProFlickrSetLink" title="<?php echo $flickrSetTitle; ?>" target="_blank" href="<?php echo $flickrSetUrl; ?>"><?php echo JText::_('JW_SIGP_PLG_FLICKRSET'); ?></a>
+<a class="sigProFlickrSetLink"  ?>" target="_blank" href="<?php echo $flickrSetUrl; ?>"><?php echo JText::_('JW_SIGP_PLG_FLICKRSET'); ?></a>
 <?php endif; ?>
 
 <?php if($itemPrintURL): ?>
 <div class="sigProPrintMessage">
 	<?php echo JText::_('JW_SIGP_PLG_PRINT_MESSAGE'); ?>:
 	<br />
-	<a title="<?php echo $row->title; ?>" href="<?php echo $itemPrintURL; ?>"><?php echo $itemPrintURL; ?></a>
+	<a  href="<?php echo $itemPrintURL; ?>"><?php echo $itemPrintURL; ?></a>
 </div>
 <?php endif; ?>

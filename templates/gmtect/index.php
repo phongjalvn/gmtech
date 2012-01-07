@@ -4,8 +4,11 @@
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/css/joomla.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/css/basetemplate.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/css/template.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/js/main.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>-->
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/js/jquery.tools.min.js" type="text/javascript" charset="utf-8"></script>
+  	
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/js/main.js" type="text/javascript" charset="utf-8"></script>
   	
 	<jdoc:include type="head" />
 </head>
@@ -100,7 +103,8 @@
 		<?php endif; ?>
 			<!-- /#home-content -->
 		<!-- #main -->
-		<div id="main" class="clearfix<?php if(!$this->countModules('banner')) : ?> productpage<?php endif; ?>">
+		<div id="main-container" class="clearfix">
+		<div id="main" class="clearfix <?php if(!$this->countModules('banner') && $this->countModules('left')) : ?> productpage<?php endif; ?>">
 			<?php if($this->countModules('left')) : ?>
 			<!-- #left -->
 			<div id="left">
@@ -111,13 +115,6 @@
 			<!-- #right -->
 			<div id="right"<?php if(!$this->countModules('left')) : ?> class="noleft"<?php endif; ?>>
 				<!-- #breadcrumb -->
-				<?php if($this->countModules('breadcrumb')) : ?>
-				<div id="breadcrumb">
-					
-					<jdoc:include type="modules" name="breadcrumb" style="phuonghtk" />
-					
-				</div>
-				<?php endif; ?>
 				<!-- /#breadcrumb -->
 				<!-- #noidungtrang -->
 							<div id="noidungtrang">
@@ -134,6 +131,7 @@
 							<!-- /#noidungtrang -->
 			</div>
 			<!-- /#right -->
+		</div>
 		</div>
 		<!-- /#main -->
 		<!-- #footer -->

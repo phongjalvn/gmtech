@@ -49,7 +49,7 @@ class JConfig {
 	var $MetaTitle = '1';
 	var $lifetime = '60';
 	var $session_handler = 'database';
-	var $password = 'root';
+	var $password = '';
 	var $sitename = 'GM tech';
 	var $MetaDesc = 'Joomla! - the dynamic portal engine and content management system';
 	var $MetaKeys = 'joomla, Joomla';

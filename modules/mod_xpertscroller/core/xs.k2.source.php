@@ -11,6 +11,7 @@
 // no direct access
 defined('_JEXEC') or die('Restricted accessd');
 require_once (JPATH_SITE.DS.'components'.DS.'com_k2'.DS.'helpers'.DS.'route.php');
+require_once(JPATH_LIBRARIES.DS.'phputf8'.DS.'utf8.php');
 
 class XSK2Source{
     
@@ -193,7 +194,7 @@ class XSK2Source{
         $text = strip_tags($text,'<p><a>');
         
         if(strlen($text)>$num_charecter && $num_charecter!=0){
-            $text1 = substr ($text, 0, $num_charecter) . "....";
+            $text1 = utf8_substr ($text, 0, $num_charecter) . "....";
             return $text1;
         }
         else return $text;

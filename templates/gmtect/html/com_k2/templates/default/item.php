@@ -454,7 +454,7 @@ defined('_JEXEC') or die('Restricted access');
 
   <?php if($this->item->params->get('itemRelated') && isset($this->relatedItems)): ?>
   	<!-- Related items by tag -->
-		<div class="itemRelated">
+		<div class="itemRelated clearfix">
 			<h3><?php echo JText::_("K2_RELATED_ITEMS_BY_TAG"); ?></h3>
 			<ul>
 				<?php foreach($this->relatedItems as $key=>$item): ?>
@@ -497,7 +497,6 @@ defined('_JEXEC') or die('Restricted access');
 					<?php endif; ?>
 				</li>
 				<?php endforeach; ?>
-				<li class="clr"></li>
 			</ul>
 			<div class="clr"></div>
 		</div>

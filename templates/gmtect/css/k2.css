@@ -300,14 +300,8 @@ border-right: 1px solid #DDD;
 margin: 0 8px 0 0;
 padding: 0 8px 0 0;
 }
-	.itemHeader .itemTitle {
-color: #202020;
-font-size: 260%;
-font-weight: normal;
-line-height: 110%;
-margin: 0;
-padding: 10px 0 4px;
-}
+
+
 	.latestItemHeader .latestItemTitle, .genericItemHeader .genericItemTitle, .userItemHeader .userItemTitle, .catItemHeader .catItemTitle {
 font-size: 24px;
 font-weight: normal;
@@ -406,7 +400,7 @@ margin: 0 16px 16px 0;
 padding: 0;
 }
 .latestItemImageBlock, .genericItemImageBlock, .catItemImageBlock {
-border: 1px dotted #ddd;
+
 margin: 0;
 padding: 8px 0 0;
 }
@@ -426,8 +420,7 @@ margin: 0 0 8px;
 text-align: center;
 }
 	span.latestItemImage img, span.genericItemImage img, span.userItemImage img, span.catItemImage img, span.itemImage img {
-border: 1px dotted #DDDDDD;
-margin: 12px 8px 0 0;
+margin: 0px 8px 0 0;
 padding: 8px;
 }
 	span.latestItemImage img, span.catItemImage img {
@@ -456,7 +449,7 @@ padding: 4px 0 12px;
 padding: 2px;
 margin: 4px;
 background: #fff;
-border: 1px solid #ccc;
+
 }
 	.itemFullText h3 {
 margin: 0;
@@ -716,23 +709,54 @@ margin-bottom: 16px;
 overflow: hidden;
 }
 .itemRelated h3 {
-background: url("../images/moduletable_title.png") repeat-x scroll 0 100% #FFF;
-border: 1px solid #E7E7E7;
+background: url('../images/arrow-splq.png') no-repeat left center;
+
+color: #1E00C8 !important;
+text-transform: uppercase;
 font-size: 12px;
 height: 35px;
 line-height: 35px;
 margin: 0 0 12px;
-padding: 0 12px;
+padding: 0 18px;
 }
-.itemRelated ul li {
-background: url("../images/arrow.png") no-repeat scroll 0 12px transparent;
-border-bottom: 1px dotted #DDD;
+.productpage .itemRelated ul li {
+background: url('../images/bg-splq.png') no-repeat;
+height: 186px;
 padding: 2px;
 text-align: center;
+border-bottom:none;
 width:150px;
+float: left;
+list-style: none;
 }
-.itemRelated ul li a{
+.itemRelated ul li {
+	display: block;
+	width: 100%;
+	height: 100px;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.itemRelated ul li img {
+	float: left;
+	margin-right: 10px;
+	display: inline;
+}
+.productpage .itemRelated ul li {
+	float: left;
+	display: inline;
+	margin-right: 8px;
+}
+.productpage .itemRelated ul li img {
+	width: 110px !important;
+	height: 122px !important;
+	display: block;
+	margin: 0 auto !important;
+	float: none;
+}
+.productpage .itemRelated ul li a{
 	display:block;
+	color: #fff;
+	text-transform: uppercase;
 	width:150px;
 	height:38px;
 	line-height:38px;

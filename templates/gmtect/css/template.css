@@ -72,7 +72,7 @@ color:#333;
 text-decoration:none;
 }
 a:hover{
-color:#f71b1e;
+
 }
 
 a span{
@@ -161,7 +161,7 @@ body {
 	font-weight: bold;
 	
 }
-#menu a:hover {
+#menu a:hover, #menu .active a {
 	text-decoration: underline;
 }
 
@@ -219,8 +219,22 @@ body {
 	float: left;
 	display: inline;
 	padding-right: 10px;
+	position: relative;
+	margin-top:74px;
 
 }
+.itemListView .componentheading, .itemView .itemTitle {
+	background: url("../images/shadow.png") repeat-x scroll center bottom transparent;
+    color: #58595B;
+    font-size: 16px;
+    font-weight: normal;
+    left: -272px;
+    padding: 15px 0 30px 36px;
+    position: relative;
+    text-transform: uppercase;
+    width: 923px;
+}
+
 #left .moduletable {
 	
 }
@@ -316,8 +330,6 @@ body {
 #jflanguageselection {
 	margin: 28px 5px 22px 0 !important;
 }
-
-
 
 
 
