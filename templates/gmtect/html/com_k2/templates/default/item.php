@@ -14,20 +14,22 @@ defined('_JEXEC') or die('Restricted access');
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/modules/mod_xpertscroller/interface/css/xpertscroller-basic.css" type="text/css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" type="text/css" media="screen" title="no title" charset="utf-8">
 <style type="text/css">
-	.itemRelated {position:relative;}
-	#itemRelated {width: 944px; height: 186px;}
-	#itemRelated .pane {width: 944px; margin:0 }
-	#itemRelated .items { width:20000em; }
-	#itemRelated .pane .item{overflow:hidden; }
-	#itemRelated .item img{width: 124px; height: 108px;}
-	.itemRelated a.browse{display:block; position:absolute; top:135px; z-index:9999}
-	.itemRelated a.prev{left:0;}
-	.itemRelated a.next{right:14px;}
+	.productpage .itemRelated {position:relative;}
+	.productpage #itemRelated {width: 944px; height: 186px;}
+	.productpage #itemRelated .pane {width: 944px; margin:0 }
+	.productpage #itemRelated .items { width:20000em; }
+	.productpage #itemRelated .pane .item{overflow:hidden; }
+	.productpage #itemRelated .item img{width: 124px; height: 108px;}
+	.productpage .itemRelated a.browse{display:block; position:absolute; top:135px; z-index:9999}
+	.productpage .itemRelated a.prev{left:2px;
+		background: transparent url('<?php echo $this->baseurl ?>/templates/gmtect/images/arrow-left.png') no-repeat !important;
+	}
+	.productpage .itemRelated a.next{right:-9px;background: transparent url('<?php echo $this->baseurl ?>/templates/gmtect/images/arrow-right.png') no-repeat !important;}
 </style>
 <script type="text/javascript" src="<?php echo $this->baseurl ?>/modules/mod_xpertscroller/interface/js/xpertscroller.js"></script>
 <script type="text/javascript" charset="utf-8">
 	jQuery(document).ready(function(){
-        jQuery('#itemRelated').scrollable({ 
+        jQuery('.productpage #itemRelated').scrollable({ 
             vertical: false,
             speed: 500,
             circular: true,
@@ -286,23 +288,28 @@ defined('_JEXEC') or die('Restricted access');
 
 		<div class="clr"></div>
 
-	  <?php if($this->item->params->get('itemExtraFields') && count($this->item->extra_fields)): ?>
-	  <!-- Item extra fields -->
-	<div id="extraTabs">
-	  	<ul>
-			<?php $extraId = 1; ?>
-			<?php foreach ($this->item->extra_fields as $key=>$extraField):?>
-			<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
-				<a href="#extratab-<?php echo $extraId; ?>"><span class="itemExtraFieldsLabel"><?php echo $extraField->name; ?>:</span></a>
-			</li>
-			<?php $extraId++; endforeach; ?>
-			</ul>
-			<?php $extraId = 1; ?>
-			<?php foreach ($this->item->extra_fields as $key=>$extraField):?>
-				<div class="itemExtraFieldsValue" id="extratab-<?php echo $extraId; ?>"><?php echo $extraField->value; ?></div>
-			<?php $extraId++; endforeach; ?>
-	</div>
-	  <?php endif; ?>
+	  	<?php if($this->item->params->get('itemExtraFields') && count($this->item->extra_fields)): ?>
+			<script>
+				jQuery(function($) {
+					$("#extraTabs").tabs({ fx: { opacity: 'toggle' } });
+				});
+				</script>
+		  <!-- Item extra fields -->
+		<div id="extraTabs">
+		  	<ul>
+				<?php $extraId = 1; ?>
+				<?php foreach ($this->item->extra_fields as $key=>$extraField):?>
+				<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
+					<a href="#extratab-<?php echo $extraId; ?>"><span class="itemExtraFieldsLabel"><?php echo $extraField->name; ?>:</span></a>
+				</li>
+				<?php $extraId++; endforeach; ?>
+				</ul>
+				<?php $extraId = 1; ?>
+				<?php foreach ($this->item->extra_fields as $key=>$extraField):?>
+					<div class="clearfix itemExtraFieldsValue" id="extratab-<?php echo $extraId; ?>"><?php echo $extraField->value; ?></div>
+				<?php $extraId++; endforeach; ?>
+		</div>
+		  <?php endif; ?>
 
 		<?php if($this->item->params->get('itemDateModified') && intval($this->item->modified)!=0):?>
 		<!-- Item date modified -->

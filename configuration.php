@@ -33,7 +33,7 @@ class JConfig {
 	var $dbtype = 'mysql';
 	var $host = 'localhost';
 	var $user = 'root';
-	var $db = 'gmtech';
+	var $db = 'gmtech8112';
 	var $dbprefix = 'jos_';
 	var $mailer = 'mail';
 	var $mailfrom = 'htkieuphuong@gmail.com';
@@ -49,7 +49,7 @@ class JConfig {
 	var $MetaTitle = '1';
 	var $lifetime = '60';
 	var $session_handler = 'database';
-	var $password = '';
+	var $password = 'root';
 	var $sitename = 'GM tech';
 	var $MetaDesc = 'Joomla! - the dynamic portal engine and content management system';
 	var $MetaKeys = 'joomla, Joomla';

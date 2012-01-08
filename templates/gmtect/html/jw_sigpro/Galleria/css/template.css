@@ -35,7 +35,7 @@ ul.sigProGalleria {
 ul.sigProGalleriaSingleThumb { }
 
 /* Placeholder */
-a.sigProGalleriaTargetLink { display:block; }
+a.sigProGalleriaTargetLink { display:block; width:100%;}
 a.sigProGalleriaTargetLink img { display:block; 
 	width: 760px;
 	height: 456px;
