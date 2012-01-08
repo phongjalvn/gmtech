@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/css/template.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>-->
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-  	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/js/jquery.tools.min.js" type="text/javascript" charset="utf-8"></script>
   	
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template;?>/js/main.js" type="text/javascript" charset="utf-8"></script>
   	

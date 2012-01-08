@@ -7,9 +7,9 @@ jQuery(document).ready(function($) {
 	 	});
  	
  	$('#xs_69 .pane .item:last').addClass('itemlast');
- 	$('.productpage .itemRelated').prepend('<span class="pre"></span>');
- 	$('.productpage .itemRelated').append('<span class="next"></span>');
-	//$(".productpage .itemRelated").scrollable({circular: true}).autoscroll({ autoplay: false });
+	 	// $('.productpage .itemRelated').prepend('<span class="pre"></span>');
+	 	// $('.productpage .itemRelated').append('<span class="next"></span>');
+		//$(".productpage .itemRelated").scrollable({circular: true}).autoscroll({ autoplay: false });
 
 });
 function goToByScroll(id){
