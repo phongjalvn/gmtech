@@ -13,7 +13,7 @@ class JConfig {
 	var $feed_email = 'author';
 	var $secret = 'T3melmaHLCxgswRW';
 	var $gzip = '0';
-	var $error_reporting = '-1';
+	var $error_reporting = '0';
 	var $xmlrpc_server = '0';
 	var $log_path = '/logs';
 	var $tmp_path = '/tmp';

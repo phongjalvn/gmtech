@@ -68,11 +68,11 @@ del {
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 a{
-color:#333;
+color:#6d6e71;
 text-decoration:none;
 }
 a:hover{
-color:#f71b1e;
+
 }
 
 a span{
@@ -97,6 +97,7 @@ body {
 	font-size:12px;
 	line-height: 1.45em;
 	overflow-x:hidden;
+	color:#6d6e71;
 }
 #wrapper {
 	width: 944px;
@@ -118,7 +119,7 @@ body {
 #menu {
 	float: left;
 	display: inline;
-	width: 700px;
+	width: 759px;
 }
 #search {
 	float: right;
@@ -149,19 +150,35 @@ body {
 	display: inline;
 }
 #menu li {
+	
+	
+}
+#menu li.item16, #menu li.item17, #menu li.item19, #menu li.item22, #menu li.item21 {
+	width:90px;
 	background: url('../images/line-menu.png') no-repeat right center;
-	padding: 0 13px 0 10px;
+}
+#menu li.item16 a, #menu li.item17 a, #menu li.item19 a, #menu li.item22 a, #menu li.item21 a {
+	width:90px;
+	
+}
+#menu li.item18, #menu li.item20 {
+	width:125px;
+	background: url('../images/line-menu.png') no-repeat right center;
+}
+#menu li.item18 a, #menu li.item20 a {
+	width:125px;
 }
 #menu a {
 	height: 37px;
 	line-height: 37px;
 	color: #fff;
-	
+	display:block;
+	text-align:center;
 	font-size: 14px;
 	font-weight: bold;
 	
 }
-#menu a:hover {
+#menu a:hover, #menu .active a {
 	text-decoration: underline;
 }
 
@@ -219,14 +236,28 @@ body {
 	float: left;
 	display: inline;
 	padding-right: 10px;
+	position: relative;
+	margin-top:74px;
 
 }
+.itemListView .componentheading, .itemView .itemTitle {
+	background: url("../images/shadow.png") repeat-x scroll center bottom transparent;
+    color: #58595B;
+    font-size: 16px;
+    font-weight: normal;
+    left: -272px;
+    padding: 15px 0 30px 36px;
+    position: relative;
+    text-transform: uppercase;
+    width: 923px;
+}
+
 #left .moduletable {
 	
 }
-#left, #right #noidungtrang {
+/*#left, #right #noidungtrang {
 	background: url('../images/bgmain.png') ;
-}
+}*/
 #right #noidungtrang {
 	padding: 0 10px;
 }
@@ -316,8 +347,6 @@ body {
 #jflanguageselection {
 	margin: 28px 5px 22px 0 !important;
 }
-
-
 
 
 

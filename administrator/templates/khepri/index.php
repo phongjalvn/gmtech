@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.
+ * @copyright	Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.
  * @license		GNU/GPL, see LICENSE.php
  * Joomla! is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -114,7 +114,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	<div id="border-bottom"><div><div></div></div></div>
 	<div id="footer">
 		<p class="copyright">
-			<a href="http://www.vietprotocol.com" target="_blank">Powered by VietProtocol Corporation</a>
+			<a href="http://www.joomla.org" target="_blank">Joomla!</a>
+			<?php echo  JText::_('ISFREESOFTWARE') ?>
 		</p>
 	</div>
 </body>

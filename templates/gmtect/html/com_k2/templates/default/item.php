@@ -11,8 +11,34 @@
 defined('_JEXEC') or die('Restricted access');
 
 ?>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="<?php echo $this->baseurl ?>/modules/mod_xpertscroller/interface/css/xpertscroller-basic.css" type="text/css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<style type="text/css">
+	.productpage .itemRelated {position:relative;}
+	.productpage #itemRelated {width: 944px; height: 186px;}
+	.productpage #itemRelated .pane {width: 944px; margin:0 }
+	.productpage #itemRelated .items { width:20000em; }
+	.productpage #itemRelated .pane .item{overflow:hidden; }
+	.productpage #itemRelated .item img{width: 124px; height: 108px;}
+	.productpage .itemRelated a.browse{display:block; position:absolute; top:135px; z-index:9999}
+	.productpage .itemRelated a.prev{left:2px;
+		background: transparent url('<?php echo $this->baseurl ?>/templates/gmtect/images/arrow-left.png') no-repeat !important;
+	}
+	.productpage .itemRelated a.next{right:-9px;background: transparent url('<?php echo $this->baseurl ?>/templates/gmtect/images/arrow-right.png') no-repeat !important;}
+</style>
+<script type="text/javascript" src="<?php echo $this->baseurl ?>/modules/mod_xpertscroller/interface/js/xpertscroller.js"></script>
+<script type="text/javascript" charset="utf-8">
+	jQuery(document).ready(function(){
+        jQuery('.productpage #itemRelated').scrollable({ 
+            vertical: false,
+            speed: 500,
+            circular: true,
+            keyboard: true
+        }).autoscroll({ autoplay: true , interval: 3000, autopause:true }).navigator();
+    });
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
 <!-- Start K2 Item Layout -->
 <span id="startOfPageId<?php echo JRequest::getInt('id'); ?>"></span>
 <?php if($this->item->params->get('itemImageGallery') && !empty($this->item->gallery)): ?>
@@ -262,28 +288,28 @@ defined('_JEXEC') or die('Restricted access');
 
 		<div class="clr"></div>
 
-	  <?php if($this->item->params->get('itemExtraFields') && count($this->item->extra_fields)): ?>
-		<script>
-			jQuery(function($) {
-				$("#extraTabs").tabs({ fx: { opacity: 'toggle' } });
-			});
-			</script>
-	  <!-- Item extra fields -->
-	<div id="extraTabs">
-	  	<ul>
-			<?php $extraId = 1; ?>
-			<?php foreach ($this->item->extra_fields as $key=>$extraField):?>
-			<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
-				<a href="#extratab-<?php echo $extraId; ?>"><span class="itemExtraFieldsLabel"><?php echo $extraField->name; ?>:</span></a>
-			</li>
-			<?php $extraId++; endforeach; ?>
-			</ul>
-			<?php $extraId = 1; ?>
-			<?php foreach ($this->item->extra_fields as $key=>$extraField):?>
-				<div class="itemExtraFieldsValue" id="extratab-<?php echo $extraId; ?>"><?php echo $extraField->value; ?></div>
-			<?php $extraId++; endforeach; ?>
-	</div>
-	  <?php endif; ?>
+	  	<?php if($this->item->params->get('itemExtraFields') && count($this->item->extra_fields)): ?>
+			<script>
+				jQuery(function($) {
+					$("#extraTabs").tabs({ fx: { opacity: 'toggle' } });
+				});
+				</script>
+		  <!-- Item extra fields -->
+		<div id="extraTabs">
+		  	<ul>
+				<?php $extraId = 1; ?>
+				<?php foreach ($this->item->extra_fields as $key=>$extraField):?>
+				<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
+					<a href="#extratab-<?php echo $extraId; ?>"><span class="itemExtraFieldsLabel"><?php echo $extraField->name; ?>:</span></a>
+				</li>
+				<?php $extraId++; endforeach; ?>
+				</ul>
+				<?php $extraId = 1; ?>
+				<?php foreach ($this->item->extra_fields as $key=>$extraField):?>
+					<div class="clearfix itemExtraFieldsValue" id="extratab-<?php echo $extraId; ?>"><?php echo $extraField->value; ?></div>
+				<?php $extraId++; endforeach; ?>
+		</div>
+		  <?php endif; ?>
 
 		<?php if($this->item->params->get('itemDateModified') && intval($this->item->modified)!=0):?>
 		<!-- Item date modified -->
@@ -454,52 +480,62 @@ defined('_JEXEC') or die('Restricted access');
 
   <?php if($this->item->params->get('itemRelated') && isset($this->relatedItems)): ?>
   	<!-- Related items by tag -->
-		<div class="itemRelated">
-			<h3><?php echo JText::_("K2_RELATED_ITEMS_BY_TAG"); ?></h3>
-			<ul>
-				<?php foreach($this->relatedItems as $key=>$item): ?>
-				<li class="<?php echo ($key%2) ? "odd" : "even"; ?>">
-
-					<?php if($this->item->params->get('itemRelatedTitle', 1)): ?>
-					<a class="itemRelTitle" href="<?php echo $item->link ?>"><?php echo $item->title; ?></a>
-					<?php endif; ?>
-
-					<?php if($this->item->params->get('itemRelatedCategory')): ?>
-					<div class="itemRelCat"><?php echo JText::_("K2_IN"); ?> <a href="<?php echo $item->category->link ?>"><?php echo $item->category->name; ?></a></div>
-					<?php endif; ?>
-
-					<?php if($this->item->params->get('itemRelatedAuthor')): ?>
-					<div class="itemRelAuthor"><?php echo JText::_("K2_BY"); ?> <a rel="author" href="<?php echo $item->author->link; ?>"><?php echo $item->author->name; ?></a></div>
-					<?php endif; ?>
-
-					<?php if($this->item->params->get('itemRelatedImageSize')): ?>
-					<img style="width:<?php echo $item->imageWidth; ?>px;height:auto;" class="itemRelImg" src="<?php echo $item->image; ?>" alt="<?php K2HelperUtilities::cleanHtml($item->title); ?>" />
-					<?php endif; ?>
-
-					<?php if($this->item->params->get('itemRelatedIntrotext')): ?>
-					<div class="itemRelIntrotext"><?php echo $item->introtext; ?></div>
-					<?php endif; ?>
-
-					<?php if($this->item->params->get('itemRelatedFulltext')): ?>
-					<div class="itemRelFulltext"><?php echo $item->fulltext; ?></div>
-					<?php endif; ?>
-
-					<?php if($this->item->params->get('itemRelatedMedia')): ?>
-					<?php if($item->videoType=='embedded'): ?>
-					<div class="itemRelMediaEmbedded"><?php echo $item->video; ?></div>
-					<?php else: ?>
-					<div class="itemRelMedia"><?php echo $item->video; ?></div>
-					<?php endif; ?>
-					<?php endif; ?>
-
-					<?php if($this->item->params->get('itemRelatedImageGallery')): ?>
-					<div class="itemRelImageGallery"><?php echo $item->gallery; ?></div>
-					<?php endif; ?>
-				</li>
-				<?php endforeach; ?>
-				<li class="clr"></li>
-			</ul>
-			<div class="clr"></div>
+  		<div class="itemRelated clearfix  basic_h">
+  			<h3><?php echo JText::_("K2_RELATED_ITEMS_BY_TAG"); ?></h3>
+		    <!-- wrapper for navigator elements -->
+		    <a class="prev browse left"></a>
+		    <div id="itemRelated" class="scroller">
+		        <div class="items">
+		        <?php $index = 0; ?>
+		        <?php for($i = 0; $i<2; $i++){?>
+		            <div class="pane">
+		            <?php for($col=0; $col<4; $col++, $index++) {?>
+		                <?php if($index>=count($this->relatedItems)) break;?>
+		                <div class="item">
+		                	<?php $item = $this->relatedItems[$index];?>
+		                    <?php if($this->item->params->get('itemRelatedTitle', 1)): ?>
+								<a class="itemRelTitle" href="<?php echo $item->link ?>"><?php echo $item->title; ?></a>
+								<?php endif; ?>
+			
+								<?php if($this->item->params->get('itemRelatedCategory')): ?>
+								<div class="itemRelCat"><?php echo JText::_("K2_IN"); ?> <a href="<?php echo $item->category->link ?>"><?php echo $item->category->name; ?></a></div>
+								<?php endif; ?>
+			
+								<?php if($this->item->params->get('itemRelatedAuthor')): ?>
+								<div class="itemRelAuthor"><?php echo JText::_("K2_BY"); ?> <a rel="author" href="<?php echo $item->author->link; ?>"><?php echo $item->author->name; ?></a></div>
+								<?php endif; ?>
+			
+								<?php if($this->item->params->get('itemRelatedImageSize')): ?>
+								<img style="width:<?php echo $item->imageWidth; ?>px;height:auto;" class="itemRelImg" src="<?php echo $item->image; ?>" alt="<?php K2HelperUtilities::cleanHtml($item->title); ?>" />
+								<?php endif; ?>
+			
+								<?php if($this->item->params->get('itemRelatedIntrotext')): ?>
+								<div class="itemRelIntrotext"><?php echo $item->introtext; ?></div>
+								<?php endif; ?>
+			
+								<?php if($this->item->params->get('itemRelatedFulltext')): ?>
+								<div class="itemRelFulltext"><?php echo $item->fulltext; ?></div>
+								<?php endif; ?>
+			
+								<?php if($this->item->params->get('itemRelatedMedia')): ?>
+								<?php if($item->videoType=='embedded'): ?>
+								<div class="itemRelMediaEmbedded"><?php echo $item->video; ?></div>
+								<?php else: ?>
+								<div class="itemRelMedia"><?php echo $item->video; ?></div>
+								<?php endif; ?>
+								<?php endif; ?>
+			
+								<?php if($this->item->params->get('itemRelatedImageGallery')): ?>
+								<div class="itemRelImageGallery"><?php echo $item->gallery; ?></div>
+								<?php endif; ?>
+		                </div>
+		                <?php if($col == 4 ){$col=0; break;} ?>
+		            <?php } ?>
+		            </div>
+		        <?php }?>
+		        </div>
+		    </div>
+		    <a class="next browse right"></a>
 		</div>
 		<?php endif; ?>
 

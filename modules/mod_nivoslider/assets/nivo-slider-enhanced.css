@@ -1,4 +1,4 @@
-.nivoSlider{position:relative;background:#202834 url(loading.gif) no-repeat 50% 50%;}
+.nivoSlider{position:relative;background:#202834 url(loading.gif) no-repeat 50% 50%; overflow: hidden;}
 .nivoSlider img{position:absolute;top:0;left:0;display:none}
 .nivoSlider a.nivo-imageLink{
 	position:absolute;top:0;left:0;width:100%;
