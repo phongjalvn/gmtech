@@ -301,14 +301,24 @@ margin: 0 8px 0 0;
 padding: 0 8px 0 0;
 }
 
-
+.catItemIntroText p{
+	margin:0 !important;
+}
+.itemListLeading .itemListLeading {
+	margin-top:0;
+	padding-bottom:0 !important;
+}
+.itemListLeading .itemListLeading .itemContainer {
+	padding-bottom:0;
+} 
 	.latestItemHeader .latestItemTitle, .genericItemHeader .genericItemTitle, .userItemHeader .userItemTitle, .catItemHeader .catItemTitle {
 font-size: 24px;
 font-weight: normal;
 line-height: 110%;
 margin: 0;
-padding: 10px 0 4px;
+padding: 0px 0 4px;
 }
+
 	.latestItemHeader .latestItemTitle a, .genericItemHeader .genericItemTitle a, .userItemHeader .userItemTitle a, .catItemHeader .catItemTitle a {
 color: #202020;
 }

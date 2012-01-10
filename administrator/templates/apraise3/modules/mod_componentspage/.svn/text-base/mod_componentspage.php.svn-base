@@ -1,6 +1,0 @@
-<?php
-defined( '_JEXEC' ) or die( 'Restricted access' );
-
-$menu = StainlessMenu::getInstance();
-
-require($tmpl_path.'/default.php');

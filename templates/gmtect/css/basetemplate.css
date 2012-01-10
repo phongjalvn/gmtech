@@ -131,7 +131,7 @@ div.catItemImageBlock {
 .catItemContentBlock{
 	display: inline;
 	float: left;
-	width: 390px;
+	width: 445px;
 }
 /* ================ */
 #userForm {
@@ -139,7 +139,7 @@ div.catItemImageBlock {
 }
 #userForm div{
 	font-style:italic;
-	margin: 5px 0;
+	margin: 0px 0;
 }
 #userForm input[type="submit"] {
 	background: url('../images/send.png') no-repeat;
@@ -159,6 +159,14 @@ div.catItemImageBlock {
 	width: 150px;
 	height: 38px;
 	border:none !important;
+}
+.ui-widget {
+		font-family: Arial, Helvetica, sans-serif !important;
+		font-size:12px !important;
+		color:#6d6e71;
+}
+.ui-widget-content {
+	color:#6d6e71 !important;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
 	background: transparent url('../images/tab.png') no-repeat bottom left !important;
@@ -189,10 +197,10 @@ div.catItemImageBlock {
     top: 0;
 }
 .ui-tabs .ui-tabs-nav {
-	margin: 0 5px 0 18px !important;
+	margin: 0 5px 0 22px !important;
 }
 .ui-tabs .ui-tabs-nav li {
-	margin: 0 2px 0 5px !important;
+	margin: 0 1px 0 0 !important;
 }
 .ui-tabs-nav a, .ui-tabs-nav a {
 	height: 37px;
@@ -205,11 +213,12 @@ div.catItemImageBlock {
 .ui-tabs-nav a, .ui-tabs-nav a span {
 	
 	color: #fff;
+	font-weight:bold;
 	font-size: 12px;
 	text-align: center;
 }
 li.ui-tabs-selected a span {
-	color: #333 !important;
+	color: #6d6e71 !important;
 }
 .productpage #k2Container {
 	position: relative;
@@ -246,4 +255,24 @@ li.ui-tabs-selected a span {
 }
 .itemListCategory h2 {
 	left: -284px !important;
+}
+.rsform-input-box {
+	margin-left:20px;
+	border:1px solid #ccc;
+	padding:4px 5px;
+}
+input.rsform-input-box {
+	width:221px;
+}
+textarea#Noidung {
+	width:305px;
+	margin-left:20px;
+	border:1px solid #ccc;
+	padding:4px 5px;
+}
+#captchaTxt30, #gui, #captcha30 {
+	margin-left:20px;
+}
+a.mceItemAnchor {
+	width:100% !important;
 }
