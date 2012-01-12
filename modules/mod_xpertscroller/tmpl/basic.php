@@ -20,7 +20,14 @@ $index=0;
     <div class="navi"></div>
     <?php endif;?>
     <a class="prev browse left"></a>
-    <div id="<?php echo $this->settings['module_unique_id'];?>" class="scroller">
+    <div id="<?php echo $this->settings['module_unique_id'];?>">
+		<?php if ($this->settings['animation_type'] == 'animation_f'): ?>
+			<ul class="tabs">
+				<?php for ($i=0; $i < $totalPane; $i++) {?>
+					<li class="tabitems">Tab <?php echo $i; ?></li>
+				<?php } ?>
+			</ul>
+		<?php endif ?>
         <div class="items">
         <?php for($i = 0; $i<$totalPane; $i++){?>
             <div class="pane">
@@ -31,8 +38,6 @@ $index=0;
                         <div class="img-left" style="float:left;">
                         	<?php echo ($this->settings['item_image'] == '1')? $this->content[$index]->image : '';?>
                         </div>
-                        
-
                         <div class="noidungoday" style="float:left;">
                         	<?php if($this->settings['article_title'] === '1'):?>
                             <h4><?php echo $this->content[$index]->title;?></h4>

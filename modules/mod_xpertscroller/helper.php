@@ -128,14 +128,21 @@ class modXpertScrollerHelper{
         if($this->settings['navigator']) $navigator = ".navigator()";
         
 		//Fade or Scroll?
-		if ($this->setting['animation_type'] == 'animation_f') {
+		if ($this->settings['animation_type'] == 'animation_f') {
 			$js = "
 				jQuery(document).ready(function(){
-	                jQuery('#{$this->settings['module_unique_id']}').tabs('.pane', { 
+	                jQuery('#{$this->settings['module_unique_id']} .tabs')
+	.tabs('#{$this->settings['module_unique_id']} .pane', { 
 	                    effect: 'fade',
 						fadeOutSpeed: {$speed},
-						rotate: {$repeat}
-	                }).slideshow();
+						rotate: {$repeat},
+	                }).slideshow({
+							nextclass: '.next',
+							prevclass: '.prev',
+							autoplay : {$autoPlay},
+							autopause : {$autoPause},
+							interval : {$interval}
+	});
 	            });
 			";
 		} else {
@@ -225,15 +232,34 @@ class modXpertScrollerHelper{
             $imgHeight  = (int)$this->settings['image_height'];
         }
         //preaper all css settings
-        $css = "
-            {$selectorId} {width: {$moduleWidth}px; height: {$moduleHeight}px;}
-            {$selectorId} .pane {width: {$moduleWidth}px }
-            {$selectorId} .items { {$animationStyle}:20000em; }
-            {$selectorId} .pane .item{{$itemDimensions}; overflow:hidden; }
-            {$selectorId} .item img{width: {$imgWidth}px; height: {$imgHeight}px;}
-            {$selectorClass} a.browse{ margin:{$controlMargin}; }
-            
-        ";
+		//Fade or Scroll?
+		if ($this->settings['animation_type'] == 'animation_f') {	       
+			$css = "
+			  {$selectorId} {width: {$moduleWidth}px; height: {$moduleHeight}px; position: relative;}
+			  {$selectorId} .tabs {display:none;}
+           {$selectorId} .pane {
+					width: {$moduleWidth}px;
+					display:none;
+					position:absolute;
+					top:0;
+					left:8px; 
+				}
+           {$selectorId} .items { }
+           {$selectorId} .pane .item{{$itemDimensions}; overflow:hidden; height:139px;}
+           {$selectorId} .item img{width: {$imgWidth}px; height: {$imgHeight}px;}
+           {$selectorClass} a.browse{ margin:{$controlMargin}; }
+			";
+		} else {
+			$css = "
+		           {$selectorId} {width: {$moduleWidth}px; height: {$moduleHeight}px;}
+						{$selectorId} .pane {width: {$moduleWidth}px;}
+		           {$selectorId} .items { {$animationStyle}:20000em; }
+		           {$selectorId} .pane .item{{$itemDimensions}; overflow:hidden; }
+		           {$selectorId} .item img{width: {$imgWidth}px; height: {$imgHeight}px;}
+		           {$selectorClass} a.browse{ margin:{$controlMargin}; }
+
+		    ";
+		}
         //push this css on document head
         $doc->addStyleDeclaration($css);
         
@@ -243,7 +269,7 @@ class modXpertScrollerHelper{
     }
     /*
     * Load Stylesheet
-    * 
+    * jj
     */    
     function load_stylesheet(){
         global $mainframe;
