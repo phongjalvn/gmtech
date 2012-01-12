@@ -4,7 +4,7 @@
  * Displays a selectbox of available categories (needs sections element)
  *
  * @package			NoNumber! Framework
- * @version			12.1.1
+ * @version			12.1.4
  *
  * @author			Peter van Westen <peter@nonumber.nl>
  * @link			http://www.nonumber.nl
@@ -20,7 +20,7 @@ defined( '_JEXEC' ) or die();
  */
 class nnFieldCategories
 {
-	var $_version = '12.1.1';
+	var $_version = '12.1.4';
 
 	function getInput( $name, $id, $value, $params, $children, $j15 = 0 )
 	{

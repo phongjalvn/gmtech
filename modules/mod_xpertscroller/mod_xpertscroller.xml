@@ -159,6 +159,11 @@
                 <option value="animation_h">Horizontal</option>
                 <option value="animation_v">Vertical </option>
             </param>
+
+			<param name="animation_type" type="radio" default="animation_s" label="SCROLLER_TYPE" description="SCROLLER_TYPE_DESC">
+				<option value="animation_s">Scroll</option>
+                <option value="animation_f">Fade</option>
+            </param>
             
             <param name="animation_speed" type="text" default="1000" label="ANIMATION_SPEED" description="ANIMATION_SPEED_DESC" />
             

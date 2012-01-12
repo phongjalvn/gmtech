@@ -4,7 +4,7 @@
  * Element to create a new slide pane
  *
  * @package			NoNumber! Framework
- * @version			12.1.1
+ * @version			12.1.4
  *
  * @author			Peter van Westen <peter@nonumber.nl>
  * @link			http://www.nonumber.nl
@@ -23,7 +23,7 @@ require_once JPATH_PLUGINS.'/system/nnframework/helpers/functions.php';
  */
 class nnFieldSlide
 {
-	var $_version = '12.1.1';
+	var $_version = '12.1.4';
 
 	function getInput( $name, $id, $value, $params, $children, $j15 = 0 )
 	{

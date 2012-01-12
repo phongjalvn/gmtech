@@ -3,7 +3,7 @@
  * NoNumber! Framework Helper File: VersionCheck
  *
  * @package			NoNumber! Framework
- * @version			12.1.1
+ * @version			12.1.4
  *
  * @author			Peter van Westen <peter@nonumber.nl>
  * @link			http://www.nonumber.nl
@@ -36,7 +36,7 @@ class NNVersions
 
 class NoNumberVersions
 {
-	var $_version = '12.1.1';
+	var $_version = '12.1.4';
 
 	function getMessage( $extension = '', $xml = '', $version = '', $addmargin = 0 )
 	{

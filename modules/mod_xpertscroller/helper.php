@@ -127,16 +127,29 @@ class modXpertScrollerHelper{
         $navigator='';
         if($this->settings['navigator']) $navigator = ".navigator()";
         
-        $js = "
-            jQuery(document).ready(function(){
-                jQuery('#{$this->settings['module_unique_id']}').scrollable({ 
-                    vertical: {$animationMode},
-                    speed: {$speed},
-                    circular: {$repeat},
-                    keyboard: {$keyboardNav}
-                }){$autoScroll}{$navigator};
-            });
-        ";
+		//Fade or Scroll?
+		if ($this->setting['animation_type'] == 'animation_f') {
+			$js = "
+				jQuery(document).ready(function(){
+	                jQuery('#{$this->settings['module_unique_id']}').tabs('.pane', { 
+	                    effect: 'fade',
+						fadeOutSpeed: {$speed},
+						rotate: {$repeat}
+	                }).slideshow();
+	            });
+			";
+		} else {
+			$js = "
+	            jQuery(document).ready(function(){
+	                jQuery('#{$this->settings['module_unique_id']}').scrollable({ 
+	                    vertical: {$animationMode},
+	                    speed: {$speed},
+	                    circular: {$repeat},
+	                    keyboard: {$keyboardNav}
+	                }){$autoScroll}{$navigator};
+	            });
+	        ";
+		};
         $doc->addScriptDeclaration($js);
     }
     

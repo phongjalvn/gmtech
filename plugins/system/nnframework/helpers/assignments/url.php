@@ -3,7 +3,7 @@
  * NoNumber! Framework Helper File: Assignments: URL
  *
  * @package			NoNumber! Framework
- * @version			12.1.1
+ * @version			12.1.4
  *
  * @author			Peter van Westen <peter@nonumber.nl>
  * @link			http://www.nonumber.nl
@@ -19,7 +19,7 @@ defined( '_JEXEC' ) or die();
  */
 class NNFrameworkAssignmentsURL
 {
-	var $_version = '12.1.1';
+	var $_version = '12.1.4';
 
 	/**
 	 * passURL
@@ -77,8 +77,9 @@ class NNFrameworkAssignmentsURL
 
 		$pass = 0;
 
-		$url = JFactory::getURI();
-		$url = $url->toString();
+		$uri = JFactory::getURI();
+
+		$url = $uri->toString();
 
 		// replace ampersand chars
 		$url = str_replace( '&amp;', '&', $url );
@@ -88,6 +89,8 @@ class NNFrameworkAssignmentsURL
 		$url = str_replace( '//www.', '//', $url );
 		// remove the http(s)
 		$url = preg_replace( '#^.*?://#', '', $url );
+		// remove the index.php/
+		$url = preg_replace( '#/index\.php(/|$)#', '/', $url );
 
 		// so also passes on urls with trailing /, ?, &, /?, etc...
 		$root = preg_replace( '#(Itemid=[0-9]*).*^#', '\1', JURI::root() );
@@ -101,11 +104,8 @@ class NNFrameworkAssignmentsURL
 		if ( !$pass ) {
 			/* Pass urls:
 			 * [root]
-			 * [root]/index.php
 			 */
-			$regex = '#^'.$root
-				.'(/index.php)?'
-				.'$#i';
+			$regex = '#^'.$root.'$#i';
 			$pass = preg_match( $regex, $url );
 		}
 
@@ -116,13 +116,10 @@ class NNFrameworkAssignmentsURL
 			 * [root]?Itemid=[menu-id]
 			 * [root]/?Itemid=[menu-id]
 			 * [root]/index.php?Itemid=[menu-id]
-			 * [root]/index.php/?Itemid=[menu-id]
 			 * [root]/[menu-alias]
 			 * [root]/[menu-alias]?Itemid=[menu-id]
 			 * [root]/index.php?[menu-alias]
 			 * [root]/index.php?[menu-alias]?Itemid=[menu-id]
-			 * [root]/index.php/[menu-alias]
-			 * [root]/index.php/[menu-alias]?Itemid=[menu-id]
 			 * [root]/[menu-link]
 			 * [root]/[menu-link]&Itemid=[menu-id]
 			 */
@@ -130,7 +127,7 @@ class NNFrameworkAssignmentsURL
 				.'(/('
 				.'index\.php'
 				.'|'
-				.'(index\.php[\?/])?'.preg_quote( $menu_def->alias, '#' )
+				.'(index\.php\?)?'.preg_quote( $menu_def->alias, '#' )
 				.'|'
 				.preg_quote( $menu_def->link, '#' )
 				.')?)?'

@@ -3,7 +3,7 @@
  * NoNumber! Framework Helper File: Licenses
  *
  * @package			NoNumber! Framework
- * @version			12.1.1
+ * @version			12.1.4
  *
  * @author			Peter van Westen <peter@nonumber.nl>
  * @link			http://www.nonumber.nl
@@ -36,7 +36,7 @@ class NNLicenses
 
 class NoNumberLicenses
 {
-	var $_version = '12.1.1';
+	var $_version = '12.1.4';
 
 	function getMessage( $extension = '', $addmargin = 0 )
 	{

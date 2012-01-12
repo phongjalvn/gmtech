@@ -4,7 +4,7 @@
  * Displays a title with a bunch of extras, like: description, image, versioncheck
  *
  * @package			NoNumber! Framework
- * @version			12.1.1
+ * @version			12.1.4
  *
  * @author			Peter van Westen <peter@nonumber.nl>
  * @link			http://www.nonumber.nl
@@ -38,7 +38,7 @@ require_once JPATH_PLUGINS.'/system/nnframework/helpers/functions.php';
  */
 class nnFieldTitle
 {
-	var $_version = '12.1.1';
+	var $_version = '12.1.4';
 
 	function getLabel( $name, $id, $label, $description, $params, $j15 = 0 )
 	{

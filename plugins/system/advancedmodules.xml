@@ -3,8 +3,8 @@
 <install version="1.5.0" type="plugin" group="system">
 	<name>System - Advanced Module Manager</name>
 	<description>PLG_SYSTEM_ADVANCEDMODULES_DESC</description>
-	<version>2.2.14</version>
-	<creationDate>December 2011</creationDate>
+	<version>2.2.16</version>
+	<creationDate>January 2012</creationDate>
 	<author>NoNumber! (Peter van Westen)</author>
 	<authorEmail>peter@nonumber.nl</authorEmail>
 	<authorUrl>http://www.nonumber.nl</authorUrl>

@@ -191,7 +191,7 @@ class XSK2Source{
     }
     
     function prepare_text ($text, $num_charecter){
-        $text = strip_tags($text,'<p><a>');
+        $text = strip_tags($text,'<p>');
         
         if(strlen($text)>$num_charecter && $num_charecter!=0){
             $text1 = utf8_substr ($text, 0, $num_charecter) . "....";

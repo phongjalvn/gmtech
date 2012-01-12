@@ -18,7 +18,7 @@ defined('_JEXEC') or die('Restricted access');
 	.productpage #itemRelated {width: 944px; height: 186px;}
 	.productpage #itemRelated .pane {width: 944px; margin:0 }
 	.productpage #itemRelated .items { width:20000em; }
-	.productpage #itemRelated .pane .item{overflow:hidden; }
+	.productpage #itemRelated .pane .item{overflow:hidden; position:relative; zoom:1}
 	.productpage #itemRelated .item img{width: 124px; height: 108px;}
 	.productpage .itemRelated a.browse{display:block; position:absolute; top:135px; z-index:9999}
 	.productpage .itemRelated a.prev{left:2px;

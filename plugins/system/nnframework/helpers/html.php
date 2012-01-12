@@ -4,7 +4,7 @@
  * extra JHTML functions
  *
  * @package			NoNumber! Framework
- * @version			12.1.1
+ * @version			12.1.4
  *
  * @author			Peter van Westen <peter@nonumber.nl>
  * @link			http://www.nonumber.nl
@@ -30,7 +30,7 @@ $document->addScriptDeclaration( implode( '', $scripts ) );
  */
 class nnHTML
 {
-	public static $_version = '12.1.1';
+	public static $_version = '12.1.4';
 
 	static function selectlist( &$options, $name, $value, $id, $size = 0, $multiple = 0, $attribs = '', $j15 = 0 )
 	{

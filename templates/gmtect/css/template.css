@@ -154,7 +154,7 @@ body {
 	
 }
 #menu li.item16, #menu li.item17, #menu li.item19, #menu li.item22, #menu li.item21 {
-	width:90px;
+	width:97px;
 	background: url('../images/line-menu.png') no-repeat right center;
 }
 #menu li.item16 a, #menu li.item17 a, #menu li.item19 a, #menu li.item22 a, #menu li.item21 a {
@@ -175,7 +175,7 @@ body {
 	display:block;
 	text-align:center;
 	font-size: 14px;
-	font-weight: bold;
+	font-weight: 100;
 	
 }
 #menu a:hover, #menu .active a {
@@ -218,12 +218,17 @@ body {
 #luottruycap {
 	float: right;
 	display: inline;
+	margin-top:16px;
 }
 #luottruycap a {
 	float: none;
 	text-decoration: none;
 	color: #fff;
 }
+#luottruycap p{
+	margin:0;
+}
+
 #gotop {
 	float: right;
 	display: inline;

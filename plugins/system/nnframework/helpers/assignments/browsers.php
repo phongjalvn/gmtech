@@ -3,7 +3,7 @@
  * NoNumber! Framework Helper File: Assignments: Browsers
  *
  * @package			NoNumber! Framework
- * @version			12.1.1
+ * @version			12.1.4
  *
  * @author			Peter van Westen <peter@nonumber.nl>
  * @link			http://www.nonumber.nl
@@ -19,7 +19,7 @@ defined( '_JEXEC' ) or die();
  */
 class NNFrameworkAssignmentsBrowsers
 {
-	var $_version = '12.1.1';
+	var $_version = '12.1.4';
 
 	/**
 	 * passBrowsers

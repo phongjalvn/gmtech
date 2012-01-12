@@ -3,7 +3,7 @@
 <install type="plugin" group="system" version="1.5">
 	<name>System - NoNumber! Framework</name>
 	<description>PLG_SYSTEM_NNFRAMEWORK_DESC</description>
-	<version>12.1.1</version>
+	<version>12.1.4</version>
 	<creationDate>January 2012</creationDate>
 	<author>NoNumber! (Peter van Westen)</author>
 	<authorEmail>peter@nonumber.nl</authorEmail>
