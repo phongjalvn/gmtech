@@ -135,6 +135,7 @@ class modXpertScrollerHelper{
 	.tabs('#{$this->settings['module_unique_id']} .pane', { 
 	                    effect: 'fade',
 						fadeOutSpeed: {$speed},
+						fadeInSpeed: {$speed},
 						rotate: {$repeat},
 	                }).slideshow({
 							nextclass: '.next',
@@ -248,7 +249,7 @@ class modXpertScrollerHelper{
 		           {$selectorId} {width: {$moduleWidth}px; height: {$moduleHeight}px;}
 						{$selectorId} .pane {width: {$moduleWidth}px;}
 		           {$selectorId} .items { {$animationStyle}:20000em; }
-		           {$selectorId} .pane .item{{$itemDimensions}; overflow:hidden; }
+		           {$selectorId} .pane .item{{$itemDimensions}; overflow:hidden; height: 145px}
 		           {$selectorId} .item img{width: {$imgWidth}px; height: {$imgHeight}px;}
 		           {$selectorClass} a.browse{ margin:{$controlMargin}; }
 

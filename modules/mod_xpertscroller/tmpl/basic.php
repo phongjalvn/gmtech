@@ -24,7 +24,7 @@ $index=0;
 		<?php if ($this->settings['animation_type'] == 'animation_f'): ?>
 			<ul class="tabs">
 				<?php for ($i=0; $i < $totalPane; $i++) {?>
-					<li class="tabitems">Tab <?php echo $i; ?></li>
+					<li class="tabitems"><a href="#">Tab <?php echo $i; ?></a></li>
 				<?php } ?>
 			</ul>
 		<?php endif ?>
