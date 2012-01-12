@@ -237,13 +237,7 @@ class modXpertScrollerHelper{
 			$css = "
 			  {$selectorId} {width: {$moduleWidth}px; height: {$moduleHeight}px; position: relative;}
 			  {$selectorId} .tabs {display:none;}
-           {$selectorId} .pane {
-					width: {$moduleWidth}px;
-					display:none;
-					position:absolute;
-					top:0;
-					left:8px; 
-				}
+           {$selectorId} .pane {width: {$moduleWidth}px;display:none;position:absolute;top:0;left:8px; }
            {$selectorId} .items { }
            {$selectorId} .pane .item{{$itemDimensions}; overflow:hidden; height:139px;}
            {$selectorId} .item img{width: {$imgWidth}px; height: {$imgHeight}px;}
