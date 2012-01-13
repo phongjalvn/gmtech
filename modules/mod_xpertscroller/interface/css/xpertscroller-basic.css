@@ -86,14 +86,13 @@ a.browse {
 .basic_h .items .pane {float:left;}
 .slidechay .basic_h .pane .item{float: left;
 	background: url('../../../../templates/gmtect/images/bg-sp-noibat.png') no-repeat;
-	
-	
 }
+
 #xs_69  .pane .item{
 	float: left;
 	border-right:1px solid #c9cacb;
 	width: 24% !important;
- }
+}
  #xs_69  .pane .item.itemlast{
  	border-right:none;
  }

@@ -21,13 +21,13 @@ $index=0;
     <?php endif;?>
     <a class="prev browse left"></a>
     <div id="<?php echo $this->settings['module_unique_id'];?>">
-		<?php if ($this->settings['animation_type'] == 'animation_f'): ?>
-			<ul class="tabs">
-				<?php for ($i=0; $i < $totalPane; $i++) {?>
-					<li class="tabitems"><a href="#">Tab <?php echo $i; ?></a></li>
-				<?php } ?>
-			</ul>
-		<?php endif ?>
+      <?php if ($this->settings['animation_type'] == 'animation_f'): ?>
+         <ul class="tabs">
+            <?php for ($i=0; $i < $totalPane; $i++) {?>
+               <li class="tabitems"><a href="#">Tab <?php echo $i; ?></a></li>
+            <?php } ?>
+         </ul>
+      <?php endif ?>
         <div class="items">
         <?php for($i = 0; $i<$totalPane; $i++){?>
             <div class="pane">
@@ -36,20 +36,20 @@ $index=0;
                 <div class="item">
                     <div class="padding clearfix">
                         <div class="img-left" style="float:left;">
-                        	<?php echo ($this->settings['item_image'] == '1')? $this->content[$index]->image : '';?>
+                           <?php echo ($this->settings['item_image'] == '1')? $this->content[$index]->image : '';?>
                         </div>
                         <div class="noidungoday" style="float:left;">
-                        	<?php if($this->settings['article_title'] === '1'):?>
+                           <?php if($this->settings['article_title'] === '1'):?>
                             <h4><?php echo $this->content[$index]->title;?></h4>
-	                        <?php endif;?>
-	                        <?php if($this->settings['intro_text'] === '1'):?>
-	                            <div class="xs_intro"><?php echo $this->content[$index]->introtext;?></div>
-	                        <?php endif;?>
+                           <?php endif;?>
+                           <?php if($this->settings['intro_text'] === '1'):?>
+                               <div class="xs_intro"><?php echo $this->content[$index]->introtext;?></div>
+                           <?php endif;?>
                         </div>
                         <?php if($this->settings['readmore'] === '1'):?>
                             <p class="xs_readmore"><a href="<?php echo $this->content[$index]->link?>">Readmore..</a></p>
                         <?php endif;?>
-                        
+
                         <?php if($this->settings['content_source'] == 'vm'):?>
                             <div class="xs_vm_products"><?php echo $this->content[$index]->items;?></div>
                         <?php endif;?>
