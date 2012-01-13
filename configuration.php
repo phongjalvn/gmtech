@@ -31,8 +31,8 @@ class JConfig {
 	var $ftp_pass = '';
 	var $ftp_root = '';
 	var $dbtype = 'mysql';
-	var $host = 'localhost';
-	var $user = 'root';
+	var $host = '127.1.28.129';
+	var $user = 'admin';
 	var $db = 'gmtech';
 	var $dbprefix = 'jos_';
 	var $mailer = 'mail';
@@ -49,7 +49,7 @@ class JConfig {
 	var $MetaTitle = '1';
 	var $lifetime = '60';
 	var $session_handler = 'database';
-	var $password = 'root';
+	var $password = 'eBdywzIb8dYX';
 	var $sitename = 'GM tech';
 	var $MetaDesc = 'Joomla! - the dynamic portal engine and content management system';
 	var $MetaKeys = 'joomla, Joomla';
