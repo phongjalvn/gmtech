@@ -33,6 +33,7 @@ class JConfig {
 	var $dbtype = 'mysql';
 	var $host = 'localhost';
 	var $user = 'root';
+	
 	var $db = 'gmtech';
 	var $dbprefix = 'jos_';
 	var $mailer = 'mail';
