@@ -28,7 +28,7 @@ $index=0;
             <?php } ?>
          </ul>
       <?php endif ?>
-        <div class="items"> 
+        <div class="items">
         <?php for($i = 0; $i<$totalPane; $i++){?>
             <div class="pane">
             <?php for($col=0; $col<(int)$this->settings['col_amount']; $col++, $index++) {?>
