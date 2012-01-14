@@ -15,8 +15,8 @@ class JConfig {
 	var $gzip = '0';
 	var $error_reporting = '0';
 	var $xmlrpc_server = '0';
-	var $log_path = '/logs';
-	var $tmp_path = '/tmp';
+	var $log_path = 'logs';
+	var $tmp_path = 'tmp';
 	var $live_site = '';
 	var $force_ssl = '0';
 	var $offset = '7';

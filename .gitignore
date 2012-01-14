@@ -1,18 +1,15 @@
 /administrator/backups/*
 !/administrator/backups/index.html
 
-/administrator/cache/*
 !/administrator/cache/index.html
 
-/cache/*
-*/cache/*
-!/cache/index.html
-!*/cache/index.html
+cache/*
+!*cache/index.html
 
-/logs/*
-!/logs/index.html
+logs/*
+!logs/index.html
 
-/tmp/*
-!/tmp/index.html
+tmp/*
+!tmp/index.html
 
 /configuration.php
