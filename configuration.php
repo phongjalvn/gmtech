@@ -31,14 +31,8 @@ class JConfig {
 	var $ftp_pass = '';
 	var $ftp_root = '';
 	var $dbtype = 'mysql';
-<<<<<<< HEAD
 	var $host = '127.1.28.129';
 	var $user = 'admin';
-=======
-	var $host = 'localhost';
-	var $user = 'root';
-	
->>>>>>> master
 	var $db = 'gmtech';
 	var $dbprefix = 'jos_';
 	var $mailer = 'mail';
